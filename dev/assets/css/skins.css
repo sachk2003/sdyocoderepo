@@ -255,7 +255,7 @@
 .color-skin-3 a:not(.btn):hover,
 .color-skin-3 a:not(.btn):focus, 
 .color-skin-3 #header-1 a:hover, 
-.color-skin-3 .navbar-brand span, 
+ 
 .color-skin-3 .panel-group .panel .panel-title > a:hover, 
 .color-skin-3 .panel-group .panel .panel-title > a:focus, 
 .color-skin-3 .nav-tabs > li.active > a, 
@@ -274,7 +274,12 @@
 .color-skin-3 .popular-items h5 .price,
 .color-skin-3 .flat-color:hover,
 .color-skin-3 .flat-color.btn-bordered {
-    color: #3498db;
+   /* color: #3498db;*/
+  color:white;
+}
+
+.color-skin-3 .navbar-brand span{
+	color: #3498db;
 }
 
 .color-skin-3 .flat-color:hover,
