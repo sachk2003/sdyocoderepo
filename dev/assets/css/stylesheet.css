@@ -2965,7 +2965,14 @@ slidemsg .light {
 /* Social Share*/
 .list-unstyled {
 padding-left: 0;
+margin-top:15%;
+margin-left:22%;
 list-style: none;
+}
+
+.share{
+	
+	
 }
 .share li {
 display: inline-block;
