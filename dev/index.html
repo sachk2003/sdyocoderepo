@@ -12,7 +12,7 @@
         <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
         <!-- Plugins CSS -->
         <link href="assets/UItoTop/css/ui.totop.css" rel="stylesheet">
-        <link href="assets/prettyPhoto/css/prettyPhoto.css" rel="stylesheet">
+        <!--<link href="assets/prettyPhoto/css/prettyPhoto.css" rel="stylesheet">-->
         
         <!-- Custom Stylesheet For This Template -->
         <link href="assets/css/stylesheet.css" rel="stylesheet">
@@ -26,6 +26,7 @@
         <script src="assets/js/html5shiv.js"></script>
         <script src="assets/js/respond.min.js"></script>
         <![endif]-->
+        
     </head>
     <body>
         <div id="main-wrapper" class="color-skin-3">
@@ -59,8 +60,8 @@
             </header>
             
             	<!-- Main slider -->
- <div class="col-md-12" style="padding: 0">    	
-  <div class="slider">
+ <div class="col-md-12" style="padding: 0;" >    	
+  <div class="slider" style="display: none !important">
   
   <div class="slide" style="background-image:url(assets/img/slides/slide3.jpg)">
       
@@ -279,48 +280,57 @@
         <!-- Bootstrap JS & Others JavaScript Plugins
             ================================================== -->
         <!-- Placed At The End Of The Document So Page Loads Faster -->
-        <script src="assets/js/jquery-2.0.3.min.js"></script>
-        <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <!--<script src="assets/js/jquery-2.0.3.min.js"></script>-->
+        <!--<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>-->
+        <script src="assets/js/jquery.bxslider.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         
+        
         <script src="assets/carouFredSel-6.2.1/jquery.carouFredSel-6.2.1.js"></script>
-        <script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+        <!--<script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>-->
         
         <script src="assets/UItoTop/js/easing.js"></script>
         <script src="assets/UItoTop/js/jquery.ui.totop.min.js"></script>
         <script src="assets/isotope-site/jquery.isotope.min.js"></script>
         <script src="assets/FitVids.js/jquery.fitvids.js"></script>
         
-        <script src="assets/js/jquery.bxslider.min.js"></script>
+        
         <!--<script src="assets/js/custom.js"></script>-->
         
         <script type="text/javascript">
             var tpj = jQuery;
             tpj.noConflict();
+            
+            
             tpj(document).ready(function () {
-            	
-            	if(tpj('.slider').length != 0)
-	{
-		tpj('.slider').bxSlider({
-			pager: true,
-			auto: true,
-			autoHover: true,
-			speed:650,
-			infiniteLoop: true,
-			easing: 'ease-in-out',
-			controls: false
-		});
-	}
+            
+            /* SLider */    	
+           if(tpj('.slider').length != 0)
+	        {
+		     tpj('.slider').show().bxSlider({
+			      pager: true,
+			      auto: true,
+			      autoHover: true,
+			      speed:500,
+			      infiniteLoop: true,
+			      easing: null,
+			      //easing: 'ease-in-out',
+			      controls: false
+		                            });
+        	}
             	
             	
                 
                 // PrettyPhoto
-                tpj("a[rel^='prettyPhoto']").prettyPhoto({
+                /*tpj("a[rel^='prettyPhoto']").prettyPhoto({
                     theme: 'light_square',
                     social_tools: false
-                });
+                });*/
+               
+               
                 // FitVids
-                tpj(".responsive-video-wrapper").fitVids();
+                //tpj(".responsive-video-wrapper").fitVids();
                 
                 // jQuery UItoTop
                 tpj().UItoTop({ easingType: 'easeOutQuart' });
@@ -333,7 +343,9 @@
                     tpj("#main-wrapper").addClass(cls);
                 });
             });
+            
             // jQuery CarouFredSel
+            
             var caroufredsel = function () {
                 tpj('#caroufredsel-portfolio-container').carouFredSel({
                     responsive: true,
@@ -375,7 +387,7 @@
             });
             tpj(window).resize(function () {
                 caroufredsel();
-            });            
+            });         
         </script>
     </body>
 </html>
