@@ -174,7 +174,7 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag1").autocomplete("widget").css("width","250px");
+                      tpj("#tag1").autocomplete("widget").css("width","325px");
                     }
 
                     });
@@ -183,7 +183,7 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag2").autocomplete("widget").css("width","250px");
+                      tpj("#tag2").autocomplete("widget").css("width","325px");
                     }
 
                     });
@@ -192,7 +192,7 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag3").autocomplete("widget").css("width","250px");
+                      tpj("#tag3").autocomplete("widget").css("width","325px");
                     }
 
                     });
@@ -201,7 +201,7 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag4").autocomplete("widget").css("width","250px");
+                      tpj("#tag4").autocomplete("widget").css("width","325px");
                     }
 
                     });
@@ -210,7 +210,7 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag5").autocomplete("widget").css("width","250px");
+                      tpj("#tag5").autocomplete("widget").css("width","325px");
                     }
 
                     });
