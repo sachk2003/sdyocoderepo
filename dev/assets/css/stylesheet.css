@@ -3023,15 +3023,23 @@ margin-left:0px;
     margin-right:auto;
     
     background-color:#DA5050;
+    color:white;
     background-image:none;
     box-shadow:none;
-    border:none;
+    
     -webkit-border-radius:0px;
     -moz-border-radius:0px;
     border-radius:0px;
     font-size:19px;
     letter-spacing:1px;
     font-family: 'Novecento Bold', Arial, Helvetica, sans-serif;
-    padding:4px;
+    /*padding:4px;*/
+   
+    
+}
+.control span {
+border: 1px solid #E78C8C;
+display: block;
+padding: 10px 8px;
 }
 

@@ -62,7 +62,7 @@
    <div class="form-group">
    	<label for="zip" class="col-lg-4 col-md-3 control-label">Zip Code</label>
    	<div class="col-md-6">
-   		<input type="text" name="zip" class="form-control" placeholder="Zip Code">
+   		<input type="text" name="zip" id="zip"   class="form-control" placeholder="Zip Code">
    		
    	</div>
    	  	
@@ -70,7 +70,7 @@
    
    
    	<div class="col-md-4 col-md-offset-2">
-   	  <button  class="control">Submit</button>
+   	  <button  class="control"><span>SUBMIT</span></button>
    	</div>
    
      
@@ -174,16 +174,19 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag1").autocomplete("widget").css("width","350px");
+                      tpj("#tag1").autocomplete("widget").css("width","375px");
                     }
 
                     });
+                    
+                    
+                    
                     tpj("#tag2").autocomplete({
                         source:'scripts/getautocomplete.php',
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag2").autocomplete("widget").css("width","350px");
+                      tpj("#tag2").autocomplete("widget").css("width","375px");
                     }
 
                     });
@@ -192,7 +195,7 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag3").autocomplete("widget").css("width","350px");
+                      tpj("#tag3").autocomplete("widget").css("width","375px");
                     }
 
                     });
@@ -201,7 +204,7 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag4").autocomplete("widget").css("width","350px");
+                      tpj("#tag4").autocomplete("widget").css("width","375px");
                     }
 
                     });
@@ -210,12 +213,21 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag5").autocomplete("widget").css("width","350px");
+                      tpj("#tag5").autocomplete("widget").css("width","375px");
                     }
 
                     });
 
-                
+                tpj("#zip").autocomplete({
+                        source:'scripts/getzip.php',
+                        minLength:5,
+                    open:function(event, ui)
+                    {
+                      tpj("#zip").autocomplete("widget").css("width","375px");
+                    }
+
+                    });
+
                 
                 
                 
