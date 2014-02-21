@@ -24,8 +24,8 @@ $result=curl_exec($ch);
  
          for($i=0;$i<count($result);$i+=3){    
          $json[]=array(
-                    'value'=> $result["city"].'-'.$term,
-                    'label'=>$result["city"].'-'.$term
+                    'value'=> $term.'-'.$result["city"].','.$result["state"],
+                    'label'=>$term.'-'.$result["city"].','.$result["state"]
                         );
     }
  
