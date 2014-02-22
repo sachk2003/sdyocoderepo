@@ -49,8 +49,9 @@
               <div class="row" style="margin-top:20px">
                <div class="col-md-3"></div>
                <div class="col-md-7">
-            <?php for($i=0;$i<5;$i++){?>			
-  <form class="form-horizontal" role="form">
+            			
+  <form class="form-horizontal" role="form" method="post" action="discountbylist.php" id="searchform">
+  	<?php for($i=0;$i<5;$i++){?>
   <div class="form-group">
     <label for="Item 1" class="col-lg-4 col-md-3 control-label">Item <?php echo $i+1;?> (example: <?php echo $items[$i];?>)</label>
     <div class="col-md-6">
@@ -59,6 +60,7 @@
   </div>
   
     <?php }?>
+    
    <div class="form-group">
    	<label for="zip" class="col-lg-4 col-md-3 control-label">Zip Code</label>
    	<div class="col-md-6">
@@ -229,16 +231,31 @@
                     });
 
                 
+               tpj("#searchform").validate({ 
+                
+                  // Specify the validation rules
+        rules: {
+            item1: {required:true,minlength:1},
+            zip: "required",
+            
+        },
+                
+             // Specify the validation error messages
+        messages: {
+            item1: "Please enter at least one Item",
+            
+            zip: "Please enter a valid zipcode",
+            
+        },
+        
+        submitHandler: function(form) {
+            form.submit();
+        }   
                 
                 
                 
                 
-                
-                
-                
-                
-                
-                
+               });
                 
                 
                 

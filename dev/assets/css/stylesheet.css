@@ -1371,6 +1371,7 @@ textarea {
 .service {
     text-align: center;
     padding: 20px;
+    
     background-color: #ecf0f1;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -1382,6 +1383,13 @@ textarea {
 
 .service.service-2 {
     text-align: left;
+    height:290px;
+}
+
+.service.service-5{
+	text-align: center;
+    height:70px;
+	
 }
 
 .service.service-3 {
