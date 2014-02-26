@@ -682,7 +682,7 @@ textarea {
  * -------------------------- */
 .testimonial {
     overflow: hidden;
-    float: right;
+    float: center;
 }
 
 .testimonial-content {
@@ -3051,3 +3051,14 @@ display: block;
 padding: 10px 8px;
 }
 
+.error{
+	color:red;
+	
+}
+
+#our-services h3{
+
+  font-size:29px; 
+  margin-top:14px;
+  margin-bottom:16px;	
+}

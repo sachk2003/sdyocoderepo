@@ -1,12 +1,11 @@
 <?php 
  
- include('scripts/header.php');
- //include('scripts/connect.php');
+include('scripts/header.php');
+include('scripts/connect.php');
 $item1 = mysql_real_escape_string($_POST['item1']);
 $item1 = trim($item1);
-//echo $item1;
-//++$m;
-//}
+
+
 $item2 = mysql_real_escape_string($_POST['item2']);
 $item2 = trim($item2);
 $item3 = mysql_real_escape_string($_POST['item3']);
@@ -16,27 +15,245 @@ $item4 = trim($item4);
 $item5 = mysql_real_escape_string($_POST['item5']);
 $item5 = trim($item5);
  
-$zip=mysql_real_escape_string($_POST['zip']);
+//$zip=mysql_real_escape_string($_POST['zip']);
+$item1=$_POST['item1'];
+$zip=$_POST['zip'];
 $zip=trim($zip);
 
+/*
 echo $item1;
 echo $item2;
 echo $item3;
 echo $item4;
-echo $item5;
-echo $zip;
+echo $item5;*/
+//echo $zip;
+
+$zipcode=explode('-',$zip);
+//echo $zipcode[0];
+$city=explode(',', $zipcode[1]);
+//echo $city[0];
 
 
+$array = array();
+$result = mysql_query("SELECT * FROM vendor WHERE zip LIKE '$zipcode[0]' AND city LIKE '$city[0]'");
+
+$num = mysql_num_rows($result);
+
+$item=array();
+if($item1!='') array_push($item,$item1);
+if($item2!='') array_push($item,$item2);
+if($item3!='') array_push($item,$item3);
+if($item4!='') array_push($item,$item4);
+if($item5!='') array_push($item,$item5);
+
+//$item = array($item1,$item2,$item3,$item4,$item5);
+//var_dump($item);
+
+if ($num > 0){
+while($row = mysql_fetch_assoc($result)){
+$array[] = $row;
+}
+}else {
+             echo"No vendors for this zip code:$zip in our database yet.<br>";
+                 mysql_close();
+                 exit;
+       }
 
 
- 
- ?>
+//var_dump($array);       
+$k=0;
+
+$upcids=array();
+
+while($k<count($item)){        
+
+for($j=0;$j<$num;$j++){
+	
+$vendorid = $array[$j]['vendorid'];
+
+$company =  $array[$j]['company'];
+//echo $vendorid;echo $company;
 
 
+if($item[$k]!='')
+{
+$query="SELECT * FROM discount WHERE vendorid LIKE '$vendorid%' AND item LIKE '$item[$k]%'";
+$result1 = mysql_query($query);
 
- 
- 
- 
-<?php
- include('scripts/footer.php');
+
+static $upccount=0;
+if($row = mysql_fetch_array($result1))
+{
+	//var_dump($row);   
+	++$upccount;
+	
+$discountid = $row["discountid"];
+
+$items = $row["item"];
+$upcid = $row["upc"];
+array_push($upcids,$upcid);
+$discount = $row["discount"];
+$unit = $row["unit"];
+$startdate = $row["startdate"];
+$enddate = $row["enddate"];
+
+$filename=$upcid;
+$filepath='/scripts/json/'.$filename;
+
+//echo $filepath;
+if(!file_exists($filepath))
+{  //echo "File Exists";
+	
+	//echo $upcid;
+	  
+	$url="http://www.product-open-data.com/product/$upcid";
+  //  echo $url;
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$headers=array('Content-type: application/json');
+    curl_setopt($ch,CURLOPT_HTTPHEADER,$headers);
+    curl_setopt($ch, CURLOPT_URL,$url);
+
+
+    $result=curl_exec($ch);
+
+   touch('scripts/json/'.$filename);
+   //echo $filename;
+   chmod('scripts/json/'.$filename,0777);	
+  $file=fopen('scripts/json/'.$filename,"w+") or exit("Unable to open file!");
+  file_put_contents('scripts/json/'.$filename, $result);
+  fclose($file);
+ }
 ?>
+
+<input name="upc code" type="hidden" id="upc<?php echo $upccount?>" value="<?php echo $upcid;?>">
+
+<?php
+
+
+
+
+
+
+
+}
+else {
+//             echo " No offers by this Vendors for this Item:$item[$k].<br>";
+      }
+
+}
+}/* End of For Loop*/
+$k=$k+1;
+}
+
+mysql_close();
+
+
+
+?>
+<input name="upc code" type="hidden" id="upccount" value="<?php echo $upccount;?>">
+<input name="upc code" type="hidden" id="upc" value="<?php echo $upcid;?>">
+<?php
+
+if($upccount!=0)
+{
+	$rows=ceil($upccount/3);
+	//var_dump($upcids);
+	?>
+	<div class="container">
+	  <div class="row">
+            		<div class="col-md-3"></div>
+            		<div class="col-md-6 col-md-offset-1">
+            			<h2 style="color:#FF0000;">Your Deals</h2>
+            		</div>
+            		<div class="col-md-3"></div>
+       </div>
+       <div class="row">
+       	<div class="col-md-12"></div>
+       	
+       </div>
+	<?php	
+	
+	for($m=0;$m<$rows;$m++)
+	{  $lastrow=$upccount%3;
+	  ?>
+	  <div class="row"><?php
+		for($n=0;$n<3;$n++)
+		{
+	 ?>
+	 
+  <div class="col-sm-6 col-md-4" id="<?php echo $upcids[$n];?>">
+    <div class="thumbnail">
+      <img data-src="holder.js/300x200" rel="popover" data-content="" title="Vendor Details" id="productimage" alt="...">
+      <div class="caption">
+        <h3>Product Details</h3>
+        <p>
+        <ul style="text-align: left;font-weight: bold;">
+   			<li id="pcode">Product Code : </li>
+   			<li id="pname">Name : </li>
+   			<li id="pcat">Category : </li>
+   			<li id="weight">Weight : </li>
+   			<li id="volume">Volume : </li>
+   			<li id="bcode">Brand Code : </li>
+   			<li id="bname">Brand Name : </li>
+   			<li id="btype">Brand Type : </li>
+   			<li id="bwebsite">Brand Website : </li>
+   			
+   			
+   			
+   		</ul>
+        </p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+   
+	  	
+		<?php
+		}?></div><?php
+	}?>
+	
+	<div class="row">
+            		<div class="col-md-3"></div>
+            		<div class="col-md-6 col-md-offset-1">
+            			<h2 style="color:#FF0000;">Best Bet</h2>
+            			
+            		</div>
+            		<div class="col-md-3"></div>
+       </div>
+	<div class="row">
+            		<div class="col-md-3"></div>
+            		<div class="col-md-6">
+            			<h5 style="text-align: left">Save Money, gas and time in a Snap!</h5>
+            		</div>
+            		<div class="col-md-3"></div>
+       </div>
+       <div class="row">
+            		<div class="col-md-2"></div>
+            		<div class="col-md-8">
+            			<h5 style="text-align: left">Find the closest store with the lowest price for YOUR shopping list</h5>
+            		</div>
+            		<div class="col-md-2"></div>
+       </div>
+       
+       
+	
+</div>	
+<?php	
+}
+?>
+
+
+
+<?php
+include('scripts/footerdiscountbylist.php');	
+	?>
+
+
+
+
+
+

@@ -35,7 +35,7 @@
             	<div class="row">
             		<div class="col-md-3"></div>
             		<div class="col-md-6 col-md-offset-1">
-            			<h2>Create YOUR Shopping List</h2>
+            			<h2 style="color:#FF0000;">Create YOUR shopping list</h2>
             		</div>
             		<div class="col-md-3"></div>
                	</div>
@@ -136,7 +136,7 @@
         <!--<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>-->
         <script src="assets/js/jquery.bxslider.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-          
+        <script src="assets/js/jquery.validate.js"></script>  
         
         
         <script src="assets/UItoTop/js/easing.js"></script>
@@ -231,7 +231,7 @@
                     });
 
                 
-               tpj("#searchform").validate({ 
+       tpj("#searchform").validate({ 
                 
                   // Specify the validation rules
         rules: {
