@@ -108,8 +108,65 @@ break;
   html: true,
   trigger: 'hover',
   placement: 'right',
-  content: function(){return "This is a popup";}
+  content: function()
+            {
+            	var upcid =tpj(this).attr("name"); 
+                var message=getvendorinformation(upcid); 
+                //console.log(message);       	
+            	
+            	return message;
+            	
+            }
     });
+	
+	
+	function getvendorinformation(upcid)
+	{
+		var message='';
+		
+		tpj.ajax({
+          	    
+                type: "POST",
+                url: '/sd/scripts/getvendorinfo.php?upcid='+upcid,
+                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                async:false,
+                success: function(data){
+                	
+                	var name= data[0]["name"];
+                	var price= data[0]["price"];
+                	var startdate = data[0]["startdate"];
+                	var enddate = data[0]["enddate"];
+                	
+                	//var vendorinfo="<div class="popover popover-medium">";
+                	var vendorinfo="<table table-bordered><tr><td>Vendor Name: </td><td>"+name+"</td></tr>";
+                	vendorinfo+="<tr><td>Price: </td><td>"+price+"</td></tr>";
+                	vendorinfo+="<tr><td>Start Date: </td><td>"+startdate+"</td></tr>";
+                	vendorinfo+="<tr><td>End Date: </td><td>"+enddate+"</td></tr></table>";
+                	
+                	//console.log(vendorinfo);
+                	message = vendorinfo;
+                	//console.log(message);               	
+                },
+                error: function(xhr, status, error) {
+               var msg=xhr.responseText;
+               
+               
+               var status=xhr.status;
+               var error="ReadyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\nresponseText: "+xhr.responseText.EvalError;
+               message = "nothing found";
+               //alert(error);
+                                     	 
+               
+               
+               }
+                
+                
+                });
+                //console.log(message);	   	
+     return message;
+		
+	}
 	
 	
 	

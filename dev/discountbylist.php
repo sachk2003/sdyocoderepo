@@ -160,16 +160,16 @@ mysql_close();
 
 if($upccount!=0)
 {
-	$rows=ceil($upccount/3);
+	$rows=ceil($upccount/5);
 	//var_dump($upcids);
 	?>
-	<div class="container">
+	<div class="container-products">
 	  <div class="row">
-            		<div class="col-md-3"></div>
-            		<div class="col-md-6 col-md-offset-1">
-            			<h2 style="color:#FF0000;">Your Deals</h2>
+            		
+            		<div class="col-md-12">
+            			<h2 style="color:#FF0000;text-align: center">Your Deals</h2>
             		</div>
-            		<div class="col-md-3"></div>
+            		
        </div>
        <div class="row">
        	<div class="col-md-12"></div>
@@ -178,18 +178,21 @@ if($upccount!=0)
 	<?php	
 	
 	for($m=0;$m<$rows;$m++)
-	{  $lastrow=$upccount%3;
+	{  
 	  ?>
-	  <div class="row"><?php
-		for($n=0;$n<3;$n++)
+	  
+	  <div class="row">
+	  	<div class="col-md-1"></div>
+	  	<?php
+		for($n=0;$n<$upccount;$n++)
 		{
 	 ?>
 	 
-  <div class="col-sm-6 col-md-4" id="<?php echo $upcids[$n];?>">
+  <div class="col-sm-6 col-md-2" id="<?php echo $upcids[$n];?>">
     <div class="thumbnail">
-      <img data-src="holder.js/300x200" rel="popover" data-content="" title="Vendor Details" id="productimage" alt="...">
+      <img data-src="holder.js/300x200"  name="<?php echo $upcids[$n];?>" rel="popover" data-content="" title="Vendor Details" id="productimage" alt="Product Image">
       <div class="caption">
-        <h3>Product Details</h3>
+        <h5 style="text-align: center">Product Details</h5>
         <p>
         <ul style="text-align: left;font-weight: bold;">
    			<li id="pcode">Product Code : </li>
@@ -213,31 +216,21 @@ if($upccount!=0)
    
 	  	
 		<?php
-		}?></div><?php
+		}?><div class="col-md-1"></div></div><?php
 	}?>
+	<div class="row" id="productbottom">
+		 <div class="col-md-12" style="margin-top:0px;">
+		 	<h3 style="color:#FF0000;text-align: center;">Best Bet</h3>
+		 	<br />
+		 	<p style="text-align: left;margin-left:42%;font-weight:600;color:black;margin-top:-2%;">Save Money, gas and time in a Snap!</p>
+		 	<br />
+		 	<p style="text-align: left;margin-left:37%;font-weight:600;color:black;margin-top:-2%;">Find the closest store with the lowest price for YOUR shopping list</p>
+		 </div>
+		
+		
+	</div>
 	
-	<div class="row">
-            		<div class="col-md-3"></div>
-            		<div class="col-md-6 col-md-offset-1">
-            			<h2 style="color:#FF0000;">Best Bet</h2>
-            			
-            		</div>
-            		<div class="col-md-3"></div>
-       </div>
-	<div class="row">
-            		<div class="col-md-3"></div>
-            		<div class="col-md-6">
-            			<h5 style="text-align: left">Save Money, gas and time in a Snap!</h5>
-            		</div>
-            		<div class="col-md-3"></div>
-       </div>
-       <div class="row">
-            		<div class="col-md-2"></div>
-            		<div class="col-md-8">
-            			<h5 style="text-align: left">Find the closest store with the lowest price for YOUR shopping list</h5>
-            		</div>
-            		<div class="col-md-2"></div>
-       </div>
+	
        
        
 	
