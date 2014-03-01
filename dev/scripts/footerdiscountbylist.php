@@ -1,4 +1,5 @@
-<footer id="footer-1" class="footer">
+          <div id="footercontainer">
+          <footer id="footer-1" class="footer">
                 <div class="container">
                     <div class="row">
                     	<div class="col-md-2"><a href="#" >Vendor Login</a></div>
@@ -30,7 +31,7 @@
                 <!-- /.container -->
             </footer>
             <!-- /#footer-2 -->
-            
+           </div>
         </div>
         <!-- /#main-wrapper -->
         <!-- Bootstrap JS & Others JavaScript Plugins

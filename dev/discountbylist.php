@@ -190,24 +190,15 @@ if($upccount!=0)
 	 
   <div class="col-sm-6 col-md-2" id="<?php echo $upcids[$n];?>">
     <div class="thumbnail">
-      <img data-src="holder.js/300x200"  name="<?php echo $upcids[$n];?>" rel="popover" data-content="" title="Vendor Details" id="productimage" alt="Product Image">
+      <img data-src="holder.js/300x200"  name="<?php echo $upcids[$n];?>" rel="popover" data-content="" title="Product Details" id="productimage" alt="Product Image">
       <div class="caption">
-        <h5 style="text-align: center">Product Details</h5>
+        <h5 style="text-align: center">Deals on this Product</h5>
         <p>
-        <ul style="text-align: left;font-weight: bold;">
-   			<li id="pcode">Product Code : </li>
-   			<li id="pname">Name : </li>
-   			<li id="pcat">Category : </li>
-   			<li id="weight">Weight : </li>
-   			<li id="volume">Volume : </li>
-   			<li id="bcode">Brand Code : </li>
-   			<li id="bname">Brand Name : </li>
-   			<li id="btype">Brand Type : </li>
-   			<li id="bwebsite">Brand Website : </li>
-   			
-   			
-   			
-   		</ul>
+        	<div class="vendor">
+        		
+        		
+        	</div>
+        
         </p>
         <p></p>
       </div>
@@ -222,9 +213,9 @@ if($upccount!=0)
 		 <div class="col-md-12" style="margin-top:0px;">
 		 	<h3 style="color:#FF0000;text-align: center;">Best Bet</h3>
 		 	<br />
-		 	<p style="text-align: left;margin-left:42%;font-weight:600;color:black;margin-top:-2%;">Save Money, gas and time in a Snap!</p>
+		 	<p style="text-align: left;margin-left:42%;font-weight:600;color:black;">Save Money, gas and time in a Snap!</p>
 		 	<br />
-		 	<p style="text-align: left;margin-left:37%;font-weight:600;color:black;margin-top:-2%;">Find the closest store with the lowest price for YOUR shopping list</p>
+		 	<p style="text-align: left;margin-left:37%;font-weight:600;color:black;">Find the closest store with the lowest price for YOUR shopping list</p>
 		 </div>
 		
 		

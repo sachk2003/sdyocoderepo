@@ -17,7 +17,7 @@ $enddate=$row['enddate'];
 
 //echo $vendorid;echo $discount;echo $unit;echo $startdate;echo $enddate;
 
-$price=$discount.$unit;
+$price=$unit.$discount;
 
 $result1=mysql_query("SELECT company FROM vendor where vendorid = $vendorid",$connection);
 while($row1 = mysql_fetch_array($result1))
