@@ -100,8 +100,8 @@
                     	<div class="col-md-2"><a href="#" >Vendor Login</a></div>
                         <div class="col-md-2"><a href="about.php" >About Us</a></div>
                         <div class="col-md-2 "><a href="privacy.php">Privacy</a></div>
-                        <div class="col-md-2 "><a href="#">Help</a></div>
-                        <div class="col-md-2 "><a href="#">Jobs</a></div>
+                        <div class="col-md-2 "><a href="help.php">Help</a></div>
+                        <div class="col-md-2 "><a href="jobs.php">Jobs</a></div>
                         <div class="col-md-2 "><a href="contact.php">Contact</a></div>
                                               
                         
