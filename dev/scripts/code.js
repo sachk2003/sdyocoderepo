@@ -65,10 +65,10 @@ tpj('document').ready(function(){
                                case 2: 
                                        /*if(element.code!=null) tpj('#'+upccode+' #bcode').append(element.code); else tpj('#'+upccode+' #bcode').append('Brand Code Not Found');
                                        if(element.name!=null) tpj('#'+upccode+' #bname').append(element.name); else tpj('#'+upccode+' #bname').append('Brand Name Not Found');
-                                       if(element.type!=null) tpj('#'+upccode+' #btype').append(element.type); else tpj('#'+upccode+' #btype').append('Brand Type Not Found');
-                                       if(element.link!=null) {var alink= '<a href='+element.link+' style="color:blue;" >'+element.link+'</a>';tpj('#'+upccode+' #bwebsite').append(alink);} 
-                                                            else {tpj('#'+upccode+' #bwebsite').append('No Website Link Found');}
-                                       if(element.img!=null){var ilink= '<a href='+element.img+' ><img src='+element.img+' alt="Brand Image"></a>';
+                                       if(element.type!=null) tpj('#'+upccode+' #btype').append(element.type); else tpj('#'+upccode+' #btype').append('Brand Type Not Found');*/
+                                       if(element.link!=null) {var alink= '<a href='+element.link+' style="color:blue;" >'+element.link+'</a>';tpj('#'+upccode+' #url').append(alink);} 
+                                                            else {tpj('#'+upccode+' #url').append('No Website Link Found');}
+                                       /*if(element.img!=null){var ilink= '<a href='+element.img+' ><img src='+element.img+' alt="Brand Image"></a>';
                                             tpj('#'+upccode+' #bimage').append(ilink);} else {  var ilink= '<a href='+scripts/notavailable.jpg+'><img src='+scripts/notavailable.jpg+' alt="Brand Image"></a>'; 
                                             tpj('#'+upccode+' #bimage').append(ilink);}
 
@@ -152,9 +152,9 @@ break;
                                        if(element.code!=null) {var bcode="<li>Brand Code: "+element.code+"</li>";message+=bcode;} else {bcode="<li>Brand Code: Not Found</li>";message+=bcode;}
                                        if(element.name!=null) {var bname="<li>Brand Name: "+element.name+"</li>";message+=bname;} else{ bname="<li>Brand Name: Not Found</li>";message+=bname;}
                                        if(element.type!=null) {var btype="<li>Brand Type: "+element.type+"</li>";message+=btype;} else{ btype="<li>Brand Type: Not Found</li>";message+=btype;}
-                                       if(element.link!=null) {var alink= '<li><Website Link:<a href='+element.link+' style="color:blue;" >'+element.link+'</a></li>';message+=alink;} 
+                                       /*if(element.link!=null) {var alink= '<li><Website Link:<a href='+element.link+' style="color:blue;" >'+element.link+'</a></li>';message+=alink;} 
                                                             else { var alink="No Website Link Found";message+=alink;}
-                                       /*if(element.img!=null){var ilink= '<a href='+element.img+' ><img src='+element.img+' alt="Brand Image"></a>';
+                                       if(element.img!=null){var ilink= '<a href='+element.img+' ><img src='+element.img+' alt="Brand Image"></a>';
                                             tpj('#'+upccode+' #bimage').append(ilink);} else {  var ilink= '<a href='+scripts/notavailable.jpg+'><img src='+scripts/notavailable.jpg+' alt="Brand Image"></a>'; 
                                             tpj('#'+upccode+' #bimage').append(ilink);}
 
@@ -249,10 +249,10 @@ break;
                 dataType: 'json',
                 async:false,
                 success: function(data){
-                    var vendorinfo="<table table-bordered><tr><td>Vendor Name</td><td>Price</td><td>Start Date</td><td>End Date</td></tr>";
+                    var vendorinfo="<table class='borderless'><tr><td class='store'>Store</td><td>Price</td><td>Start Date</td><td>End Date</td></tr>";
                     for(var k in data)
                     {
-                      vendorinfo+="<tr><td>"+data[k]["name"]+"</td>";
+                      vendorinfo+="<tr><td class='store'>"+data[k]["name"]+"</td>";
                       vendorinfo+="<td>"+data[k]["price"]+"</td>";	
                       vendorinfo+="<td>"+data[k]["startdate"]+"</td>";	
                       vendorinfo+="<td>"+data[k]["enddate"]+"</td></tr>";	

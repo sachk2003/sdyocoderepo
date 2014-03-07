@@ -10,6 +10,7 @@
         <title>SuperDealyo - Location Aware Shopping</title>
         <!-- Bootstrap Core CSS -->
         <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/BradhITC/font.css" rel="stylesheet">
         <!-- Plugins CSS -->
         <link href="assets/UItoTop/css/ui.totop.css" rel="stylesheet">
         <!--<link href="assets/prettyPhoto/css/prettyPhoto.css" rel="stylesheet">-->

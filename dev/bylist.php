@@ -33,38 +33,40 @@
             </header>
             <div class="container-form" id="pad" >
             	<div class="row">
-            		<div class="col-md-3"></div>
-            		<div class="col-md-6 col-md-offset-1">
+            		<div class="col-md-2"></div>
+            		<div class="col-md-8">
             			<h2 style="color:#FF0000;">Create YOUR shopping list</h2>
             		</div>
-            		<div class="col-md-3"></div>
+            		<div class="col-md-2"></div>
                	</div>
              <?php 
              
-             $items=array("Milk","Quick Oats","Honey","Strawberry Preserves","Laptop");
+             $items=array("Peanut Butter","Quick Oats","Honey","Strawberry Preserves","Peanut Butter Creamy");
              
              
              ?>            
             
-              <div class="row" style="margin-top:20px">
-               <div class="col-md-3"></div>
-               <div class="col-md-7">
+              <div class="row" style="margin-top:10px">
+               <div class="col-md-1"></div>
+               <div class="col-md-10">
             			
-  <form class="form-horizontal" role="form" method="post" action="discountbylist.php" id="searchform">
+  <form class="form-horizontal " role="form" method="post" action="discountbylist.php" id="searchform">
   	<?php for($i=0;$i<5;$i++){?>
   <div class="form-group">
-    <label for="Item 1" class="col-lg-4 col-md-3 control-label">Item <?php echo $i+1;?> (example: <?php echo $items[$i];?>)</label>
+  	
+    <label for="Item 1" class="col-md-6 control-label">Item <?php echo $i+1;?> (example: <?php echo $items[$i];?>)</label>
+    
     <div class="col-md-6">
-      <input type="text" name="item<?php echo $i+1;?>" class="form-control" id="tag<?php echo $i+1;?>" placeholder="Item <?php echo $i+1;?>">
+      <input type="text" name="item<?php echo $i+1;?>" class="form-control fontsforweb_fontid_4368" id="tag<?php echo $i+1;?>" placeholder="Item <?php echo $i+1;?>">
     </div>
   </div>
   
     <?php }?>
     
    <div class="form-group">
-   	<label for="zip" class="col-lg-4 col-md-3 control-label">Zip Code</label>
+   	<label for="zip" class="col-md-6 control-label">Enter zip code and select city from dropdown</label>
    	<div class="col-md-6">
-   		<input type="text" name="zip" id="zip"   class="form-control" placeholder="Zip Code">
+   		<input type="text" name="zip" id="zip"   class="form-control fontsforweb_fontid_4368" placeholder="Zip Code">
    		
    	</div>
    	  	
@@ -96,11 +98,11 @@
                 <div class="container">
                     <div class="row">
                     	<div class="col-md-2"><a href="#" >Vendor Login</a></div>
-                        <div class="col-md-2"><a href="#" >About Us</a></div>
-                        <div class="col-md-2 "><a href="#">Privacy</a></div>
+                        <div class="col-md-2"><a href="about.php" >About Us</a></div>
+                        <div class="col-md-2 "><a href="privacy.php">Privacy</a></div>
                         <div class="col-md-2 "><a href="#">Help</a></div>
                         <div class="col-md-2 "><a href="#">Jobs</a></div>
-                        <div class="col-md-2 "><a href="#">Contact</a></div>
+                        <div class="col-md-2 "><a href="contact.php">Contact</a></div>
                                               
                         
                     </div>
@@ -176,7 +178,7 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag1").autocomplete("widget").css("width","375px");
+                      tpj("#tag1").autocomplete("widget").css("width","266px");
                     }
 
                     });
@@ -188,7 +190,7 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag2").autocomplete("widget").css("width","375px");
+                      tpj("#tag2").autocomplete("widget").css("width","266px");
                     }
 
                     });
@@ -197,7 +199,7 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag3").autocomplete("widget").css("width","375px");
+                      tpj("#tag3").autocomplete("widget").css("width","266px");
                     }
 
                     });
@@ -206,7 +208,7 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag4").autocomplete("widget").css("width","375px");
+                      tpj("#tag4").autocomplete("widget").css("width","266px");
                     }
 
                     });
@@ -215,7 +217,7 @@
                         minLength:1,
                     open:function(event, ui)
                     {
-                      tpj("#tag5").autocomplete("widget").css("width","375px");
+                      tpj("#tag5").autocomplete("widget").css("width","266px");
                     }
 
                     });
@@ -225,7 +227,7 @@
                         minLength:5,
                     open:function(event, ui)
                     {
-                      tpj("#zip").autocomplete("widget").css("width","375px");
+                      tpj("#zip").autocomplete("widget").css("width","266px");
                     }
 
                     });
