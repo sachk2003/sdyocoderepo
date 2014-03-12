@@ -82,14 +82,14 @@
               	<p></p>
               	<div class="row">
               		<div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
-              		<div class="col-md-8">P.M. , is a Co-Founder & VP of Cloud, Security and Privacy, is a member of the Board of the company. He has over 15 years of experience in IT particularly related to Cloud, Security, Risk Management and Privacy. He has worked in HP, WIPRO, McGraw Hill, Tektronix etc. He has a B.S. in electrical an electronics engineering from Bangalore University and a post-graduate diploma in Business Administration from Universitas 21 Global.</div>
+              		<div class="col-md-8">N.D. , is the VP of Sales & Marketing, of the company. He has over 15 years of experience in IT sales and marketing particularly related to IT systems related to consumer products, IT services and Media and Advertising. He has worked in XXX etc. He has a B.S. in electrical an electronics engineering from YYY University and an MBA from ZZZ University.</div>
               		
               		
               	</div>
               	<p></p>
               	<div class="row">
               		<div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
-              		<div class="col-md-8">P.M. , is a Co-Founder & VP of Cloud, Security and Privacy, is a member of the Board of the company. He has over 15 years of experience in IT particularly related to Cloud, Security, Risk Management and Privacy. He has worked in HP, WIPRO, McGraw Hill, Tektronix etc. He has a B.S. in electrical an electronics engineering from Bangalore University and a post-graduate diploma in Business Administration from Universitas 21 Global.</div>
+              		<div class="col-md-8">P.P. , is the Principal Consultant of Front End and Middleware, in the company. He has over 5 years of experience in GUI design, App development, PHP, MySQL, Javascript, AJAX, Java etc. He has developed many IT systems particularly facing consumers. He has worked in XXX company. He has a B.S. in Computer engineering from YYY University.</div>
               		
               		
               	</div>

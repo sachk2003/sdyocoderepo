@@ -3043,10 +3043,22 @@ margin-left:0px;
     
 	
 }
+
+#vendorlogin{
+	
+    width: 50%;
+    margin-left:25%;
+    right:25%;
+	
+}
+
+
 .form-horizontal .control-label {
   text-align:left;
   font-size:14px;
 }
+
+
 .control{
 	
 	display:block;
@@ -3078,6 +3090,37 @@ border: 1px solid #E78C8C;
 display: block;
 padding: 10px 8px;
 }
+.control-small{
+	display:block;
+    max-width:100px;
+    width:100px;
+    text-align:center;
+    margin-bottom:8px;
+    margin-top: 16px;
+    margin-left:auto;
+    margin-right:auto;
+    
+    background-color:#DA5050;
+    color:white;
+    background-image:none;
+    box-shadow:none;
+    
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
+    border-radius:0px;
+    font-size:14px;
+    letter-spacing:1px;
+    font-family: 'Novecento Bold', Arial, Helvetica, sans-serif;
+    /*padding:4px;*/
+	
+	
+}
+
+
+
+
+
+
 
 .error{
 	color:red;
@@ -3346,4 +3389,18 @@ border-radius: 50%;
 text-align: center;
 line-height: 30px;
 color: #FFF;
+}
+
+.form-errors{
+   margin-left:27%;	
+	
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+    cursor: pointer;
 }
