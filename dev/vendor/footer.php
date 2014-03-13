@@ -108,6 +108,169 @@
                 
                 
                });
+       /* Vendor Create Form*/     
+            
+         tpj("#signupform").validate({ 
+                
+                  // Specify the validation rules
+        rules: {
+        	
+           fname: {required:true},
+           lname: "required",
+           country: "required",
+           zip:"required",
+           address:"required",
+           city:"required",
+           state:"required",
+           phone:"required",
+           email2:"required",
+           category:"required"
+            
+        },
+                
+             // Specify the validation error messages
+        messages: {
+            fname: "First Name is Required",
+           lname: "Last Name is required",
+           country: "Country is required",
+           zip:"zip is required",
+           address:"Address is required",
+           city:"City is required",
+           state:"state is required",
+           phone:"Phone is required",
+           email2:"Email is required",
+           category:"Category is required"
+            
+        },
+        
+        submitHandler: function(form) {
+            form.submit();
+        }   
+                        
+                
+                
+               });
+               
+            
+        tpj("#vendorchangepwd").validate({ 
+                
+                  // Specify the validation rules
+        rules: {
+        	
+           email2: {required:true,email:true},
+           password2: "required",
+           newpassword: "required"
+            
+        },
+                
+             // Specify the validation error messages
+        messages: {
+            email2: "Enter a valid email",
+            newpassword:"Enter valid new password",
+            password2:"Please enter a correct password"
+            
+        },
+        
+        submitHandler: function(form) {
+            form.submit();
+        }   
+                
+                
+                
+                
+               });
+            
+            tpj("#discountadd").validate({ 
+                
+                  // Specify the validation rules
+        rules: {
+        	
+           discount: {required:true,email:true},
+           unit: "required",
+           startdate: "required",
+           enddate:"required"
+            
+        },
+                
+             // Specify the validation error messages
+        messages: {
+             discount:"Enter a discount",
+             unit:"Enter Unit",
+             startdate:"Enter Startdate",
+             enddate:"Enter enddate"
+            
+        },
+        
+        submitHandler: function(form) {
+            form.submit();
+        }   
+                
+                
+                
+                
+               });
+            
+      tpj('#discountdelete').validate({ // initialize the plugin
+        rules: {
+            'check_list[]': {
+                required: true,
+                //maxlength: 5
+            }
+        },
+        messages: {
+            'check_list[]': {
+                required: "You must check at least 1 box",
+                //maxlength: "Check no more than {0} boxes"
+            }
+        },
+        submitHandler: function (form) { // for demo
+            alert('valid form submitted'); // for demo
+            return false; // for demo
+        }
+    });
+            
+            
+      tpj("#vendorforgotpwd").validate({ 
+                
+                  // Specify the validation rules
+        rules: {
+        	
+           fname: {required:true},
+           lname: "required",
+           country: "required",
+           zip:"required",
+           address:"required",
+           city:"required",
+           state:"required",
+           phone:"required",
+           email2:{required:true,email:true},
+           
+            
+        },
+                
+             // Specify the validation error messages
+        messages: {
+            fname: "First Name is Required",
+           lname: "Last Name is required",
+           country: "Country is required",
+           zip:"zip is required",
+           address:"Address is required",
+           city:"City is required",
+           state:"state is required",
+           phone:"Phone is required",
+           email2:"Email is required",
+           
+            
+        },
+        
+        submitHandler: function(form) {
+            form.submit();
+        }   
+                        
+                
+                
+               });   
+            
             
             
             });         

@@ -1,4 +1,6 @@
 <?php 
+//var_dump($_SESSION);
+
 include 'header.php';
 ?>
 <div class="container" style="margin-top:7%;">
@@ -9,7 +11,7 @@ include 'header.php';
 			    	<h3 class="panel-title">Please sign in</h3>
 			 	</div>
 			  	<div class="panel-body">
-			    	<form accept-charset="UTF-8" role="form" action="../scripts/vendor_check_login.php" method="post">
+			    	<form  role="form" action="../scripts/vendor_check_login.php" method="post" id="loginform">
                     <fieldset>
 			    	  	<div class="form-group">
 			    		    <input class="form-control" placeholder="E-mail" name="email" type="text">
@@ -17,7 +19,9 @@ include 'header.php';
 			    		<div class="form-group">
 			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
 			    		</div>
+			    		<div class="form-group">
 			    	    <input class="btn btn-lg control-small btn-block" type="submit" value="Login">
+			    	   </div>
 			    	    <br />
 			    	    <a href='vendor_create_login.php'>Create Login</a>
 			    	    <br />

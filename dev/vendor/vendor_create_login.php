@@ -17,7 +17,7 @@ include 'header.php';
 
 
 
-<form method="post" action="../scripts/vendor_create_login.php">
+<form method="post" action="../scripts/vendor_create_login.php" id="signupform">
  <fieldset>
         <legend>Vendor Sign-Up Page</legend>
         <div class='row'>

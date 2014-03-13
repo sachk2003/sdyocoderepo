@@ -14,7 +14,7 @@ include 'header.php';
               	</ul>
            </div>  
       		<div class="col-md-9" style="margin-top:20px;">
-      		 <form method="post" action="../scripts/vendor_forgot_password.php">	
+      		 <form method="post" action="../scripts/vendor_forgot_password.php" id="vendorforgotpwd">	
       		 <fieldset>
 		        <legend>Vendor Sign-Up Page</legend>
 		        <div class='row'>

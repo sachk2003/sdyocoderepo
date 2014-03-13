@@ -1,9 +1,12 @@
 <?php
-session_start();
+
+$_SESSION=array();
+var_dump($_SESSION);
+echo "vendor_check Called";
 include("connect.php");
 // Store  variables from the login form
-$email = mysql_escape_string($_POST['email']);
-$password = mysql_escape_string($_POST['password']);
+$email = mysql_real_escape_string($_POST['email']);
+$password = mysql_real_escape_string($_POST['password']);
 $email = trim($email);
 //echo $email;
 $password = trim($password);
@@ -12,11 +15,11 @@ $result = mysql_query("SELECT * FROM vendor WHERE email LIKE '$email%'");
 
      if($row = mysql_fetch_array($result)){
 
-        $result = mysql_query("SELECT * FROM vendor WHERE email LIKE '$email%' AND password LIKE '$password%'");
+        $result = mysql_query("SELECT * FROM vendor WHERE email='$email' AND password LIKE '$password%'");
         if($row = mysql_fetch_array($result)){
-            print $row["fname"];
+            echo $row["fname"];
 
-              session_start ();
+              session_start();
               $_SESSION['fname']=$row["fname"];
               $_SESSION['email']=$row["email"];
               echo"Welcome ",$_SESSION['fname'];

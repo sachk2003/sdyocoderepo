@@ -37,7 +37,7 @@ mysql_close();
   			<div class="col-md-3" id="leftCol">
               
               	<ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="vendor_home.php">Welcome</a></li>
+                  <li><a href="vendor_home.php">Vendor Home</a></li>
                   <li><a href="discount_code_add.php">Add Discounts and Offerings</a></li>
                   <li><a href="discount_update.php">Update Discounts and Offerings</a></li>
                   <li><a href="discount_delete.php">Delete Discounts and Offerings</a></li>
@@ -50,7 +50,7 @@ mysql_close();
              <h6 style="text-align: center">ADD Discounts and Offerings</h6>
              <div class="col-md-12 col-md-offset-1">
              
-             <form id="FormName" class="form-horizontal" action="../scripts/discount_add.php" method="post" name="FormName">
+             <form id="discountadd" class="form-horizontal" action="../scripts/discount_add.php" method="post" name="FormName">
                        
              
              <div class="form-group">

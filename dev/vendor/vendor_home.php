@@ -2,6 +2,12 @@
 include("../scripts/connect.php");
 include 'header.php';
 session_start();
+//var_dump($_SESSION);
+if(!isset($_SESSION['fname'])){
+                   echo "<h6 style='margin-top:10%;margin-left:30%;'>Please <a href='index.php'>Click Here</a> to Login </h6>";
+                   exit;
+                  }
+                  
 ?>
 
  
@@ -10,7 +16,7 @@ session_start();
   			<div class="col-md-3" id="leftCol">
               
               	<ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="vendor_home.php">Welcome</a></li>
+                  <li><a href="vendor_home.php">Vendor Home</a></li>
                   <li><a href="discount_code_add.php">Add Discounts and Offerings</a></li>
                   <li><a href="discount_update.php">Update Discounts and Offerings</a></li>
                   <li><a href="discount_delete.php">Delete Discounts and Offerings</a></li>
@@ -21,11 +27,7 @@ session_start();
            </div>  
       		<div class="col-md-9" style="margin-top:20px;">
       	       <?php
-      	       if(!isset($_SESSION['fname'])){
-                   echo"Please Create Login";
-                   exit;
-                  }
-                  
+      	       
               echo"<h5>Welcome, ",$_SESSION['fname'],".</h5>";
               echo "<br><br>";
               $email=$_SESSION['email'];

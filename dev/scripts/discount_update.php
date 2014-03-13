@@ -16,7 +16,7 @@ exit;
   			<div class="col-md-3" id="leftCol">
               
               	<ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="../vendor/vendor_home.php">Welcome</a></li>
+                  <li><a href="../vendor/vendor_home.php">Vendor Home</a></li>
                   <li><a href="../vendor/discount_code_add.php">Add Discounts and Offerings</a></li>
                   <li><a href="../vendor/discount_update.php">Update Discounts and Offerings</a></li>
                   <li><a href="../vendor/discount_delete.php">Delete Discounts and Offerings</a></li>

@@ -40,7 +40,7 @@ mysql_close();
   			<div class="col-md-3" id="leftCol">
               
               	<ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="vendor_home.php">Welcome</a></li>
+                  <li><a href="vendor_home.php">Vendor Home</a></li>
                   <li><a href="discount_code_add.php">Add Discounts and Offerings</a></li>
                   <li><a href="discount_update.php">Update Discounts and Offerings</a></li>
                   <li><a href="discount_delete.php">Delete Discounts and Offerings</a></li>
@@ -53,7 +53,7 @@ mysql_close();
       			<?php if ($num > 0){?> 
       			<h6>Delete Discounts and Offerings </h6> 
                
-      <form id="FormName" class="form-horizontal" action="../scripts/discount_delete.php" method="post" name="FormName">
+      <form id="discountdelete" class="form-horizontal" action="../scripts/discount_delete.php" method="post" name="discountdelete">
       <table class="table table-bordered"><tr><td></td><td>Item</td><td>UPC</td><td>Discount</td><td>Unit</td><td>Start Date</td><td>End Date</td></tr>
       <?php 
               	for($i=0;$i<sizeof($array);$i++)

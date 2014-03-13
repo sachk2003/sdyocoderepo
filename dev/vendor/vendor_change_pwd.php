@@ -30,7 +30,7 @@ session_start();
               echo "<br><br>";
               $email=$_SESSION['email'];
               ?>
-              <form method="post" action="../scripts/vendor_change_password.php">	
+              <form method="post" action="../scripts/vendor_change_password.php" id="vendorchangepwd">	
 	      		 <fieldset>
 			        <legend>Vendor Change Password</legend>
 			        <div class='row'>
