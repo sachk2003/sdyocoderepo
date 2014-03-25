@@ -190,7 +190,7 @@ if($upccount!=0)
 	 
   <div class="col-sm-6 col-md-2" id="<?php echo $upcids[$n];?>">
     <div class="thumbnail">
-      <img data-src="holder.js/300x200"  name="<?php echo $upcids[$n];?>" rel="popover" data-content="" title="Product Details" id="productimage" alt="Product Image">
+      <img data-src="holder.js/300x200"  target="_blank" name="<?php echo $upcids[$n];?>" rel="popover" data-content="" title="Product Details" id="productimage" alt="Product Image">
       <p id="url" style="text-align: center"></p>
       <div class="caption">
         <h5 style="text-align: center">Deals on this Product</h5>
