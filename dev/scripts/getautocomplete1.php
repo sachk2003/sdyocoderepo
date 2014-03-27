@@ -7,7 +7,7 @@
 $config = array(
     'endpoint' => array(
         'sdyo' => array(
-            'host' => '54.186.192.32', 'port' => '8983', 'path' => '/solr/'
+            'host' => 'dev.superdealyo.com', 'port' => '8983', 'path' => '/solr/'
         )
     )
 );

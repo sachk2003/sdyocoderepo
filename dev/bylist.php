@@ -183,7 +183,7 @@
                 
                 
                 tpj("#tag1").autocomplete({
-                        source:'scripts/getautocomplete1.php',
+                        source:'scripts/getautocomplete2.php',
                         search: function() {
           // custom minLength
           var term = extractLast( this.value );
