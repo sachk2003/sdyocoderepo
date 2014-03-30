@@ -27,7 +27,10 @@ $client = new Solarium\Client($config);
  // get a terms query instance and set some options
 $query = $client->createTerms();
 $query->setFields('sname');
-$query->setPrefix($searchterm); 
+//$query->setPrefix($searchterm); 
+$query->setRegex($searchterm.'.*');
+$query->setRegexflags('case_insensitive');
+
 //$query->setLowerbound($searchterm);
  
 // this executes the query and returns the result

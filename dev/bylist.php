@@ -184,29 +184,7 @@
                 
                 tpj("#tag1").autocomplete({
                         source:'scripts/getautocomplete2.php',
-                        search: function() {
-          // custom minLength
-          var term = extractLast( this.value );
-          
-          if ( term.length < 2 ) {
-            return false;
-          }
-        },
-        focus: function() {
-          // prevent value inserted on focus
-          return false;
-        },
-        select: function( event, ui ) {
-          var terms = split( this.value );
-          // remove the current input
-          terms.pop();
-          // add the selected item
-          terms.push( ui.item.value );
-          // add placeholder to get the comma-and-space at the end
-          terms.push( "" );
-          this.value = terms.join( " " );
-          return false;
-        },
+                                
                         minLength:1,
                     open:function(event, ui)
                     {
@@ -218,7 +196,7 @@
                     
                     
                     tpj("#tag2").autocomplete({
-                        source:'scripts/getautocomplete1.php',
+                        source:'scripts/getautocomplete2.php',
                         minLength:1,
                     open:function(event, ui)
                     {
@@ -227,7 +205,7 @@
 
                     });
                     tpj("#tag3").autocomplete({
-                        source:'scripts/getautocomplete.php',
+                        source:'scripts/getautocomplete2.php',
                         minLength:1,
                     open:function(event, ui)
                     {
@@ -236,7 +214,7 @@
 
                     });
                     tpj("#tag4").autocomplete({
-                        source:'scripts/getautocomplete.php',
+                        source:'scripts/getautocomplete2.php',
                         minLength:1,
                     open:function(event, ui)
                     {
@@ -245,7 +223,7 @@
 
                     });
                     tpj("#tag5").autocomplete({
-                        source:'scripts/getautocomplete.php',
+                        source:'scripts/getautocomplete2.php',
                         minLength:1,
                     open:function(event, ui)
                     {
