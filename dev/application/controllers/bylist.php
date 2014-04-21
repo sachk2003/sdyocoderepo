@@ -194,10 +194,7 @@ class Bylist extends CI_Controller {
 				$upccode=substr($upcid,0,3);
 				$imgpath="http://superdealyo.com/images/gtin/gtin-".$upccode."/$upcid.jpg";
 				
-				
-				
-				
-				
+							
 			    array_push($images,$imgpath);
 				
 				
