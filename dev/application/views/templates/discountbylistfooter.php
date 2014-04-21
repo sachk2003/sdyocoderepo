@@ -1,12 +1,12 @@
 <footer id="footer-1" class="footer">
                 <div class="container">
                     <div class="row">
-                    	<div class="col-md-2"><a href="vendor/index.php" >Vendor Login</a></div>
-                        <div class="col-md-2"><a href="about.php" >About Us</a></div>
-                        <div class="col-md-2 "><a href="privacy.php">Privacy</a></div>
-                        <div class="col-md-2 "><a href="help.php">Help</a></div>
-                        <div class="col-md-2 "><a href="jobs.php">Jobs</a></div>
-                        <div class="col-md-2 "><a href="contact.php">Contact</a></div>
+                    	<div class="col-md-2"><a href="../vendor/index.php" >Vendor Login</a></div>
+                        <div class="col-md-2"><a href="../about.php" >About Us</a></div>
+                        <div class="col-md-2 "><a href="../privacy.php">Privacy</a></div>
+                        <div class="col-md-2 "><a href="../help.php">Help</a></div>
+                        <div class="col-md-2 "><a href="../jobs.php">Jobs</a></div>
+                        <div class="col-md-2 "><a href="../contact.php">Contact</a></div>
                                               
                         
                     </div>
