@@ -187,12 +187,19 @@ class Bylist extends CI_Controller {
 		foreach($items as $item)
 		{
 			$gtindetails=$this->discounts->getgtindetails($item);	
-	        $upcid=$gtindetails[0]['GTIN_CD'];
+	        $upcid = $gtindetails[0]['GTIN_CD'];
 	        if($upcid!='')
 			  { $upccount++;
 		        array_push($upcids,$upcid);
 				$upccode=substr($upcid,0,3);
 				$imgpath="http://superdealyo.com/images/gtin/gtin-".$upccode."/$upcid.jpg";
+				if (@getimagesize($src)) {
+					$imgpath="http://echo base_url('assets/img/notavailable.gif')";
+					
+				}	
+				
+				$imgpath="http://superdealyo.com/images/gtin/gtin-".$upccode."/$upcid.jpg";
+				
 			    array_push($images,$imgpath);
 				
 				
