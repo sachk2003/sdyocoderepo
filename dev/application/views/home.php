@@ -11,7 +11,7 @@
         <h1>The closest store with the lowest price for YOUR shopping list</h1>
         
       </div>
-      <a href="bylist" class="btn btn-primary transition"><span>CREATE SHOPPING LIST </span></a>
+      <a href="bylist/" class="btn btn-primary transition"><span>CREATE SHOPPING LIST </span></a>
       
       </div>
     
@@ -179,6 +179,7 @@
                    			<td><h2 class="facebook"><i class="icon-facebook"></i></h2></td>
                    			<td><h2 class="twitter"><i class="icon-twitter"></i></h2></td>
                    			<td><h2 class="youtube"><i class="icon-youtube"></i></h2></td>
+                   			<td><h2 class="youtube"><i class="icon-rss"></i></h2></td>
                    			<td><h2 class="pinterest"><i class="icon-pinterest"></i></h2></td>
                    		</tr>
              </table>
