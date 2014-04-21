@@ -193,12 +193,14 @@ class Bylist extends CI_Controller {
 		        array_push($upcids,$upcid);
 				$upccode=substr($upcid,0,3);
 				$imgpath="http://superdealyo.com/images/gtin/gtin-".$upccode."/$upcid.jpg";
+				
 				if (@getimagesize($src)) {
-					$imgpath="http://echo base_url('assets/img/notavailable.gif')";
+					$imgpath="http://dev.superdealyo.com/assets/img/notavailable.gif";
+					
 					
 				}	
 				
-				$imgpath="http://superdealyo.com/images/gtin/gtin-".$upccode."/$upcid.jpg";
+				
 				
 			    array_push($images,$imgpath);
 				
