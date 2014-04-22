@@ -192,9 +192,14 @@ class Bylist extends CI_Controller {
 			  { $upccount++;
 		        array_push($upcids,$upcid);
 				$upccode=substr($upcid,0,3);
+				$this->load->helper('file');
+				$path="../images/gtin/gtin-".$upccode."/$upcid.jpg";
+				$exists = read_file($path);
+				if($exists)
 				$imgpath="http://superdealyo.com/images/gtin/gtin-".$upccode."/$upcid.jpg";
-				
-							
+				else
+				$imgpath="http://dev.superdealyo.com/assets/img/notavailable.gif";			
+			    
 			    array_push($images,$imgpath);
 				
 				
