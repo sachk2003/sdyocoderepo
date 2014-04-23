@@ -27,8 +27,8 @@ class Login extends CI_Controller {
 	 
 	public function index()
 	{
-               
-        $this->load->view('vendor/login'); 
+         $data['message']='';      
+        $this->load->view('vendor/login',$data); 
 	}
 	
 	
