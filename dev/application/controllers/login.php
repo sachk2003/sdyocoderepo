@@ -67,7 +67,7 @@ class Login extends CI_Controller {
 			$this->session->set_userdata($data);
 			//var_dump($data);
 			
-            header('Location:/super/vendor/index');
+            header('Location:../vendor/index');
 			
 		
 		}
