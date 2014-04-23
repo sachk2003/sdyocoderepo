@@ -132,4 +132,18 @@ if($upccount!=0)
    
    
    <input name="maxcount" type="hidden" id="maxcount" value="<?php echo $max;?>">
-<?php } $this->load->view('templates/discountbylistfooter');?>
+<?php }
+
+else{
+?>
+  	<div class="container-products">
+	  <div class="row">
+            		
+            		<div class="col-md-12">
+            			<h2 style="color:#FF0000;text-align: center">No Discounts Found </h2>
+            		</div>
+        </div>
+     </div>       		
+	<?php
+}
+$this->load->view('templates/discountbylistfooter');?>
