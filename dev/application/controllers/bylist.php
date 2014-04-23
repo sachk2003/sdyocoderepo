@@ -165,7 +165,7 @@ class Bylist extends CI_Controller {
 		 $zipcode=explode('-',$zip);
          $city=explode(',', $zipcode[1]);		 
 		 
-		 $items=array();
+		$items=array();
 		if($item1!='') array_push($items,$item1);
 		if($item2!='') array_push($items,$item2);
 		if($item3!='') array_push($items,$item3);
@@ -186,11 +186,24 @@ class Bylist extends CI_Controller {
 		$details=array();
 		foreach($items as $item)
 		{
-			$gtindetails=$this->discounts->getgtindetails($item);	
-	        $upcid = $gtindetails[0]['GTIN_CD'];
-	        if($upcid!='')
-			  { $upccount++;
-		        array_push($upcids,$upcid);
+			
+		    $j=0;			     
+			foreach($vendors as $vendor)	
+			{   $vendorid=$vendor['vendorid'];
+			    $company=$vendor['company'];
+				$itemdetails=$this->discounts->getdiscountbyitem($vendorid,$item);
+				//var_dump($itemdetails);
+				
+			    if(count($itemdetails)!=0)
+				{  //var_dump($itemdetails);
+				   
+				  			  $upcid=$itemdetails[0]['upc'];
+							  
+			      if($upcid)
+			      {
+			      	
+				  $upccount++;
+		               array_push($upcids,$upcid);
 				$upccode=substr($upcid,0,3);
 				$this->load->helper('file');
 				$path="../images/gtin/gtin-".$upccode."/$upcid.jpg";
@@ -200,20 +213,7 @@ class Bylist extends CI_Controller {
 				else
 				$imgpath="http://dev.superdealyo.com/assets/img/notavailable.gif";			
 			    
-			    array_push($images,$imgpath);
-				
-				
-			  }	
-		    $j=0;			     
-			foreach($vendors as $vendor)	
-			{   $vendorid=$vendor['vendorid'];
-			    $company=$vendor['company'];
-				$itemdetails=$this->discounts->getdiscountbyitem($vendorid,$item);
-				//var_dump($itemdetails);
-			    if(count($itemdetails)!=0)
-				{  //var_dump($itemdetails);
-			      if($upcid==$itemdetails[0]['upc'])
-			      {
+			    array_push($images,$imgpath);	
 			      //echo $j;
 				  $details[$k][$j][]= $itemdetails[0]['item'];	
 				  $details[$k][$j][]= $company;
@@ -232,9 +232,11 @@ class Bylist extends CI_Controller {
 				 	
 				}
 				$j++;
+				
 			}
 		
-		$k++;							
+		$k++;	
+								
 		}
 		$itemsinfo[]=$upccount;
 		$itemsinfo[]=$upcids;
@@ -245,6 +247,7 @@ class Bylist extends CI_Controller {
 		//var_dump($details);
 		//var_dump($itemsinfo);	
 		$data['details']=$itemsinfo;
+		
 		$this->load->view('discountbylist.php',$data);
 			 
         		 
