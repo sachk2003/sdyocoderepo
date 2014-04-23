@@ -370,10 +370,7 @@ class Vendorfunctions extends CI_Model{
 	}
 	
 	function discountupcadd($upc,$discount,$unit,$startdate,$enddate,$vendorid,$item)
-	{
-		
-		$date = new DateTime();
-   
+	{	$date = new DateTime();
 		$timestamp=$date->getTimestamp();
 		$this->db->set('timestamp', $timestamp);
 		$this->db->set('vendorid', $vendorid);
@@ -383,9 +380,8 @@ class Vendorfunctions extends CI_Model{
 		$this->db->set('enddate', $enddate);
 		$this->db->set('discount', $discount);
 		$this->db->set('unit', $unit);
-		$this->db->insert('discount');
-		
-		if ($this->db->affected_rows() == 1)
+		$query=$this->db->insert('discount');
+                  if($this->db->affected_rows() > 0)
 		 return true;
 		
 		else false;

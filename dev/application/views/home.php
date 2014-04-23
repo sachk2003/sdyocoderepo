@@ -25,7 +25,7 @@
         <h1>The closest store with the lowest price for YOUR shoppping list</h1>
         
       </div>
-      <a href="welcome/bylist" class="btn btn-primary transition"><span>CREATE SHOPPING LIST</span></a>
+      <a href="bylist/" class="btn btn-primary transition"><span>CREATE SHOPPING LIST</span></a>
       
       </div>
     </div>

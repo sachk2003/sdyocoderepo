@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'localhost:8080/super/';
+$config['base_url']	= 'dev.superdealyo.com';
 
 /*
 |--------------------------------------------------------------------------
