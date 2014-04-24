@@ -62,7 +62,9 @@ if($upccount!=0)
         <h5 style="text-align: center">Deals on this Product</h5>
         <p>
         	<div class="vendor">
-        		<table class="borderless"><tbody><tr><td class="store">Store</td><td>Price</td><td>Start Date</td><td>End Date</td></tr>
+        		<table class="borderless"><tbody>
+        		<tr><td colspan="4"><a href="<?php echo $discounts[0][0][8];?>" style="color:blue;"><?php echo $discounts[0][0][8];?></a></td></tr>
+        		<tr><td class="store">Store</td><td>Price</td><td>Start Date</td><td>End Date</td></tr>
         			<?php if(!empty($discounts[$n])) {
         				//var_dump($discounts);
         				
