@@ -175,12 +175,12 @@
            	 <h3 class="centered">Connect</h3>
            	 <div class="share1">
            	 <table>
-                   		<tr>
-                   			<td><h2 class="facebook"><i class="icon-facebook"></i></h2></td>
-                   			<td><h2 class="twitter"><i class="icon-twitter"></i></h2></td>
-                   			<td><h2 class="youtube"><i class="icon-youtube"></i></h2></td>
-                   			<td><h2 class="youtube"><i class="icon-rss"></i></h2></td>
-                   			<td><h2 class="pinterest"><i class="icon-pinterest"></i></h2></td>
+                   	<tr>
+                   			<td><a href="#"><h2 class="facebook"><i class="icon-facebook"></i></h2></a></td>
+                   			<td><a href="#"><h2 class="twitter"><i class="icon-twitter"></i></h2></a></td>
+                   			<td><a href="#"><h2 class="youtube"><i class="icon-youtube"></i></h2></a></td>
+                   			<td><a href="#"><h2 class="youtube"><i class="icon-rss"></i></h2></a></td>
+                   			<td><a href="#"><h2 class="pinterest"><i class="icon-pinterest"></i></h2></a></td>
                    		</tr>
              </table>
              </div>
