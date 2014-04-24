@@ -204,6 +204,18 @@ class Bylist extends CI_Controller {
 			      	
 				  $upccount++;
 		               array_push($upcids,$upcid);
+		               /* get the Brand Link*/
+				  $gtindetails=$this->discounts->getgtindetailsbyupc($upcid);
+				  $bsin=$gtindetails[0]['BSIN'];
+				  
+				  $branddetails=$this->discounts->getbranddetails($bsin);
+				  if(!$this->customSearch('not found', $branddetails[0]))
+		                   {
+		  	
+			       $link=$branddetails[0]['BRAND_LINK'];
+				  }
+		               
+		               
 				$upccode=substr($upcid,0,3);
 				$this->load->helper('file');
 				$path="../images/gtin/gtin-".$upccode."/$upcid.jpg";
@@ -223,6 +235,7 @@ class Bylist extends CI_Controller {
 				  $details[$k][$j][]= $itemdetails[0]['startdate'];	
 				  $details[$k][$j][]= $itemdetails[0]['enddate'];	
 				  $details[$k][$j][]= $imgpath;
+				  $details[$k][$j][]= $link;
 					
 				  } 	
 				}
