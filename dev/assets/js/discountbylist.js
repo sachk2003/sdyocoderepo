@@ -9,7 +9,7 @@ tpj('document').ready(function(){
           if(upccount!=0) 
 	      {   
 	      	 var numrows=tpj('input#maxcount').val();
-	      	 console.log(numrows);
+	      	 //console.log(numrows);
              switch(numrows){
 	      		case '1': console.log("entered 1");tpj('.container-products .row .col-md-2 .caption .vendor').css("height","50px");break;
 	      		case '2': console.log("entered 2");tpj('.container-products .row .col-md-2 .caption .vendor').css("height","70px");break;
@@ -122,7 +122,7 @@ tpj('document').ready(function(){
 			            	var upcid =tpj(this).attr("name"); 
 			            	var openingmessage='<div id="productinfo"><h5>Product Details</h5><p><ul>';
 			                var returnmessage=getproductinformation(upcid);
-			                console.log(returnmessage);
+			                //console.log(returnmessage);
 			                //console.log('Return message:'+returnmessage);
 			                
 			                var closemessage='</ul></p></div>';
