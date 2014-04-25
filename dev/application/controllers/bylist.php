@@ -202,8 +202,11 @@ class Bylist extends CI_Controller {
 			      if($upcid)
 			      {
 			      	
+				 if(!in_array($upcid,$upcids))
+				  {	
 				  $upccount++;
-		               array_push($upcids,$upcid);
+		          array_push($upcids,$upcid);
+				  }
 		               /* get the Brand Link*/
 				  $gtindetails=$this->discounts->getgtindetailsbyupc($upcid);
 				  $bsin=$gtindetails[0]['BSIN'];
