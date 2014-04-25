@@ -133,7 +133,7 @@ if($upccount!=0)
    </div>
    
    
-   <input name="maxcount" type="hidden" id="maxcount" value="<?php echo $max;?>">
+   <input name="maxcount" type="hidden" id="maxcount" value="<?php if($max==0) echo $maxdiscount;else echo $max+1;?>">
 <?php }
 
 else{
