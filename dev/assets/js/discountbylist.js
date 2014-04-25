@@ -111,9 +111,11 @@ tpj('document').ready(function(){
 			        var width = window.innerWidth;
 			        var positionleft = tpj(source).offset().left;
 			        //alert(width - positionleft);
-			        if((width - positionleft)<250)
+			       if((width - positionleft)<250 && width >500)
 			          return "left";         
-			        else
+			        else if(width < 500)
+			           return "auto";
+			        else   
 			          return "right";
 			        
 			    },
