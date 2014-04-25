@@ -116,17 +116,27 @@ if($upccount!=0)
        
    </div>
    <div class="container">
-   	<div class="row" id="productbottom">
-		 <div class="col-md-12" style="margin-top:0px;">
-		 	<h3 style="color:#FF0000;text-align: center;">Best Bet</h3>
-		 	<br>
-		 	<p style="text-align: left;margin-left:42%;font-weight:600;color:black;">Save Money, gas and time in a Snap!</p>
-		 	<br>
-		 	<p style="text-align: left;margin-left:32%;font-weight:600;color:black;">Find the closest store with the lowest price for YOUR shopping list</p>
-		 </div>
-		
-		
-	</div>
+   	<div class="row">
+            		<div class="col-md-12">
+            			<h2 style="color:#FF0000;text-align: center">Best Bet</h2>
+            		</div>
+            		
+    </div>
+    <div class="row">
+    	            <div class="col-md-4"></div>
+            		<div class="col-md-4">
+            			<p style="color:#000000;text-align: center">Save Money, gas and time in a Snap!</p>
+            		</div>
+            		<div class="col-md-4"></div>
+    </div>
+    <div class="row">
+    	            <div class="col-md-3"></div>
+            		<div class="col-md-6">
+            			<p style="color:#000000;text-align: center">Find the closest store with the lowest price for YOUR shopping list</p>
+            		</div>
+            		<div class="col-md-3"></div>
+    </div>
+   	
    	
    	
    	
