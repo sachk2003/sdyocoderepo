@@ -115,6 +115,8 @@ tpj('document').ready(function(){
 			          return "left";         
 			        else if(width < 500)
 			           return "auto";
+			        else if(width < 800)
+			           return "auto";    
 			        else   
 			          return "right";
 			        
