@@ -17,7 +17,7 @@ class Login extends CI_Controller {
         parent::__construct();
 		$this->load->helper(array('form','url'));
 		$this->load->model('vendorfunctions');
-               $this->force_ssl();
+               
 		           
 
     }
@@ -27,7 +27,8 @@ class Login extends CI_Controller {
 	 
 	public function index()
 	{
-         $data['message']='';      
+         $data['message']='';  
+         $this->force_ssl();
         $this->load->view('vendor/login',$data); 
 	}
 	
@@ -35,6 +36,7 @@ class Login extends CI_Controller {
         {
         $CI =& get_instance();
         $CI->config->config['base_url'] = str_replace('http://', 'https://', $CI->config->config['base_url']);
+        
         if ($_SERVER['SERVER_PORT'] != 443)
         {
             redirect($CI->uri->uri_string());
