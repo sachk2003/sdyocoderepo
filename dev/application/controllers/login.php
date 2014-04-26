@@ -28,20 +28,11 @@ class Login extends CI_Controller {
 	public function index()
 	{
          $data['message']='';  
-         $this->force_ssl();
+        
         $this->load->view('vendor/login',$data); 
 	}
 	
-	function force_ssl()
-        {
-        $CI =& get_instance();
-        $CI->config->config['base_url'] = str_replace('http://', 'https://', $CI->config->config['base_url']);
-        echo $CI->config->config['base_url'];
-        if ($_SERVER['SERVER_PORT'] != 443)
-        {
-            redirect($CI->uri->uri_string());
-         }
-        }
+	
 	
 	public function logincheck()
 	{
