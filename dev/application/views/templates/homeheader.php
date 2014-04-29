@@ -9,17 +9,17 @@
         
         <title>SuperDealyo - Location Aware Shopping</title>
         <!-- Bootstrap Core CSS -->
-        <link href="http://<?php echo base_url('assets/bootstrap/css/bootstrap.css');?>" rel="stylesheet">
-        <link href="http://<?php echo base_url('assets/BradhITC/font.css');?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/bootstrap/css/bootstrap.css');?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/BradhITC/font.css');?>" rel="stylesheet">
         <!-- Plugins CSS -->
-        <link href="http://<?php echo base_url('assets/UItoTop/css/ui.totop.css');?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/UItoTop/css/ui.totop.css');?>" rel="stylesheet">
         <!--<link href="assets/prettyPhoto/css/prettyPhoto.css" rel="stylesheet">-->
         
         <!-- Custom Stylesheet For This Template -->
-        <link href="http://<?php echo base_url('assets/css/stylesheet.css')?>" rel="stylesheet">
-        <link href="http://<?php echo base_url('assets/css/skins.css')?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/css/stylesheet.css')?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/css/skins.css')?>" rel="stylesheet">
         <!-- Font Awesome  -->    
-        <link href="http://<?php echo base_url('assets/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
         <!-- Google Fonts -->    
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
