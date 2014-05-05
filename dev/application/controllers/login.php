@@ -15,9 +15,9 @@ class Login extends CI_Controller {
 	 function __construct(){
 
         parent::__construct();
-		$this->load->helper(array('form'));
+		$this->load->helper(array('form','url'));
 		$this->load->model('vendorfunctions');
-          
+               
 		           
 
     }
@@ -27,8 +27,9 @@ class Login extends CI_Controller {
 	 
 	public function index()
 	{
-               
-        $this->load->view('vendor/login'); 
+         $data['message']='';  
+        
+        $this->load->view('vendor/login',$data); 
 	}
 	
 	
@@ -39,7 +40,7 @@ class Login extends CI_Controller {
 			   
 		//$this->load->library('session');
 		$this->load->library('form_validation');
-		$this->load->helper('url');
+		$this->load->helper(array('form', 'url'));
 		
 		$email=$this->input->post('email');
 		$password=$this->input->post('password');
@@ -67,26 +68,21 @@ class Login extends CI_Controller {
 			$this->session->set_userdata($data);
 			//var_dump($data);
 			
-            header('Location:/super/vendor/index');
+            header('Location:../vendor/index');
 			
 		
 		}
 		else{
-			//echo "called";
-		       
 			$this->form_validation->set_message('required', 'Invalid username or password');
-			header('Location:index');
+			$message="Invalid username or password";
+			$data['message']=$message;
+			$this->load->view('vendor/login',$data);
 			
 		}
 		}
 		else{
-			//echo "called";
-			//echo form_error('email');
-			//echo form_error('password'); 
-			 //echo validation_errors();
-			//$this->form_validation->set_message('email', 'Invalid username or password');
-			//$this->form_validation->set_message('password', 'Invalid username or password');
-			header('Location:index');
+			$data['message']='';
+			$this->load->view('vendor/login',$data);
 			
 		}
       

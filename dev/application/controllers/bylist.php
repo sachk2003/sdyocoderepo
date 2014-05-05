@@ -202,8 +202,28 @@ class Bylist extends CI_Controller {
 			      if($upcid)
 			      {
 			      	
+<<<<<<< HEAD
 				  $upccount++;
 		               array_push($upcids,$upcid);
+=======
+				 if(!in_array($upcid,$upcids))
+				  {	
+				  $upccount++;
+		          array_push($upcids,$upcid);
+				  }
+		               /* get the Brand Link*/
+				  $gtindetails=$this->discounts->getgtindetailsbyupc($upcid);
+				  $bsin=$gtindetails[0]['BSIN'];
+				  
+				  $branddetails=$this->discounts->getbranddetails($bsin);
+				  if(!$this->customSearch('not found', $branddetails[0]))
+		                   {
+		  	
+			       $link=$branddetails[0]['BRAND_LINK'];
+				  }
+		               
+		               
+>>>>>>> cdce262e434578474f4c7edbef783a1444e8a520
 				$upccode=substr($upcid,0,3);
 				$this->load->helper('file');
 				$path="../images/gtin/gtin-".$upccode."/$upcid.jpg";
@@ -223,6 +243,8 @@ class Bylist extends CI_Controller {
 				  $details[$k][$j][]= $itemdetails[0]['startdate'];	
 				  $details[$k][$j][]= $itemdetails[0]['enddate'];	
 				  $details[$k][$j][]= $imgpath;
+				  $details[$k][$j][]= $link;
+				  $details[$k][$j][] = $vendorid;
 					
 				  } 	
 				}
@@ -252,6 +274,34 @@ class Bylist extends CI_Controller {
 			 
         		 
 	  }	
+	
+
+     public function vendorinfo()
+	  {
+	  	$vendorid=$this->input->get('vendorid');
+		if($vendorid!='')
+		{
+			
+			$vendorinfo=$this->discounts->vendorinformation($vendorid);
+		    if(count($vendorinfo)!=0)
+			{
+				$data['message']='';	
+				$data['details']=$vendorinfo;
+				$this->load->view('vendorinfo',$data);
+				
+			}
+			else{
+				
+				$data['message']='No Vendor Details found';	
+				$data['details']='';
+				$this->load->view('vendorinfo',$data);
+			}
+		  	
+		}
+		
+		
+	  }
+
 
       public function getproductinfo()
 	  {

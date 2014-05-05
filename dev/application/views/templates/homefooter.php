@@ -38,13 +38,13 @@
         <!-- Placed At The End Of The Document So Page Loads Faster -->
         <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
         
-        <script src="http://<?php echo base_url('assets/js/jquery.bxslider.min.js');?>"></script>
-        <script src="http://<?php echo base_url('assets/bootstrap/js/bootstrap.min.js');?>"></script>
+        <script src="<?php echo base_url('assets/js/jquery.bxslider.min.js');?>"></script>
+        <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js');?>"></script>
                
         
-        <script src="http://<?php echo base_url('assets/UItoTop/js/easing.js');?>"></script>
-        <script src="http://<?php echo base_url('assets/UItoTop/js/jquery.ui.totop.min.js');?>"></script>
-        <script src="http://<?php echo base_url('assets/js/home.js')?>"></script>
+        <script src="<?php echo base_url('assets/UItoTop/js/easing.js');?>"></script>
+        <script src="<?php echo base_url('assets/UItoTop/js/jquery.ui.totop.min.js');?>"></script>
+        <script src="<?php echo base_url('assets/js/home.js')?>"></script>
         
         
        

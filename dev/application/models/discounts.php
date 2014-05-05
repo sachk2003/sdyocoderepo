@@ -36,6 +36,34 @@ class Discounts extends CI_Model{
 		
 	   }
 	   
+	   public function vendorinformation($vendorid)
+	   {
+	   	
+		$this->db->where('vendorid', $vendorid);
+        
+		$query=$this->db->get('vendor');
+		
+		if($query->num_rows >= 1){
+
+            foreach ($query->result() as $row)
+            {   //echo "came";
+                
+                $data[]=(array)$row;
+               
+
+            }
+            
+
+        }
+		else{
+			$data[]='No Vendors';
+			
+		}
+		
+		return $data;
+		
+	   }
+	   
 	   
 	   public function getdiscountbyitem($vendor,$item)
 	   {

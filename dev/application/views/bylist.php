@@ -1,11 +1,11 @@
 <?php $this->load->view('templates/homeheader');?>
-<div class="container-form" id="pad" >
+<div class="container" >
             	<div class="row">
-            		<div class="col-md-2"></div>
-            		<div class="col-md-8">
+            		<div class="col-md-3"></div>
+            		<div class="col-md-6" id="pad">
             			<h2 style="color:#FF0000;">Create YOUR shopping list</h2>
             		</div>
-            		<div class="col-md-2"></div>
+            		<div class="col-md-3"></div>
                	</div>
              <?php 
              
@@ -14,9 +14,9 @@
              
              ?>            
             
-              <div class="row" style="margin-top:10px">
-               <div class="col-md-1"></div>
-               <div class="col-md-10">
+              <div class="row">
+               <div class="col-md-3"></div>
+               <div class="col-md-6" id="pad">
             			
   <form class="form-horizontal " role="form" method="post" action="getdiscounts" id="searchform">
   	<?php for($i=0;$i<5;$i++){?>
@@ -41,7 +41,7 @@
    </div>
    
    
-   	<div class="col-md-4 col-md-offset-2">
+   	<div>
    	  <button  class="control"><span>SUBMIT</span></button>
    	</div>
    
@@ -51,7 +51,7 @@
             			
            </div>
               
-            
+            <div class="col-md-3"></div>
             
             
               </div>            	

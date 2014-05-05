@@ -9,7 +9,7 @@ tpj('document').ready(function(){
           if(upccount!=0) 
 	      {   
 	      	 var numrows=tpj('input#maxcount').val();
-	      	 console.log(numrows);
+	      	 //console.log(numrows);
              switch(numrows){
 	      		case '1': console.log("entered 1");tpj('.container-products .row .col-md-2 .caption .vendor').css("height","50px");break;
 	      		case '2': console.log("entered 2");tpj('.container-products .row .col-md-2 .caption .vendor').css("height","70px");break;
@@ -44,27 +44,35 @@ tpj('document').ready(function(){
 			                             	
 			                                //console.log("entered message 0");	
 			                                //console.log(element.pnm);console.log(element.upc);
+			                                if(element.pnm!=null)
 			                                message+='<li>Product Name: '+element.pnm+'</li>';
-			                                message+='<li>Product Code: '+element.upc+'</li>';
-			                                if(element.mg!=0)
+			                                
+			                                if(element.upc!=null)
+			                                 message+='<li>Product Code: '+element.upc+'</li>';
+			                                 
+			                                if(element.mg!=null)
 			                                {
 			                                	message+='<li>Weight : '+element.mg+' grams</li>';
 			                                }
-			                                if(element.moz!=0)
+			                                if(element.moz!=null)
 			                                {
 			                                	message+='<li>Volume : '+element.moz+' oz</li>';
 			                                }
-			                                if(element.mml!=0)
+			                                if(element.mml!=null)
 			                                {
 			                                	message+='<li>Volume : '+element.mml+' ml</li>';
 			                                }
-			                                if(element.mfloz!=0)
+			                                if(element.mfloz!=null)
 			                                {
 			                                	message+='<li>Volume : '+element.mfloz+' fluid oz</li>';
 			                                }
-			                                
+			                                if(element.bsin!=null)
 			                             	message+='<li>Brand Code: '+element.bsin+'</li>';
+			                             	
+			                             	if(element.brandnm!=null)
 			                             	message+='<li>Brand Name: '+element.brandnm+'</li>';
+			                             	
+			                             	if(element.brandtypename!=null)
 			                             	message+='<li>Brand Type: '+element.brandtypename+'</li>';
 			                             	//console.log(message);
 			                             	
@@ -103,9 +111,13 @@ tpj('document').ready(function(){
 			        var width = window.innerWidth;
 			        var positionleft = tpj(source).offset().left;
 			        //alert(width - positionleft);
-			        if((width - positionleft)<250)
+			       if((width - positionleft)<250 && width >500)
 			          return "left";         
-			        else
+			        else if(width < 500)
+			           return "auto";
+			        else if(width < 800)
+			           return "auto";    
+			        else   
 			          return "right";
 			        
 			    },
@@ -114,7 +126,7 @@ tpj('document').ready(function(){
 			            	var upcid =tpj(this).attr("name"); 
 			            	var openingmessage='<div id="productinfo"><h5>Product Details</h5><p><ul>';
 			                var returnmessage=getproductinformation(upcid);
-			                console.log(returnmessage);
+			                //console.log(returnmessage);
 			                //console.log('Return message:'+returnmessage);
 			                
 			                var closemessage='</ul></p></div>';

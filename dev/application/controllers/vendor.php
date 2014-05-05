@@ -25,7 +25,7 @@ class Vendor extends CI_Controller {
 		
         //$this->is_logged_in();
 		if(!$this->session->userdata('is_logged_in'))
-			      header('Location:/super/login/index');     
+			      header('Location:../login/index');     
 
          }
 			function index()
@@ -53,7 +53,7 @@ class Vendor extends CI_Controller {
 			   else
 			   {
 			     //If no session, redirect to login page
-			      header('Location:/super/login/index');
+			      header('Location:../login/index');
 			   }
 			 }
 			
@@ -63,7 +63,7 @@ class Vendor extends CI_Controller {
 			    $this->session->unset_userdata('email');
 				 $this->session->unset_userdata('fname');
 			   session_destroy();
-			   header('Location:/super/login/index');
+			   header('Location:../login/index');
 			 }
 	 
 	 
@@ -228,24 +228,23 @@ class Vendor extends CI_Controller {
 			}
 			
 			function discount_add_submit()
-			{
-			$upc = $this->input->post('upc');
+                        {       
+			
+                        $upc = $this->input->post('upc');
+
 			$item = $this->input->post('item');
 			$discount = $this->input->post('discount');
 			$unit = $this->input->post('unit');
 			$startdate = $this->input->post('startdate');
 			$enddate = $this->input->post('enddate');
 			$vendorid=$this->input->post('vendorid');
-			
 			$added=$this->vendorfunctions->discountupcadd($upc,$discount,$unit,$startdate,$enddate,$vendorid,$item);
-			
-			if($added)
-			{
-				$data['message']='Discount added successfully';
+                       if($added)
+		{		$data['message']='Discount added successfully';
 				
 			}
 			else{
-				
+
 				$data['message']='Discount could not be added successfully';
 			}
 				$data['upc']=$upc;

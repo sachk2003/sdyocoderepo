@@ -62,7 +62,9 @@ if($upccount!=0)
         <h5 style="text-align: center">Deals on this Product</h5>
         <p>
         	<div class="vendor">
-        		<table class="borderless"><tbody><tr><td class="store">Store</td><td>Price</td><td>Start Date</td><td>End Date</td></tr>
+        		<table class="borderless"><tbody>
+        		<tr><td colspan="4"><a target="_blank" href="<?php echo $discounts[0][0][8];?>" style="color:blue;"><?php echo $discounts[0][0][8];?></a></td></tr>
+        		<tr><td class="store">Store</td><td>Price</td><td>Start Date</td><td>End Date</td></tr>
         			<?php if(!empty($discounts[$n])) {
         				//var_dump($discounts);
         				
@@ -73,7 +75,7 @@ if($upccount!=0)
         				$price=$discount[4].$discount[3];
 						?>
         			
-        			<tr><td class="store"><?php echo $discount[1];?></td><td><?php echo $price;?></td><td><?php echo $discount[5];?></td><td><?php echo $discount[6];?></td></tr>
+        			<tr><td class="store"><a target="_blank" style="color:blue" href="vendorinfo?vendorid=<?php if($discount[9]!='') echo $discount[9];?>"><?php echo $discount[1];?></a></td><td><?php echo $price;?></td><td><?php echo $discount[5];?></td><td><?php echo $discount[6];?></td></tr>
         		<?php }
                     else $norec=1;
 					  
@@ -114,22 +116,46 @@ if($upccount!=0)
        
    </div>
    <div class="container">
-   	<div class="row" id="productbottom">
-		 <div class="col-md-12" style="margin-top:0px;">
-		 	<h3 style="color:#FF0000;text-align: center;">Best Bet</h3>
-		 	<br>
-		 	<p style="text-align: left;margin-left:42%;font-weight:600;color:black;">Save Money, gas and time in a Snap!</p>
-		 	<br>
-		 	<p style="text-align: left;margin-left:32%;font-weight:600;color:black;">Find the closest store with the lowest price for YOUR shopping list</p>
-		 </div>
-		
-		
-	</div>
+   	<div class="row">
+            		<div class="col-md-12">
+            			<h2 style="color:#FF0000;text-align: center">Best Bet</h2>
+            		</div>
+            		
+    </div>
+    <div class="row">
+    	            <div class="col-md-4"></div>
+            		<div class="col-md-4">
+            			<p style="color:#000000;text-align: center">Save Money, gas and time in a Snap!</p>
+            		</div>
+            		<div class="col-md-4"></div>
+    </div>
+    <div class="row">
+    	            <div class="col-md-3"></div>
+            		<div class="col-md-6">
+            			<p style="color:#000000;text-align: center">Find the closest store with the lowest price for YOUR shopping list</p>
+            		</div>
+            		<div class="col-md-3"></div>
+    </div>
+   	
    	
    	
    	
    </div>
    
    
-   <input name="maxcount" type="hidden" id="maxcount" value="<?php echo $max;?>">
-<?php } $this->load->view('templates/discountbylistfooter');?>
+   <input name="maxcount" type="hidden" id="maxcount" value="<?php if($max==0) echo $maxdiscount;else echo $max+1;?>">
+<?php }
+
+else{
+?>
+  	<div class="container-products">
+	  <div class="row">
+            		
+            		<div class="col-md-12">
+            			<h2 style="color:#FF0000;text-align: center">No Discounts Found </h2>
+            		</div>
+        </div>
+     </div>       		
+	<?php
+}
+$this->load->view('templates/discountbylistfooter');?>

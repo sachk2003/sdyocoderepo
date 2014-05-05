@@ -45,7 +45,7 @@
               	
               	<div class="row">
                   
-                  	<div class="col-md-4"><img src="http://<?php echo base_url('assets/img/sach.jpg');?>" width="300px" height="300px" class="img-responsive"></div>
+                  	<div class="col-md-4"><img src="<?php echo base_url('assets/img/sach.jpg');?>" width="300px" height="300px" class="img-responsive"></div>
                   	<div class="col-md-8">Sach Kangovi , Founder & CEO, is the chairman of the Board of of the company. He has over 25 years of IT experience. He has worked for 10 years in Fortune 20 Global corporations including Boeing, Johnson & Johnson, AT&T, Lucent and Comcast. He also worked as Vice President of Pre-Sales Support and System Architecture in a Global IT company and 6 years in mid-size and small companies. His work in Comcast as Distinguished Engineer earned him a patent on next generation provisioning system, approved in 154 countries. He has a Ph.D. in engineering from Rutgers University and an Executive MBA from Universitas 21 Global in collaboration with Harvard Business School.</div>            	
                     
                  
@@ -65,7 +65,7 @@
               	<h2 id="sec2">Management</h2>
               	<div class="row">
                   
-                  	<div class="col-md-4"><img src="http://<?php echo base_url('assets/img/sach.jpg');?>" width="300px" height="300px" class="img-responsive"></div>
+                  	<div class="col-md-4"><img src="<?php echo base_url('assets/img/sach.jpg');?>" width="300px" height="300px" class="img-responsive"></div>
                   	<div class="col-md-8">Sach Kangovi , Founder & CEO, is the chairman of the Board of of the company. He has over 25 years of IT experience. He has worked for 10 years in Fortune 20 Global corporations including Boeing, Johnson & Johnson, AT&T, Lucent and Comcast. He also worked as Vice President of Pre-Sales Support and System Architecture in a Global IT company and 6 years in mid-size and small companies. His work in Comcast as Distinguished Engineer earned him a patent on next generation provisioning system, approved in 154 countries. He has a Ph.D. in engineering from Rutgers University and an Executive MBA from Universitas 21 Global in collaboration with Harvard Business School.</div>            	
                     
                  

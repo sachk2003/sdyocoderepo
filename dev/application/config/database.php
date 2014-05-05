@@ -48,9 +48,9 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost:3307';
+$db['default']['hostname'] = 'superdealyo.cwnb3mxyxksk.us-west-2.rds.amazonaws.com';
 $db['default']['username'] = 'root';
-$db['default']['password'] = '';
+$db['default']['password'] = 'superdealyo';
 $db['default']['database'] = 'superdealyo';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';

@@ -1,4 +1,6 @@
-<?php $this->load->view('templates/homeheader');?>
+<?php $this->load->view('templates/homeheader');
+$this->load->helper("form");
+?>
 
 <div class="container" style="margin-top:7%;">
     <div class="row">
@@ -10,6 +12,7 @@
 			 	</div>
 			  	<div class="panel-body">
 			    	<h4><?php echo validation_errors(); ?></h4>
+			    	<h6 class="error"><?php if($message!='') echo $message; ?></h6>
 			    	<form  role="form" action="logincheck" method="post" id="loginform">
                     <fieldset>
 			    	  	<div class="form-group">
