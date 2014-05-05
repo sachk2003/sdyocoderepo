@@ -179,14 +179,14 @@ class Login extends CI_Controller {
 		"X-Mailer: PHP/" . phpversion();
 		
 		if(mail($email,"Registration Confirmation",
-		"Hello $fname\nThank you for taking time to create login with SuperDealyo.com\n
+		"Hello $fname,\nThank you for taking time to create login with SuperDealyo.com\n
 		Below is your login information.\n
 		Temporary Password:$password\n
-		You can access login page at http://superdealyo.com/vendor/vendor.html\n
+		You can access login page at http://dev.superdealyo.com/vendor/\n
 		After logging in please change the temporary password.\n
-		Thank you for your interest in SuperDealyo.com.\n
+		Thank you for your interest in SuperDealyo.com\n
 		\n
-		Sincerely;\n
+		Sincerely
 		\n
 		SuperDealyo Team\n
 		Bringing your world to your fingertips",$headers))
