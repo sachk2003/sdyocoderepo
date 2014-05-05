@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'dev.superdealyo.com';
+$config['base_url']	= (isset($_SERVER['HTTPS']) ? "https://" : "http://").'dev.superdealyo.com';
 
 /*
 |--------------------------------------------------------------------------
