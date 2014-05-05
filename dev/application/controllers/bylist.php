@@ -239,6 +239,7 @@ class Bylist extends CI_Controller {
 				  $details[$k][$j][]= $itemdetails[0]['enddate'];	
 				  $details[$k][$j][]= $imgpath;
 				  $details[$k][$j][]= $link;
+				  $details[$k][$j][] = $vendorid;
 					
 				  } 	
 				}
@@ -269,6 +270,33 @@ class Bylist extends CI_Controller {
         		 
 	  }	
 	
+
+     public function vendorinfo()
+	  {
+	  	$vendorid=$this->input->get('vendorid');
+		if($vendorid!='')
+		{
+			
+			$vendorinfo=$this->discounts->vendorinformation($vendorid);
+		    if(count($vendorinfo)!=0)
+			{
+				$data['message']='';	
+				$data['details']=$vendorinfo;
+				$this->load->view('vendorinfo',$data);
+				
+			}
+			else{
+				
+				$data['message']='No Vendor Details found';	
+				$data['details']='';
+				$this->load->view('vendorinfo',$data);
+			}
+		  	
+		}
+		
+		
+	  }
+
 
       public function getproductinfo()
 	  {
