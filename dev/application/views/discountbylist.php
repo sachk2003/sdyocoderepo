@@ -63,7 +63,7 @@ if($upccount!=0)
         <p>
         	<div class="vendor">
         		<table class="borderless"><tbody>
-        		<tr><td colspan="4"><a href="<?php echo $discounts[0][0][8];?>" style="color:blue;"><?php echo $discounts[0][0][8];?></a></td></tr>
+        		<tr><td colspan="4"><a target="_blank" href="<?php echo $discounts[0][0][8];?>" style="color:blue;"><?php echo $discounts[0][0][8];?></a></td></tr>
         		<tr><td class="store">Store</td><td>Price</td><td>Start Date</td><td>End Date</td></tr>
         			<?php if(!empty($discounts[$n])) {
         				//var_dump($discounts);
@@ -75,7 +75,7 @@ if($upccount!=0)
         				$price=$discount[4].$discount[3];
 						?>
         			
-        			<tr><td class="store"><?php echo $discount[1];?></td><td><?php echo $price;?></td><td><?php echo $discount[5];?></td><td><?php echo $discount[6];?></td></tr>
+        			<tr><td class="store"><a target="_blank" style="color:blue" href="vendorinfo?vendorid=<?php if($discount[9]!='') echo $discount[9];?>"><?php echo $discount[1];?></a></td><td><?php echo $price;?></td><td><?php echo $discount[5];?></td><td><?php echo $discount[6];?></td></tr>
         		<?php }
                     else $norec=1;
 					  
