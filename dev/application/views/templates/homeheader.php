@@ -24,8 +24,8 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
-        <script src="http://http://<?php echo base_url('assets/js/html5shiv.js')?>"></script>
-        <script src="http://<?php echo base_url('assets/js/respond.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/js/html5shiv.js')?>"></script>
+        <script src="<?php echo base_url('assets/js/respond.min.js')?>"></script>
         <![endif]-->
         <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
 
