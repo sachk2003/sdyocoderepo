@@ -183,7 +183,7 @@ class User extends CI_Controller {
 	 }
 	 else{
 	 	$data['message']='Your profile Deleted. You will be redirected soon ....';
-		$data['url']='/super/userlogin/index'; 
+		$data['url']='/userlogin/index'; 
 		$this->load->view('user/redirect',$data);
 	 }
 	
