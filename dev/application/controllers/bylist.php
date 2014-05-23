@@ -202,10 +202,10 @@ class Bylist extends CI_Controller {
 			      if($upcid)
 			      {
 			      	
-<<<<<<< HEAD
+
 				  $upccount++;
 		               array_push($upcids,$upcid);
-=======
+
 				 if(!in_array($upcid,$upcids))
 				  {	
 				  $upccount++;
@@ -223,7 +223,7 @@ class Bylist extends CI_Controller {
 				  }
 		               
 		               
->>>>>>> cdce262e434578474f4c7edbef783a1444e8a520
+
 				$upccode=substr($upcid,0,3);
 				$this->load->helper('file');
 				$path="../images/gtin/gtin-".$upccode."/$upcid.jpg";
