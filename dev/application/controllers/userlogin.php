@@ -417,7 +417,8 @@ class Userlogin extends CI_Controller {
 	 	foreach($items as $item)
 		{   $message.="<table><tr><td>";
 			if($discountarray[$item])
-			{   
+			{   $table="";
+				
 			    $table="<table style='background-color:#c1c1c1;width:50%;'><tr><th colspan='4'>".$item."</th></tr><tr><th>Vendor</th><th>Start Date</th><th>End Date</th><th>Discount</th></tr>"; 
 				foreach($discountarray[$item] as $discountinfo)
 				      {
