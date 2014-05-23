@@ -149,7 +149,7 @@ class Bylist extends CI_Controller {
 				
 	    } 
 
-        
+          /*
 	  public function getdiscounts()
 	  {
 	  	 
@@ -212,6 +212,7 @@ class Bylist extends CI_Controller {
 		          array_push($upcids,$upcid);
 				  }
 		               /* get the Brand Link*/
+		               /*
 				  $gtindetails=$this->discounts->getgtindetailsbyupc($upcid);
 				  $bsin=$gtindetails[0]['BSIN'];
 				  
@@ -275,7 +276,139 @@ class Bylist extends CI_Controller {
         		 
 	  }	
 	
-
+    */
+    
+    public function getdiscounts()
+	  {
+	  	 
+		
+	  	 $item1 = $this->input->post('item1');
+		 $item2 = $this->input->post('item2');
+		 $item3 = $this->input->post('item3');
+		 $item4 = $this->input->post('item4');
+		 $item5 = $this->input->post('item5');
+		 $zip   = $this->input->post('zip');
+         if($zip=='No Such Zip Code in USA')
+		 {
+		 	$data['main_content']='bylist';
+			$data['message']="Wrong Zip Code, Try Again";
+            $this->load->view('bylist',$data); 
+		 }	
+		 else{
+		 $zip=trim($zip);
+		 $zipcode=explode('-',$zip);
+         $city=explode(',', $zipcode[1]);		 
+		 
+		 
+		$items=array();
+		if($item1!='') array_push($items,$item1);
+		if($item2!='') array_push($items,$item2);
+		if($item3!='') array_push($items,$item3);
+		if($item4!='') array_push($items,$item4);
+		if($item5!='') array_push($items,$item5);
+		 
+		 
+		 
+		//$this->load->model('discounts');
+		$vendors=array();
+		$vendors = $this->discounts->availablevendors($zipcode[0],$city[0]);
+		
+		//$details=$this->getdiscountinfo($vendors, $item);
+		
+		$upcids=array();
+	    $images=array();
+		
+		
+		$k=0;$upccount=0;$imgpath='';
+		$details=array();
+		foreach($items as $item)
+		{
+			
+		    $j=0;			     
+			foreach($vendors as $vendor)	
+			{   $vendorid=$vendor['vendorid'];
+			    $company=$vendor['company'];
+				$itemdetails=$this->discounts->getdiscountbyitem($vendorid,$item);
+				//var_dump($itemdetails);
+				
+			    if(count($itemdetails)!=0)
+				{  //var_dump($itemdetails);
+				   
+				  $upcid=$itemdetails[0]['upc'];
+				  
+				
+							  
+			      if($upcid)
+			      {
+			      
+				  if(!in_array($upcid,$upcids))
+				  {	
+				  $upccount++;
+		          array_push($upcids,$upcid);
+				  }
+				  /* get the Brand Link*/
+				  $gtindetails=$this->discounts->getgtindetailsbyupc($upcid);
+				  $bsin=$gtindetails[0]['BSIN'];
+				  
+				  $branddetails=$this->discounts->getbranddetails($bsin);
+				  if(!$this->customSearch('not found', $branddetails[0]))
+		          {
+		  	
+			       $link=$branddetails[0]['BRAND_LINK'];
+				  }
+				  
+				$upccode=substr($upcid,0,3);
+				$this->load->helper('file');
+				$path="../images/gtin/gtin-".$upccode."/$upcid.jpg";
+				$exists = read_file($path);
+				if($exists)
+				$imgpath="http://superdealyo.com/images/gtin/gtin-".$upccode."/$upcid.jpg";
+				else
+				$imgpath="http://dev.superdealyo.com/assets/img/notavailable.gif";			
+			    
+			    array_push($images,$imgpath);	
+			      //echo $j;
+				  $details[$k][$j][]= $itemdetails[0]['item'];	
+				  $details[$k][$j][]= $company;
+				  $details[$k][$j][]= $itemdetails[0]['upc'];
+				  $details[$k][$j][]= $itemdetails[0]['discount'];
+				  $details[$k][$j][]= $itemdetails[0]['unit'];
+				  $details[$k][$j][]= $itemdetails[0]['startdate'];	
+				  $details[$k][$j][]= $itemdetails[0]['enddate'];	
+				  $details[$k][$j][]= $imgpath;
+				  $details[$k][$j][]= $link;
+				  $details[$k][$j][] = $vendorid;
+				  } 	
+				}
+				else 
+				{
+					$details[$k][$j]=array();
+				 	
+				}
+				$j++;
+				
+			}
+		
+		$k++;	
+								
+		}
+		$itemsinfo[]=$upccount;
+		$itemsinfo[]=$upcids;
+		$itemsinfo[]=$details;
+		$itemsinfo[]=$images;
+		//var_dump($upcids);
+		//var_dump($images);
+		//var_dump($details);
+		//var_dump($itemsinfo);	
+		$data['details']=$itemsinfo;
+		
+		$this->load->view('discountbylist.php',$data);
+			 
+			 } 		 
+	  }	
+    
+    
+    
      public function vendorinfo()
 	  {
 	  	$vendorid=$this->input->get('vendorid');
