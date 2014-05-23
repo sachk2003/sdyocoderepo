@@ -351,7 +351,7 @@ class Userlogin extends CI_Controller {
 			//var_dump($discountarray);
 			//var_dump($productarray);
 			$this->senduseremail($fname,$email,$items,$discountarray,$productarray);
-			exit;
+			
 		}
 		
 		
@@ -455,11 +455,11 @@ class Userlogin extends CI_Controller {
 	 	$message.="Thank you for using SuperDealyo.<br />";
 	 	$message.="<br />SuperDealyo User Support Team<br />";
 	 	echo $message;
-		/*if(mail($email,$subject,$message,$headers))
+		if(mail($email,$subject,$message,$headers))
 		return true;
 		else 
 	    return false;
-	    */
+	    
 	 	/*echo "\n --------------------- \n";
 	 	echo "Email id:".$email;
 		echo "Item Count: ".count($items)."\n";
