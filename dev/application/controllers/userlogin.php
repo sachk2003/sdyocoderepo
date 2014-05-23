@@ -305,13 +305,15 @@ class Userlogin extends CI_Controller {
 							  foreach($items as $item)
 							    { //echo " <br />For Item: ".$item." vendorid: ".$vendorid."\n";
 							      
-								  $itemdetails=$this->getproductdetails($item);
+								 // $itemdetails=$this->getproductdetails($item);
 								  
 								  
 								  $discounts= $this->discounts->getdiscountbyitem($vendorid,$item);
 								   if(!empty($discounts))
 								    {
 								    	//var_dump($discounts);
+								    	$upc=$discounts[0]['upc'];
+										$itemdetails=$this->getproductdetails($upc);
 								    	$i=0;
 										foreach($discounts as $discount)
 										{
@@ -353,10 +355,10 @@ class Userlogin extends CI_Controller {
 	
    }
 	 
-	 public function getproductdetails($item)
+	 public function getproductdetails($upc)
 	 {
 	 	$itemdetails=array();
-		$upcdetails= $this->discounts->getgtindetails($item);
+		$upcdetails= $this->discounts->getgtindetailsbyupc($upc);
 								  //var_dump($gtindetails);
 								  $pnm=$upcdetails[0]['GTIN_NM'];$itemdetails['pnm']=$pnm;
 								  $upc=$upcdetails[0]['GTIN_CD'];$itemdetails['upc']=$upc;
