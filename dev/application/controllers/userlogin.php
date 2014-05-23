@@ -314,6 +314,7 @@ class Userlogin extends CI_Controller {
 								    	//var_dump($discounts);
 								    	$upc=$discounts[0]['upc'];
 										$itemdetails=$this->getproductdetails($upc);
+										var_dump($itemdetails);
 								    	$i=0;
 										foreach($discounts as $discount)
 										{
