@@ -206,10 +206,10 @@ class Userlogin extends CI_Controller {
 		Sincerely;\n
 		\n
 		SuperDealyo Team\n
-		Bringing your world to your fingertips�.",$headers); 
+		Bringing your world to your fingertips",$headers); 
 		/// email to me infoming new subscriber has registered
-		mail("sach@linuxbox.simutel","New Registration",
-		"new vendor:$email has registered.");
+		//mail("sach@linuxbox.simutel","New Registration",
+		//"new vendor:$email has registered.");
 		
 	 }
 	 
