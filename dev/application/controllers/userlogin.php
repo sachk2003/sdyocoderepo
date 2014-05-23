@@ -314,7 +314,7 @@ class Userlogin extends CI_Controller {
 								    	//var_dump($discounts);
 								    	$upc=$discounts[0]['upc'];
 										$itemdetails=$this->getproductdetails($upc);
-										var_dump($itemdetails);
+										//var_dump($itemdetails);
 								    	$i=0;
 										foreach($discounts as $discount)
 										{
@@ -345,8 +345,8 @@ class Userlogin extends CI_Controller {
 				skip;
 			}
 			
-			//var_dump($discountarray);
-			//var_dump($productarray);
+			var_dump($discountarray);
+			var_dump($productarray);
 			$this->senduseremail($fname,$email,$items,$discountarray,$productarray);
 			exit;
 		}
