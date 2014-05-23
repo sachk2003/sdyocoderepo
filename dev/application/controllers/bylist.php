@@ -203,7 +203,7 @@ class Bylist extends CI_Controller {
 			      {
 			      	
 
-				  $upccount++;
+				  //$upccount++;
 		               array_push($upcids,$upcid);
 
 				 if(!in_array($upcid,$upcids))
