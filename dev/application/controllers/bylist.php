@@ -402,7 +402,7 @@ class Bylist extends CI_Controller {
 		//var_dump($itemsinfo);	
 		$data['details']=$itemsinfo;
 		
-		$this->load->view('discountbylist.php',$data);
+		$this->load->view('discountbylist1.php',$data);
 			 
 			 } 		 
 	  }	
