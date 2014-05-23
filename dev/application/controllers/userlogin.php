@@ -68,7 +68,7 @@ class Userlogin extends CI_Controller {
 			$this->session->set_userdata($data);
 			//var_dump($data);
 			//redirect('userlogin','refresh');
-            header('Location:/super/user/index');
+            header('Location:user/index');
 			
 		
 		}
@@ -161,7 +161,7 @@ class Userlogin extends CI_Controller {
 				if($userdetails)
 				{
 				$userid=$userdetails[0]['userid'];
-				$password=$userdetails[0]['password'];
+				$password=$password;
 			    $fname=$userdetails[0]['fname'];
 				if($userid)
 				
