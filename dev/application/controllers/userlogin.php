@@ -331,7 +331,7 @@ class Userlogin extends CI_Controller {
 									if(!array_key_exists($item,$productarray))
 									   $productarray[$item]=$itemdetails;
 									
-									var_dump($productarray);
+									//var_dump($productarray);
 									
 								}
 								//echo "\n";
@@ -349,7 +349,7 @@ class Userlogin extends CI_Controller {
 			}
 			
 			//var_dump($discountarray);
-			var_dump($productarray);
+			//var_dump($productarray);
 			$this->senduseremail($fname,$email,$items,$discountarray,$productarray);
 			exit;
 		}
@@ -431,7 +431,7 @@ class Userlogin extends CI_Controller {
 			
 			if($productarray[$item])
 			{      $pdetail='';
-					$ptable="<table style='background-color:#c1c1c1;width:100%;'><tr><th colspan='2'>Item Details</th></tr><tr><td>";
+					$ptable="<table style='background-color:white;width:100%;'><tr><th colspan='2'>Item Details</th></tr><tr><td>";
 				    $pinfo=$productarray[$item];
 				    if($pinfo['upc']!='') $pdetail="Product Code : ".$pinfo['upc']."<br />";
 				    if($pinfo['mg']!=0) $pdetail.="Weight : ".$pinfo['mg']." grams<br />";
