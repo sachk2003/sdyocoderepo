@@ -331,6 +331,8 @@ class Userlogin extends CI_Controller {
 									if(!in_array($item,$productarray))
 									$productarray[$item]=$itemdetails;
 									
+									var_dump($productarray);
+									
 								}
 								//echo "\n";
 						}
