@@ -431,7 +431,7 @@ class Userlogin extends CI_Controller {
 			$message.=$table;
 			
 			if($productarray[$item])
-			{      $pdetail='';
+			{      $pdetail='';$ptable='';
 					$ptable="<table style='background-color:white;width:100%;'><tr><th colspan='2'>Item Details</th></tr><tr><td>";
 				    $pinfo=$productarray[$item];
 				    if($pinfo['upc']!='') $pdetail="Product Code : ".$pinfo['upc']."<br />";
@@ -445,7 +445,7 @@ class Userlogin extends CI_Controller {
 				    
 			}
 			
-			$message.=$ptable."<br /><hr width='50%' align='left'><br />";
+			$message.=$ptable."<br /><hr width='100%' align='left'><br />";
 		
 		}
 		
