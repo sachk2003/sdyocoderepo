@@ -25,7 +25,7 @@ class User extends CI_Controller {
 		
         //$this->is_logged_in();
 		if(!$this->session->userdata('is_logged_in'))
-	     header('Location:/super/userlogin/index');       
+	     header('Location:/userlogin/index');       
 		           
 
     }
@@ -46,7 +46,7 @@ class User extends CI_Controller {
 		$this->session->unset_userdata('email');
 		$this->session->unset_userdata('fname');
 		session_destroy();
-		header('Location:/super/userlogin/index');
+		header('Location:/userlogin/index');
 	 }
 			 
 			 
@@ -66,7 +66,7 @@ class User extends CI_Controller {
 				}
 			else{
 				session_destroy();
-		        header('Location:/super/userlogin/index');
+		        header('Location:/userlogin/index');
 				
 				
 			}
@@ -163,7 +163,7 @@ class User extends CI_Controller {
 			else{
 				
 				session_destroy();
-		        header('Location:/super/userlogin/index');
+		        header('Location:/userlogin/index');
 				
 				
 			}
