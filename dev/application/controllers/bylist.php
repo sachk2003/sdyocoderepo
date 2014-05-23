@@ -365,7 +365,7 @@ class Bylist extends CI_Controller {
 				$imgpath="http://superdealyo.com/images/gtin/gtin-".$upccode."/$upcid.jpg";
 				else
 				$imgpath="http://dev.superdealyo.com/assets/img/notavailable.gif";			
-			    
+			        if(!in_array($imgpath,$images))
 			    array_push($images,$imgpath);	
 			      //echo $j;
 				  $details[$k][$j][]= $itemdetails[0]['item'];	
