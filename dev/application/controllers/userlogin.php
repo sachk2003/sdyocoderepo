@@ -195,7 +195,7 @@ class Userlogin extends CI_Controller {
 		"Reply-To: info@superdealyo.com ". "\r\n" .
 		"X-Mailer: PHP/" . phpversion();
 		
-		mail($email,"Registration Confirmation",
+		if(mail($email,"Registration Confirmation",
 		"Hello $fname\nThank you for taking time to create login with SuperDealyo.com\n
 		Below is your login information.\n
 		Temporary Password:$password\n
@@ -206,7 +206,10 @@ class Userlogin extends CI_Controller {
 		Sincerely;\n
 		\n
 		SuperDealyo Team\n
-		Bringing your world to your fingertips",$headers); 
+		Bringing your world to your fingertips",$headers))
+		
+		return true;
+		else false;
 		/// email to me infoming new subscriber has registered
 		//mail("sach@linuxbox.simutel","New Registration",
 		//"new vendor:$email has registered.");
