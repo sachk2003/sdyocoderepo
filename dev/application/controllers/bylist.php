@@ -203,7 +203,7 @@ class Bylist extends CI_Controller {
 			      {
 			      	
 
-				  //$upccount++;
+				  $upccount++;
 		               array_push($upcids,$upcid);
 
 				 if(!in_array($upcid,$upcids))
@@ -264,10 +264,10 @@ class Bylist extends CI_Controller {
 		$itemsinfo[]=$upcids;
 		$itemsinfo[]=$details;
 		$itemsinfo[]=$images;
-		//var_dump($upcids);
-		//var_dump($images);
-		//var_dump($details);
-		//var_dump($itemsinfo);	
+		var_dump($upcids);
+		var_dump($images);
+		var_dump($details);
+		var_dump($itemsinfo);	
 		$data['details']=$itemsinfo;
 		
 		$this->load->view('discountbylist.php',$data);
