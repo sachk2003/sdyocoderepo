@@ -434,7 +434,7 @@ class Userlogin extends CI_Controller {
 				    if($pinfo['mfloz']!=0) $pdetail.="Volume : ".$pinfo['mfloz']." fluid oz<br />";
 				    if($pinfo['bsin']!='') $pdetail.="Brand Code : ".$pinfo['bsin']."<br />";
 					if($pinfo['brandtypename']!='') $pdetail.="Brand Type : ".$pinfo['brandtypename']."<br />";
-					$ptable.="<img src='".$pinfo['url']."' /></td><td>".$pdetail."</td></tr></table></td></tr></table>";
+					$ptable.="<img src='".$pinfo['url']."' width='50px' height='50px' /></td><td>".$pdetail."</td></tr></table></td></tr></table>";
 				    
 			}
 			
