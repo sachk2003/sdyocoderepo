@@ -6,11 +6,11 @@ $upcids=$details[1];
 $discounts=$details[2];
 $images=$details[3];
 //var_dump($discounts);
-/*var_dump($discounts);
+var_dump($discounts);
 var_dump($upccount);
 var_dump($upcids);
 var_dump($images);
-*/
+
 
 if($upccount!=0)
 {   for($m=0;$m<$upccount;$m++)
