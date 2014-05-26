@@ -350,7 +350,10 @@ class Userlogin extends CI_Controller {
 			
 			//var_dump($discountarray);
 			//var_dump($productarray);
-			$this->senduseremail($fname,$email,$items,$discountarray,$productarray);
+			if($this->senduseremail($fname,$email,$items,$discountarray,$productarray))
+			echo "Mail sent to ".$email;
+			else 
+			echo "Mail could not be sent";
 			
 		}
 		
