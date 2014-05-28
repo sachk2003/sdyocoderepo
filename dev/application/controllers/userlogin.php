@@ -458,7 +458,7 @@ class Userlogin extends CI_Controller {
 	 	$message.="If you would like to stop the alerts, please remove the items from your profile by logging on to your account using your email and password. <br />Note:Please do not respond to this email as it is machine generated.<br />";
 	 	$message.="Thank you for using SuperDealyo.<br />";
 	 	$message.="<br />SuperDealyo User Support Team<br />";
-	 	echo $message;
+	 	//echo $message;
 		if(mail($email,$subject,$message,$headers))
 		return true;
 		else 
