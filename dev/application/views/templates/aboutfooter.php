@@ -1,5 +1,5 @@
 <footer id="footer-1" class="footer">
-                <div class="container">
+                <div class="container" style="width:100%">
                     <div class="row">
                         <div class="col-md-2"><a href="login/index" >Vendor Login</a></div>
                         <div class="col-md-2"><a href="userlogin/index" >User Login</a></div>
