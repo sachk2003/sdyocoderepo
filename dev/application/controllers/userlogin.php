@@ -426,7 +426,7 @@ class Userlogin extends CI_Controller {
 				foreach($discountarray[$item] as $discountinfo)
 				      {
 				      	
-						$table.="<tr><th><a href='../bylist/vendorinfo?vendorid=".$discountinfo['vendorid']."'>".$discountinfo['company']."</a></th><th>".$discountinfo['startdate']."</th><th>".$discountinfo['enddate']."</th><th>".$discountinfo['unit'].$discountinfo['discount']."</th></tr>";
+						$table.="<tr><th><a href='http://dev.superdealyo.com/bylist/vendorinfo?vendorid=".$discountinfo['vendorid']."'>".$discountinfo['company']."</a></th><th>".$discountinfo['startdate']."</th><th>".$discountinfo['enddate']."</th><th>".$discountinfo['unit'].$discountinfo['discount']."</th></tr>";
 				      } 
 			}
 			$table.="</table></td><td>";
@@ -443,7 +443,7 @@ class Userlogin extends CI_Controller {
 				    if($pinfo['mml']!=0) $pdetail.="Volume : ".$pinfo['mml']." ml<br />";
 				    if($pinfo['mfloz']!=0) $pdetail.="Volume : ".$pinfo['mfloz']." fluid oz<br />";
 				    if($pinfo['bsin']!='') $pdetail.="Brand Code : ".$pinfo['bsin']."<br />";
-					if($pinfo['brandtypename']!='') $pdetail.="Brand Type : ".$pinfo['brandtypename']."<br />";
+					if($pinfo['brandlink']!='') $pdetail.="Brand Link : ".$pinfo['brandlink']."<br />";
 					$ptable.="<img src='".$pinfo['url']."' width='50px' height='50px' /></td><td>".$pdetail."</td></tr></table></td>";
 				    
 			}
