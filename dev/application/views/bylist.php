@@ -61,7 +61,7 @@
 <div class="row">
    <div class="col-md-4"></div>
    <div class="col-md-4">
-  <h4><a class="control" href="<?php echo base_url('userlogin/index');?>">Sign Up</a> for email alerts for your shopping list</a></h4>   </div>
+  <h4>Sign Up for email alerts for your shopping list</a></h4>   </div>
    <div class="col-md-4"></div>
 </div> 
 
