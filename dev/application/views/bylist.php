@@ -47,7 +47,7 @@
    
      
 </form>
-                        			
+            <h4>Click here to <a href="<?php echo base_url('userlogin/index');?>" >register</a></h4>            			
             			
            </div>
               
