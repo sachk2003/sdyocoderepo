@@ -61,7 +61,7 @@
 <div class="row">
    <div class="col-md-4"></div>
    <div class="col-md-4">
-  <h6>Sign Up for email alerts for your shopping list</a></h6>   </div>
+  <h5>Sign Up for email alerts for your shopping list</a></h5> <button type="button" value="User Login" class="btn btn-primary" /> </div>
    <div class="col-md-4"></div>
 </div> 
 
