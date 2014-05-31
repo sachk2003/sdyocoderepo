@@ -61,7 +61,7 @@
 <div class="row">
    <div class="col-md-4"></div>
    <div class="col-md-4">
-  <h4>Sign Up for email alerts for your shopping list</a></h4>   </div>
+  <h6>Sign Up for email alerts for your shopping list</a></h6>   </div>
    <div class="col-md-4"></div>
 </div> 
 
