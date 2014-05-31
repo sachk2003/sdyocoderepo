@@ -47,7 +47,7 @@
    
      
 </form>
-            <h4>Click here to <a href="<?php echo base_url('userlogin/index');?>" >register</a></h4>            			
+                      			
             			
            </div>
               
@@ -58,6 +58,11 @@
             </div>
             
 
-
+<div class="row">
+   <div class="col-md-4"></div>
+   <div class="col-md-4">
+  <h4>Click here to <a href="<?php echo base_url('userlogin/index');?>">register</a></h4>   </div>
+   <div class="col-md-4"></div>
+</div> 
 
 <?php $this->load->view('templates/bylistfooter');?>
