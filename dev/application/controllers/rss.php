@@ -22,7 +22,7 @@ class Rss extends CI_Controller {
 	public function index()
 	{
 		
-        
+        header("Content-Type: application/rss+xml");
         $this->load->view('superdealyo.rss'); 
 	}
 }	
