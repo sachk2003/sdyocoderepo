@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Superdealyo</title>
+        <description>SuperDealyo related news</description>
+        <link>http://Superdealyo.com/about/news.html</link>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <lastBuildDate>Thr, 16 Dec 2010 11:53:09 -0400</lastBuildDate>
+        <pubDate>Thr, 16 Dec 2010 11:52:20 -0400</pubDate>
+        <generator>FeedForAll v2.0 (2.0.3.1) http://www.feedforall.com</generator>
+        <item>
+            <title>SuperDealyo</title>
+            <description>SuperDealyo related news</description>
+            <link>http://superdealyo.com/about/news.html</link>
+            <guid isPermaLink="false">1FEC9E0A-49A7-4179-90F7-B2DAAA454F9E</guid>
+            <pubDate>Thr, 16 Dec 2010 11:52:20 -0400</pubDate>
+        </item>
+    </channel>
+</rss>
