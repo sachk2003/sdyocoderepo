@@ -2,7 +2,7 @@
                 <div class="container" style="width:100%">
                     <div class="row">
                         <div class="col-md-2"><a href="login/index" >Vendor Login</a></div>
-                        <div class="col-md-2"><a href="userlogin/index" >User Login</a></div>
+                        
                         <div class="col-md-2"><a href="about" >About Us</a></div>
                         <div class="col-md-2 "><a href="privacy">Privacy</a></div>
                         <div class="col-md-2 "><a href="help">Help</a></div>
