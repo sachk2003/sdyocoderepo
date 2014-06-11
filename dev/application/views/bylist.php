@@ -22,7 +22,7 @@
   	<?php for($i=0;$i<5;$i++){?>
   <div class="form-group">
   	
-    <label for="Item 1" class="col-md-6 control-label">Item <?php echo $i+1;?> (example: <?php echo $items[$i];?>)</label>
+    <label for="Item 1" class="col-md-6 control-label">Item <?php echo $i+1;?> <br />(example: <?php echo $items[$i];?>)</label>
     
     <div class="col-md-6">
       <input type="text" name="item<?php echo $i+1;?>" class="form-control fontsforweb_fontid_4368" id="tag<?php echo $i+1;?>" placeholder="Item <?php echo $i+1;?>">
