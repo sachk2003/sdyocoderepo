@@ -56,10 +56,10 @@
             
               </div>  
               <div class="row">
-   <div class="col-md-4"></div>
-   <div class="col-md-4">
+   <div class="col-md-2"></div>
+   <div class="col-md-8">
   <h5>Sign Up for email alerts for your shopping list <a href="../userlogin/"><button type="button" class="btn btn-primary btn-xs">User Login</button></a> </h5></div>
-   <div class="col-md-4"></div>
+   <div class="col-md-2"></div>
 </div>           	
             </div>
             
