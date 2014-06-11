@@ -80,8 +80,8 @@
               	</div>
               	<p></p>
               	<div class="row">
-              		<div class="col-md-4"><img src="<?php echo base_url('assets/img/notavailable.jpg');?>" class="img-responsive"></div>
-              		<div class="col-md-8">N.D. , is the VP of Sales & Marketing, of the company. He has over 15 years of experience in IT sales and marketing particularly related to IT systems related to consumer products, IT services and Media and Advertising. He has worked in XXX etc. He has a B.S. in electrical an electronics engineering from YYY University and an MBA from ZZZ University.</div>
+              		<div class="col-md-4"><img src="<?php echo base_url('assets/img/aiko.jpg');?>" class="img-responsive"></div>
+              		<div class="col-md-8">AIKO , is the VP of Sales & Marketing, of the company. Aïko Thurlow provides the Sales & Marketing direction and creative balance for SuperDealyo. With over 10 years of helping companies improve their marketing operations, Aïko has held key roles in marketing, business strategy and product development. Prior to SuperDealyo, Aïko founded Hatching Edge, a management consulting firm, and was also a Senior Consultant with Accenture, a global consulting company. She has also served in a senior role at National Bank of Canada, at the Strategy Lead over seeing all of Eastern Canada's Account Manager. She was also previously guiding small and medium size businesses' efforts as a Business Advisor for the Royal Bank of Canada.</div>
               		
               		
               	</div>
