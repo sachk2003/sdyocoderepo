@@ -3724,6 +3724,6 @@ textarea[readonly] {
 
 .img-responsive {
   display: block;
-  height: 200px;
+  height: 150px;
   max-width: 100%;
 }
