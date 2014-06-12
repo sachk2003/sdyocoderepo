@@ -11,11 +11,11 @@
         <div class='row'>
             <div class='col-sm-4'>	
             	<div class='form-group'>
-                    <label for="user_password">Contact First Name*</label>
+                    <label for="user_password">Contact Name*</label>
                     <input class="form-control" id="fname" name="fname" size="30" type="text" />
                 </div>
             </div>
-            <div class='col-sm-4'>	
+            <!--<div class='col-sm-4'>	
             	<div class='form-group'>
                     <label for="user_password">Contact Middle Name</label>
                     <input class="form-control" id="mname" name="mname" size="30" type="text" />
@@ -27,11 +27,11 @@
                     <input class="form-control" id="lname" name="lname" size="30" type="text" />
                 </div>
         	
-        	</div>
+        	</div>-->
         </div>
         <div class="row">
         	
-        	<div class="col-sm-4">
+        	<!--<div class="col-sm-4">
         	     <div class='form-group'>
                     <label for="user_password">Country*</label>
                     <select class="form-control" name="country">
@@ -69,7 +69,7 @@
                     
                 </div>
         	
-        	</div>
+        	</div>-->
         	<div class="col-sm-4">
         	     <div class='form-group'>
                     <label for="user_password">zip*</label>
@@ -77,12 +77,12 @@
                 </div>
         	
         	</div>
-        	<div class='col-sm-4'>	
+        	<!--<div class='col-sm-4'>	
             	<div class='form-group'>
                     <label for="user_password">Address*</label>
                     <input class="form-control" id="address" name="address" size="30" type="text" />
                 </div>
-            </div>
+         </div>-->
         	
         	
         </div> 
@@ -107,7 +107,7 @@
         	
         	</div>-->
         </div>
-        <div class='row'>
+        <!--<div class='row'>
             <div class='col-sm-6'>	
             	<div class='form-group'>
                     <label for="user_password">Contact Phone Number*</label>
@@ -121,7 +121,7 @@
                 </div>
             </div>
             
-        </div>
+        </div>-->
         <div class='row'>
             <div class='col-sm-6'>	
             	<div class='form-group'>

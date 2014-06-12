@@ -109,10 +109,10 @@ class Userlogin extends CI_Controller {
 	 {
 		 	
 		$fname = $this->input->post('fname');
-		$mname = $this->input->post('mname');
-		$lname = $this->input->post('lname');
+		//$mname = $this->input->post('mname');
+		//$lname = $this->input->post('lname');
 		
-		$address = $this->input->post('address');
+		//$address = $this->input->post('address');
 		//$city = $this->input->post('city');
 		//$state = $this->input->post('state');
 		$zip = $this->input->post('zip');
@@ -130,9 +130,10 @@ class Userlogin extends CI_Controller {
 		 $city=$secondpart[0];
 		 $state=$secondpart[1];
 		 
-		$country = $this->input->post('country');
-		$phone = $this->input->post('phone');
-		$mphone = $this->input->post('mphone');
+		//$country = $this->input->post('country');
+		$country="USA";
+		//$phone = $this->input->post('phone');
+		//$mphone = $this->input->post('mphone');
 		$email = $this->input->post('email2');
 		
 		$alertitem1 = $this->input->post('alertitem1');
@@ -153,7 +154,8 @@ class Userlogin extends CI_Controller {
 		else{
 			
 			
-			$created=$this->userfunctions->createuser($fname,$mname,$lname,$country,$zip,$address,$city,$state,$phone,$mphone,$email,$password,$timestamp,$alertitem1,$alertitem2,$alertitem3,$alertitem4,$alertitem5);
+			//$created=$this->userfunctions->createuser($fname,$mname,$lname,$country,$zip,$address,$city,$state,$phone,$mphone,$email,$password,$timestamp,$alertitem1,$alertitem2,$alertitem3,$alertitem4,$alertitem5);
+			$created=$this->userfunctions->createuser($fname,$country,$zip,$city,$state,$email,$password,$timestamp,$alertitem1,$alertitem2,$alertitem3,$alertitem4,$alertitem5);
 			if($created)
 			{
 				$message="User created.";

@@ -235,7 +235,7 @@ class Userfunctions extends CI_Model{
 			}
 		
 	}
-	
+	/*
 	function createuser($fname,$mname,$lname,$country,$zip,$address,$city,$state,$phone,$mphone,$email,$password,$timestamp,$alertitem1,$alertitem2,$alertitem3,$alertitem4,$alertitem5)
 	{
 		$this->db->set('timestamp', $timestamp);
@@ -265,6 +265,37 @@ class Userfunctions extends CI_Model{
 		
 		
 	}
+	*/
+	function createuser($fname,$country,$zip,$city,$state,$email,$password,$timestamp,$alertitem1,$alertitem2,$alertitem3,$alertitem4,$alertitem5)
+	{
+		$this->db->set('timestamp', $timestamp);
+		$this->db->set('fname', $fname);
+		//$this->db->set('mname', $mname);
+		//$this->db->set('lname', $lname);
+		$this->db->set('country', $country);
+		$this->db->set('zip', $zip);
+		//$this->db->set('address', $address);
+		$this->db->set('city', $city);
+		$this->db->set('state', $state);
+		//$this->db->set('phone', $phone);
+		//$this->db->set('mphone', $mphone);
+		$this->db->set('email', $email);
+		$this->db->set('password', md5($password));
+		$this->db->set('alertitem1', $alertitem1);
+		$this->db->set('alertitem2', $alertitem2);
+		$this->db->set('alertitem3', $alertitem3);
+		$this->db->set('alertitem4', $alertitem4);
+		$this->db->set('alertitem5', $alertitem5);
+		$this->db->insert('user');
+		
+		if ($this->db->affected_rows() == 1)
+		 return true;
+		
+		else false;
+		
+		
+	}
+	
 	
 	function updateuserinfo($fname,$mname,$lname,$country,$zip,$address,$city,$state,$phone,$mphone,$email,$password,$timestamp,$alertitem1,$alertitem2,$alertitem3,$alertitem4,$alertitem5)
 	{
