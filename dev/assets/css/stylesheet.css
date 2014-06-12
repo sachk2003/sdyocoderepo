@@ -3720,3 +3720,10 @@ select[readonly],
 textarea[readonly] {
     cursor: pointer;
 }
+
+
+.img-responsive {
+  display: block;
+  height: 200px;
+  max-width: 100%;
+}
