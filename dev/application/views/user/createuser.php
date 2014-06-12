@@ -15,6 +15,13 @@
                     <input class="form-control" id="fname" name="fname" size="30" type="text" />
                 </div>
             </div>
+            <div class="col-sm-4">
+        	     <div class='form-group'>
+                    <label for="user_password">zip*</label>
+                    <input class="form-control" id="zip" name="zip" size="30" type="text" />
+                </div>
+        	
+        	</div>
             <!--<div class='col-sm-4'>	
             	<div class='form-group'>
                     <label for="user_password">Contact Middle Name</label>
@@ -70,13 +77,13 @@
                 </div>
         	
         	</div>-->
-        	<div class="col-sm-4">
+        	<!--<div class="col-sm-4">
         	     <div class='form-group'>
                     <label for="user_password">zip*</label>
                     <input class="form-control" id="zip" name="zip" size="30" type="text" />
                 </div>
         	
-        	</div>
+        	</div>-->
         	<!--<div class='col-sm-4'>	
             	<div class='form-group'>
                     <label for="user_password">Address*</label>
