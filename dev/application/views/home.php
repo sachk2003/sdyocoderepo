@@ -176,10 +176,10 @@
            	 <div class="share1">
            	 <table>
                    	<tr>
-                   			<td><a href="https://www.facebook.com/pages/Superdealyo/1431918810419520"><h2 class="facebook"><i class="icon-facebook"></i></h2></a></td>
-                   			<td><a href="https://twitter.com/superdealyo"><h2 class="twitter"><i class="icon-twitter"></i></h2></a></td>
-                   			<td><a href="https://www.youtube.com/channel/UC1SmKeJ0Ft8c6ZE4alFlIww"><h2 class="youtube"><i class="icon-youtube"></i></h2></a></td>
-                   			<td><a href="rss/index"><h2 class="youtube"><i class="icon-rss"></i></h2></a></td>
+                   			<td><a target="_blank" href="https://www.facebook.com/pages/Superdealyo/1431918810419520"><h2 class="facebook"><i class="icon-facebook"></i></h2></a></td>
+                   			<td><a target="_blank" href="https://twitter.com/superdealyo"><h2 class="twitter"><i class="icon-twitter"></i></h2></a></td>
+                   			<td><a target="_blank" href="https://www.youtube.com/channel/UC1SmKeJ0Ft8c6ZE4alFlIww"><h2 class="youtube"><i class="icon-youtube"></i></h2></a></td>
+                   			<td><a target="_blank" href="rss/index"><h2 class="youtube"><i class="icon-rss"></i></h2></a></td>
                    			
                    		</tr>
              </table>
