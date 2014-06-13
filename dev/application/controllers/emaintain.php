@@ -33,7 +33,7 @@ class Emaintain extends CI_Controller {
         //$this->is_logged_in();
 		if(!$this->session->userdata('is_logged_in'))
 		
-			      header('Location:../emaintain/index');    
+			      header('Location:../adminlogin/index');    
 		           
 
     }
