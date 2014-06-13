@@ -79,10 +79,11 @@ class Emaintain extends CI_Controller {
 		
 		$url= base_url()."upload/";   
 		
-		$vendorid=$this->input->post('vendor');
+		//$vendorid=$this->input->post('vendor');
 		
 		
 		$filetype = $_FILES['uploadedfile']['type'];
+		echo $filetype;
 		if(in_array($filetype, $allowed)) 
 		{    
 			 		 
