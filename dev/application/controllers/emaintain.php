@@ -84,6 +84,7 @@ class Emaintain extends CI_Controller {
 		
 		$filetype = $_FILES['uploadedfile']['type'];
 		echo $filetype;
+		
 		if(in_array($filetype, $allowed)) 
 		{    
 			 		 
@@ -209,7 +210,7 @@ class Emaintain extends CI_Controller {
 		else{
 			/*$vendors=$this->adminfunctions->getvendors();
 		    $data['vendors']=$vendors;*/
-			$data['message']='This file type is not allowed';       
+			$data['message']='This file type is not allowed'.$filetype;       
             $this->load->view('admin/bulkdiscounts',$data);
 			
 			
