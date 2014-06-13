@@ -26,12 +26,12 @@
         <!-- Placed At The End Of The Document So Page Loads Faster -->
         <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-        <script src="http://<?php echo base_url('assets/bootstrap/js/bootstrap.min.js');?>"></script>
-        <script src="http://<?php echo base_url('assets/js/jquery.validate.js');?>"></script>       
+        <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js');?>"></script>
+        <script src="<?php echo base_url('assets/js/jquery.validate.js');?>"></script>       
         
-        <script src="http://<?php echo base_url('assets/UItoTop/js/easing.js');?>"></script>
-        <script src="http://<?php echo base_url('assets/UItoTop/js/jquery.ui.totop.min.js');?>"></script>
-        <script src="http://<?php echo base_url('assets/js/discountbylist.js')?>"></script>
+        <script src="<?php echo base_url('assets/UItoTop/js/easing.js');?>"></script>
+        <script src="<?php echo base_url('assets/UItoTop/js/jquery.ui.totop.min.js');?>"></script>
+        <script src="<?php echo base_url('assets/js/discountbylist.js')?>"></script>
         
         
         
