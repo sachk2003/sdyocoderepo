@@ -58,6 +58,7 @@ class Emaintain extends CI_Controller {
     	
 	public function uploadfile()
 	{
+		echo "Entered uploadfile";
 	    $totalcount=0;$insertedcount=0;
 		$errorarray=array();
 		$upload_dir = "/var/www/html/dev/upload";
