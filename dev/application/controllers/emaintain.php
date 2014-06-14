@@ -84,6 +84,9 @@ class Emaintain extends CI_Controller {
 		
 		$filetype = $_FILES['uploadedfile']['type'];
 		echo $filetype;
+		$file_name = $_FILES['uploadedfile']['name']; 
+		$ext = pathinfo($filename, PATHINFO_EXTENSION);
+		echo $ext;
 		 var_dump($_FILES);
 		exit;
 		if(in_array($filetype, $allowed)) 
