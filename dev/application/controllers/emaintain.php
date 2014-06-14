@@ -84,7 +84,7 @@ class Emaintain extends CI_Controller {
 		
 		$filetype = $_FILES['uploadedfile']['type'];
 		echo $filetype;
-		
+		exit;
 		if(in_array($filetype, $allowed)) 
 		{    
 			 		 
