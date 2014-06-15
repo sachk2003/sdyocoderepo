@@ -20,7 +20,7 @@ SuperDealyo is a well-funded, pre-IPO company headquartered in Princeton Junctio
               	
               	<hr />
               	<h2>Current Jobs</h2>
-                <h5><a href="jobs/vpsales">Vice President Finanace -- Princeton Junction</a></h5>
+                <h5><a href="jobs/vpfinance">Vice President Finanace -- Princeton Junction</a></h5>
                 </div></div></div>
 
 

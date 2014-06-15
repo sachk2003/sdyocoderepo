@@ -30,6 +30,11 @@ class Jobs extends CI_Controller {
 		
 		$this->load->view('jobsvpsales'); 
 	}
+        function vpfinance()
+        {
+
+                $this->load->view('jobsvpfinance');
+        }
 }
 
 /* End of file welcome.php */
