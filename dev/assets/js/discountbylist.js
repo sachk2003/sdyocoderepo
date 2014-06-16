@@ -44,35 +44,35 @@ tpj('document').ready(function(){
 			                             	
 			                                //console.log("entered message 0");	
 			                                //console.log(element.pnm);console.log(element.upc);
-			                                if(element.pnm!=null)
+			                                if(element.pnm!=null || element.pnm!='')
 			                                message+='<li>Product Name: '+element.pnm+'</li>';
 			                                
-			                                if(element.upc!=null)
+			                                if(element.upc!=null || element.upc!='')
 			                                 message+='<li>Product Code: '+element.upc+'</li>';
 			                                 
-			                                if(element.mg!=null)
+			                                if(element.mg!=null || element.mg!='')
 			                                {
 			                                	message+='<li>Weight : '+element.mg+' grams</li>';
 			                                }
-			                                if(element.moz!=null)
+			                                if(element.moz!=null || element.moz!='')
 			                                {
 			                                	message+='<li>Volume : '+element.moz+' oz</li>';
 			                                }
-			                                if(element.mml!=null)
+			                                if(element.mml!=null || element.mml!='')
 			                                {
 			                                	message+='<li>Volume : '+element.mml+' ml</li>';
 			                                }
-			                                if(element.mfloz!=null)
+			                                if(element.mfloz!=null || element.mfloz!='')
 			                                {
 			                                	message+='<li>Volume : '+element.mfloz+' fluid oz</li>';
 			                                }
-			                                if(element.bsin!=null)
+			                                if(element.bsin!=null || element.bsin!='')
 			                             	message+='<li>Brand Code: '+element.bsin+'</li>';
 			                             	
-			                             	if(element.brandnm!=null || element.brandnm!= "")
+			                             	if(element.brandnm!=null || element.brandnm!= '')
 			                             	message+='<li>Brand Name: '+element.brandnm+'</li>';
 			                             	
-			                             	if(element.brandtypename!=null || element.brandtypename!="")
+			                             	if(element.brandtypename!=null || element.brandtypename!='')
 			                             	message+='<li>Brand Type: '+element.brandtypename+'</li>';
 			                             	//console.log(message);
 			                             	
