@@ -5,7 +5,7 @@ $upccount=$details[0];
 $upcids=$details[1];
 $discounts=$details[2];
 $images=$details[3];
-var_dump($discounts);
+//var_dump($discounts);
 
 
 
