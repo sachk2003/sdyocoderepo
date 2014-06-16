@@ -352,7 +352,7 @@ class Bylist extends CI_Controller {
 				  
 				  $branddetails=$this->discounts->getbranddetails($bsin);
 				  if(!$this->customSearch('not found', $branddetails[0]))
-		          {
+		          {var_dump($branddetails);
 		  	
 			       $link = $branddetails[0]['BRAND_LINK'];
 				  }
