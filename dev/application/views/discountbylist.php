@@ -63,7 +63,7 @@ if($upccount!=0)
         <p>
         	<div class="vendor">
         		<table class="borderless"><tbody>
-        		<tr><td colspan="4"><a target="_blank" href="<?php if($discounts[$n][0][8]!='') echo $discounts[$n][0][8];else echo '#'?>" style="color:blue;"><?php if($discounts[$n][0][8]!="") echo $discounts[$n][0][8]; else echo 'Link not found';?></a></td></tr>
+        		<tr><td colspan="4"><?php if($discounts[$n][0][8]!=''){ ?><a target="_blank" href="<?php echo $discounts[$n][0][8]?>" style="color:blue;"><?php echo $discounts[$n][0][8];?></a><?php }else{ echo 'Link not found'; }?></td></tr>
         		<tr><td class="store">Store</td><td>Price</td><td>Start Date</td><td>End Date</td></tr>
         			<?php if(!empty($discounts[$n])) {
         				//var_dump($discounts);
