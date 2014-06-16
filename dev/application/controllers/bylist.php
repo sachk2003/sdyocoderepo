@@ -443,9 +443,13 @@ class Bylist extends CI_Controller {
       public function getproductinfo()
 	  {
 	  	$json=array();
+		$pnm='';$upc='';$bsin='';$mg='';$moz='';$mml='';$mfloz='';$mabv='';$mabw='';
+		$brandnm='';$brandtypecd='';$brandlink='';$brandtypename='';
+		
+		
 	  	$upc= $this->input->get('upc');
 		$upcdetails=$this->discounts->getgtindetailsbyupc($upc);
-		var_dump($upcdetails);
+		//var_dump($upcdetails);
 		//echo array_search('not found',$upcdetails[0]);
 		if(!$this->customSearch('not found', $upcdetails[0]))
 		{
@@ -484,6 +488,7 @@ class Bylist extends CI_Controller {
 			
 			
 		  }
+		  
 		  $json[]=array(
 		                    'message'=> '0',
 		                    'pnm'=>$pnm,
