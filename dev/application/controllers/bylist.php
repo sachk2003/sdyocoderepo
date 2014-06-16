@@ -444,9 +444,9 @@ class Bylist extends CI_Controller {
 	  {
 	  	$json=array();
 		$pnm='';$upc='';$bsin='';$mg='';$moz='';$mml='';$mfloz='';$mabv='';$mabw='';
-		$brandnm;
+		$brandnm='';
 		$brandtypecd='';$brandlink='';
-		$brandtypename;
+		$brandtypename='';
 		
 		
 	  	$upc= $this->input->get('upc');
