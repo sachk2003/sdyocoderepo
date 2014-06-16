@@ -193,8 +193,8 @@ class Userlogin extends CI_Controller {
 	 function sendemail($email,$password,$fname)
 	 {
 	 	
-		$headers = "From: info@superdealyo.com". "\r\n" .
-		"Reply-To: info@superdealyo.com ". "\r\n" .
+		$headers = "From: support@superdealyo.com". "\r\n" .
+		"Reply-To: support@superdealyo.com ". "\r\n" .
 		"X-Mailer: PHP/" . phpversion();
 		
 		if(mail($email,"Registration Confirmation",
@@ -404,8 +404,8 @@ class Userlogin extends CI_Controller {
 	 
 	public function senduseremail($fname,$email,$items,$discountarray,$productarray) 
 	 {
-	 	$headers = "From: info@superdealyo.com". "\r\n" .
-		"Reply-To: info@superdealyo.com ". "\r\n" .
+	 	$headers = "From: support@superdealyo.com". "\r\n" .
+		"Reply-To: support@superdealyo.com ". "\r\n" .
 		'MIME-Version: 1.0' . "\r\n" .
         'Content-type: text/html; charset=iso-8859-1' . "\r\n" .
 		"X-Mailer: PHP/" . phpversion();
