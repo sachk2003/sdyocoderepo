@@ -69,10 +69,10 @@ tpj('document').ready(function(){
 			                                if(element.bsin!=null)
 			                             	message+='<li>Brand Code: '+element.bsin+'</li>';
 			                             	
-			                             	if(element.brandnm!=null)
+			                             	if(element.brandnm!=null || element.brandnm!= "")
 			                             	message+='<li>Brand Name: '+element.brandnm+'</li>';
 			                             	
-			                             	if(element.brandtypename!=null)
+			                             	if(element.brandtypename!=null || element.brandtypename!="")
 			                             	message+='<li>Brand Type: '+element.brandtypename+'</li>';
 			                             	//console.log(message);
 			                             	
