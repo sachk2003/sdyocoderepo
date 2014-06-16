@@ -323,7 +323,7 @@ class Bylist extends CI_Controller {
 		$details=array();
 		foreach($items as $item)
 		{
-			$link='';
+			$link='';$itemname='';
 		    $j=0;			     
 			foreach($vendors as $vendor)	
 			{   $vendorid=$vendor['vendorid'];
@@ -349,6 +349,8 @@ class Bylist extends CI_Controller {
 				  /* get the Brand Link*/
 				  $gtindetails=$this->discounts->getgtindetailsbyupc($upcid);
 				  $bsin=$gtindetails[0]['BSIN'];
+				  $itemname=$gtindetails[0]['GTIN_NM'];
+				  
 				  
 				  $branddetails=$this->discounts->getbranddetails($bsin);
 				  
@@ -383,6 +385,7 @@ class Bylist extends CI_Controller {
 					  $details[$k][$j][]='';
 				  }
 				  $details[$k][$j][] = $vendorid;
+				  $details[$k][$j][] = $itemname;
 				  } 	
 				}
 				else 
