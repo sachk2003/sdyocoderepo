@@ -323,7 +323,7 @@ class Bylist extends CI_Controller {
 		$details=array();
 		foreach($items as $item)
 		{
-			
+			$link='';
 		    $j=0;			     
 			foreach($vendors as $vendor)	
 			{   $vendorid=$vendor['vendorid'];
@@ -351,8 +351,9 @@ class Bylist extends CI_Controller {
 				  $bsin=$gtindetails[0]['BSIN'];
 				  
 				  $branddetails=$this->discounts->getbranddetails($bsin);
+				  
 				  if(!$this->customSearch('not found', $branddetails[0]))
-		          {var_dump($branddetails);
+		          {//var_dump($branddetails);
 		  	
 			       $link = $branddetails[0]['BRAND_LINK'];
 				  }
