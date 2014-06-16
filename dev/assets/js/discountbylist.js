@@ -78,6 +78,7 @@ tpj('document').ready(function(){
 			                             	
 			                             }  
 			                             else{
+			                             	Console.log(message);
 			                             	message+='<li>Product Code: '+upccode+'</li>';
 			                             	message+='<li>Other details not found</li>';
 			                             	

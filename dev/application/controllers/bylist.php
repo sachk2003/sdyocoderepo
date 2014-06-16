@@ -354,7 +354,7 @@ class Bylist extends CI_Controller {
 				  if(!$this->customSearch('not found', $branddetails[0]))
 		          {
 		  	
-			       $link=$branddetails[0]['BRAND_LINK'];
+			       $link = $branddetails[0]['BRAND_LINK'];
 				  }
 				  
 				$upccode=substr($upcid,0,3);
@@ -376,7 +376,11 @@ class Bylist extends CI_Controller {
 				  $details[$k][$j][]= $itemdetails[0]['startdate'];	
 				  $details[$k][$j][]= $itemdetails[0]['enddate'];	
 				  $details[$k][$j][]= $imgpath;
+				  if($link!='')
 				  $details[$k][$j][]= $link;
+				  else {
+					  $details[$k][$j][]='';
+				  }
 				  $details[$k][$j][] = $vendorid;
 				  } 	
 				}
@@ -441,7 +445,7 @@ class Bylist extends CI_Controller {
 	  	$json=array();
 	  	$upc= $this->input->get('upc');
 		$upcdetails=$this->discounts->getgtindetailsbyupc($upc);
-		//var_dump($upcdetails);
+		var_dump($upcdetails);
 		//echo array_search('not found',$upcdetails[0]);
 		if(!$this->customSearch('not found', $upcdetails[0]))
 		{
@@ -454,9 +458,6 @@ class Bylist extends CI_Controller {
 		  $mfloz= $upcdetails[0]['M_FLOZ'];
 		  $mabv=$upcdetails[0]['M_ABV'];
 		  $mabw=$upcdetails[0]['M_ABW'];
-		  
-		  
-		  
 		  
 		  
 		  $branddetails=$this->discounts->getbranddetails($bsin);
