@@ -2,12 +2,12 @@ var tpj = jQuery;
 tpj.noConflict();
 tpj('document').ready(function(){
 	   
-	   var productnamecount = tpj('.container-products .row .col-md-2 .caption #productname').val();
+	   var productnamecount = tpj('.container-products .row .col-md-2 .caption #productname h5').val();
 	   console.log(productnamecount);
 	   var productnamelen = productnamecount.length;
 	   console.log(productnamelen);
 	   if(productnamelen>24 & productnamelen<53)
-	      tpj('.container-products .row .col-md-2 .caption #productname').css("height","50px");
+	      tpj('.container-products .row .col-md-2 .caption #productname h5').css("height","50px");
 	      
 	   
 	   
