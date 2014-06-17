@@ -5,7 +5,7 @@ tpj('document').ready(function(){
 	   tpj('.container-products .row .col-md-2 .caption #productname h5').each(
 	   	function(index)
 	   	{
-	   		len=this( this ).text().length;
+	   		len=tpj( this ).text().length;
 	   	    console.log(len);
 	   	 if(len>=maxlen) maxlen=len;	
 	   	}
