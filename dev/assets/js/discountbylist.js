@@ -86,13 +86,10 @@ tpj('document').ready(function(){
 			                                if(element.bsin!=null)
 			                             	message+='<li>Brand Code: '+element.bsin+'</li>';
 			                             	
-			                             	if(element.brandnm!=null || element.brandnm!=" ")
+			                             	if(element.brandnm!='')
 			                             	message+='<li>Brand Name: '+element.brandnm+'</li>';
-			                             	if(element.brandnm==null) console.log('true');
-			                             	if(element.brandnm=='') console.log('spacetrue');
-			                             	if(element.brandnm==' ') console.log('space2true');
-			                             	  console.log('Brand Name:'+element.brandnm);
-			                             	if(element.brandtypename!=null || element.brandtypename!=" ")
+			                             	
+			                             	if(element.brandtypename!='')
 			                             	message+='<li>Brand Type: '+element.brandtypename+'</li>';
 			                             	console.log(message);
 			                             	
