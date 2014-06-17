@@ -29,9 +29,9 @@ tpj('document').ready(function(){
 	      	 //console.log(numrows);
              switch(numrows){
 	      		case '1': console.log("entered 1");tpj('.container-products .row .col-md-2 .caption .vendor').css("height","50px");break;
-	      		case '2': console.log("entered 2");tpj('.container-products .row .col-md-2 .caption .vendor').css("height","70px");break;
-	      		case '3': tpj('.container-products .row .col-md-2 .caption .vendor').css("height","90px");break;
-	      		case '4': tpj('.container-products .row .col-md-2 .caption .vendor').css("height","110px");break;
+	      		case '2': console.log("entered 2");tpj('.container-products .row .col-md-2 .caption .vendor').css("height","80px");break;
+	      		case '3': tpj('.container-products .row .col-md-2 .caption .vendor').css("height","100px");break;
+	      		case '4': tpj('.container-products .row .col-md-2 .caption .vendor').css("height","120px");break;
 	      		default: console.log("entered default");break;
 	      		
 	      	}	      	
