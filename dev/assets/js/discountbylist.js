@@ -6,7 +6,7 @@ tpj('document').ready(function(){
 	   console.log(productnamecount);
 	   var productnamelen = productnamecount.length;
 	   console.log(productnamelen);
-	   if(productnamelen>24 & productnamelen<53)
+	   if(productnamelen>24 & productnamelen<60)
 	      tpj('.container-products .row .col-md-2 .caption #productname').css("height","50px");
 	      
 	   
