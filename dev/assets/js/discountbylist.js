@@ -1,6 +1,14 @@
 var tpj = jQuery;
 tpj.noConflict();
 tpj('document').ready(function(){
+	   var maxlen=0;var len=0;
+	   foreach(tpj('.container-products .row .col-md-2 .caption #productname h5'))
+	   {
+	   	 len=tpj('.container-products .row .col-md-2 .caption #productname h5').text().length;
+	   	 console.log(len);
+	   	 if(len>=maxlen) maxlen=len;
+	   }
+	   console.log(maxlen);
 	   
 	   var productnamecount = tpj('.container-products .row .col-md-2 .caption #productname h5').text();
 	   console.log(productnamecount);
