@@ -2,7 +2,7 @@ var tpj = jQuery;
 tpj.noConflict();
 tpj('document').ready(function(){
 	   
-	   var productnamecount = tpj('.caption #productname').val();
+	   var productnamecount = tpj('.container-products .row .col-md-2 .caption #productname').val();
 	   console.log(productnamecount);
 	   var productnamelen = productnamecount.length;
 	   console.log(productnamelen);
