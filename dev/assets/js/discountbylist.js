@@ -61,8 +61,8 @@ tpj('document').ready(function(){
 			                             	
 			                                //console.log("entered message 0");	
 			                                //console.log(element.pnm);console.log(element.upc);
-			                                if(element.pnm!=null)
-			                                message+='<li>Product Name: '+element.pnm+'</li>';
+			                                //if(element.pnm!=null)
+			                                //message+='<li>Product Name: '+element.pnm+'</li>';
 			                                
 			                                if(element.upc!=null)
 			                                 message+='<li>Product Code: '+element.upc+'</li>';
@@ -86,10 +86,10 @@ tpj('document').ready(function(){
 			                                if(element.bsin!=null)
 			                             	message+='<li>Brand Code: '+element.bsin+'</li>';
 			                             	
-			                             	if(element.brandnm!=null || element.brandnm!="")
+			                             	if(element.brandnm!=null || element.brandnm!=" ")
 			                             	message+='<li>Brand Name: '+element.brandnm+'</li>';
 			                             	
-			                             	if(element.brandtypename!=null || element.brandtypename!="")
+			                             	if(element.brandtypename!=null || element.brandtypename!=" ")
 			                             	message+='<li>Brand Type: '+element.brandtypename+'</li>';
 			                             	console.log(message);
 			                             	
