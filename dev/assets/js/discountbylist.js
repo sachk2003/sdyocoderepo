@@ -2,6 +2,13 @@ var tpj = jQuery;
 tpj.noConflict();
 tpj('document').ready(function(){
 	   
+	   var productnamecount = tpj('#productname').val();
+	   var productnamelen = productnamecount.length;
+	   if(productnamelen>24 & productnamelen<53)
+	      tpj('#productname').css("height","50px");
+	      
+	   
+	   
         var upccount= tpj('input#upccount').val();
         var upccode='';var j=0;
 	      //alert(upccount);

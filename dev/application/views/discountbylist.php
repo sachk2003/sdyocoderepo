@@ -59,7 +59,9 @@ if($upccount!=0)
       <img  src="<?php echo $images[$n];?>"  name="<?php echo $upcids[$n];?>" rel="popover" data-content="" title="Product Details" id="productimage" alt="Product Image">
       <p id="url" style="text-align: center"></p>
       <div class="caption">
-        <h5 style="text-align: center"><?php if($discounts[$n][0][10]!='') echo $discounts[$n][0][10];?></h5>
+      	<div id="productname">
+        <h5 style="text-align: center;"><?php if($discounts[$n][0][10]!='') echo $discounts[$n][0][10];?></h5>
+        </div>
         <p>
         	<div class="vendor">
         		<table class="borderless"><tbody>
