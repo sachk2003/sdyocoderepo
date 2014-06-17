@@ -6,16 +6,16 @@ tpj('document').ready(function(){
 	   	function(index)
 	   	{
 	   		len=tpj( this ).text().length;
-	   	    console.log(len);
+	   	    //console.log(len);
 	   	 if(len>=maxlen) maxlen=len;	
 	   	}
 	   	
 	   	
 	   );
-	   console.log(maxlen);
+	   //console.log(maxlen);
 	   
 	   if(maxlen>24 & maxlen<60)
-	      tpj('.container-products .row .col-md-2 .caption #productname').css("height","50px");
+	      tpj('.container-products .row .col-md-2 .caption #productname').css("height","40px");
 	      
 	   
 	   
