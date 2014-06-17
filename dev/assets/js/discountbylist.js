@@ -14,12 +14,7 @@ tpj('document').ready(function(){
 	   );
 	   console.log(maxlen);
 	   
-	   
-	   var productnamecount = tpj('.container-products .row .col-md-2 .caption #productname h5').text();
-	   console.log(productnamecount);
-	   var productnamelen = productnamecount.length;
-	   console.log(productnamelen);
-	   if(productnamelen>24 & productnamelen<60)
+	   if(maxlen>24 & maxlen<60)
 	      tpj('.container-products .row .col-md-2 .caption #productname').css("height","50px");
 	      
 	   
