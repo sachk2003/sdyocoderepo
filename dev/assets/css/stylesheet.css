@@ -3727,3 +3727,10 @@ textarea[readonly] {
   height: 150px;
   max-width: 100%;
 }
+
+
+#productdetails{
+	font-weight:bold;
+	text-align:center;
+	
+}

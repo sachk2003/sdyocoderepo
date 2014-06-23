@@ -66,7 +66,7 @@ tpj('document').ready(function(){
 			                                
 			                                if(element.upc!=null)
 			                                 message+='<li>Product Code: '+element.upc+'</li>';
-			                                 
+			                                /* 
 			                                if(element.mg!=null)
 			                                {
 			                                	message+='<li>Weight : '+element.mg+' grams</li>';
@@ -82,7 +82,7 @@ tpj('document').ready(function(){
 			                                if(element.mfloz!=null)
 			                                {
 			                                	message+='<li>Volume : '+element.mfloz+' fluid oz</li>';
-			                                }
+			                                }*/
 			                                if(element.bsin!=null)
 			                             	message+='<li>Brand Code: '+element.bsin+'</li>';
 			                             	
