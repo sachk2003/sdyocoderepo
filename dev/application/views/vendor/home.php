@@ -71,7 +71,7 @@
 				echo "<b>Sub-cateogry9:</b> $subcat9<br>";
 				echo "<b>Sub-cateogry10:</b> $subcat10<br>";
 				echo "<br>";
-				echo "<h6>Discount and Special Offerings</h6><br />";
+				echo "<h6>Offerings</h6><br />";
 				 }
 				 else { 
 				         echo "The Vendor database is empty"; 
@@ -86,7 +86,7 @@
       	       
       	       ?>		
       			
-      		<table class="table table-bordered"><tr><td>Item</td><td>UPC</td><td>Discount</td><td>Unit</td><td>Start Date</td><td>End Date</td></tr>
+      		<table class="table table-bordered"><tr><td>Item</td><td>UPC</td><td>Sale Price</td><td>Unit</td><td>Start Date</td><td>End Date</td></tr>
       <?php 
               	for($i=0;$i<sizeof($array);$i++)
               	{$j=$i+1;

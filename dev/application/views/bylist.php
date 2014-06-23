@@ -15,7 +15,14 @@
              ?>            
             
               <div class="row">
-               <div class="col-md-3"></div>
+               <div class="col-md-3">
+               	<p>
+                 <h4 style="color:red">Currently site is in trial mode.</h4>
+                 <h5>To test drive please enter only the items given as examples and use 08550 for zipcode</h5>
+            		
+            	</p>
+               	
+               </div>
                <div class="col-md-6" id="pad">
             			
   <form class="form-horizontal " role="form" method="post" action="getdiscounts" id="searchform">
@@ -51,7 +58,11 @@
             			
            </div>
               
-            <div class="col-md-3"></div>
+            <div class="col-md-3">
+            	
+            	
+            	
+            </div>
             
             
               </div>  

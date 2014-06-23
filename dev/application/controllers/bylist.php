@@ -149,134 +149,7 @@ class Bylist extends CI_Controller {
 				
 	    } 
 
-          /*
-	  public function getdiscounts()
-	  {
-	  	 
-		
-	  	 $item1 = $this->input->post('item1');
-		 $item2 = $this->input->post('item2');
-		 $item3 = $this->input->post('item3');
-		 $item4 = $this->input->post('item4');
-		 $item5 = $this->input->post('item5');
-		 $zip   = $this->input->post('zip');
-         
-		 $zip=trim($zip);
-		 $zipcode=explode('-',$zip);
-         $city=explode(',', $zipcode[1]);		 
-		 
-		$items=array();
-		if($item1!='') array_push($items,$item1);
-		if($item2!='') array_push($items,$item2);
-		if($item3!='') array_push($items,$item3);
-		if($item4!='') array_push($items,$item4);
-		if($item5!='') array_push($items,$item5);
-		 
-		//$this->load->model('discounts');
-		$vendors=array();
-		$vendors = $this->discounts->availablevendors($zipcode[0],$city[0]);
-		//var_dump($vendors);
-		//$details=$this->getdiscountinfo($vendors, $item);
-		
-		$upcids=array();
-	    $images=array();
-		
-		
-		$k=0;$upccount=0;$imgpath='';
-		$details=array();
-		foreach($items as $item)
-		{
-			
-		    $j=0;			     
-			foreach($vendors as $vendor)	
-			{   $vendorid=$vendor['vendorid'];
-			    $company=$vendor['company'];
-				$itemdetails=$this->discounts->getdiscountbyitem($vendorid,$item);
-				//var_dump($itemdetails);
-				
-			    if(count($itemdetails)!=0)
-				{  //var_dump($itemdetails);
-				   
-				  			  $upcid=$itemdetails[0]['upc'];
-							  
-			      if($upcid)
-			      {
-			      	
-
-				  $upccount++;
-		               array_push($upcids,$upcid);
-
-				 if(!in_array($upcid,$upcids))
-				  {	
-				  $upccount++;
-		          array_push($upcids,$upcid);
-				  }
-		               /* get the Brand Link*/
-		               /*
-				  $gtindetails=$this->discounts->getgtindetailsbyupc($upcid);
-				  $bsin=$gtindetails[0]['BSIN'];
-				  
-				  $branddetails=$this->discounts->getbranddetails($bsin);
-				  if(!$this->customSearch('not found', $branddetails[0]))
-		                   {
-		  	
-			       $link=$branddetails[0]['BRAND_LINK'];
-				  }
-		               
-		               
-
-				$upccode=substr($upcid,0,3);
-				$this->load->helper('file');
-				$path="../images/gtin/gtin-".$upccode."/$upcid.jpg";
-				$exists = read_file($path);
-				if($exists)
-				$imgpath="http://superdealyo.com/images/gtin/gtin-".$upccode."/$upcid.jpg";
-				else
-				$imgpath="http://dev.superdealyo.com/assets/img/notavailable.gif";			
-			    
-			    array_push($images,$imgpath);	
-			      //echo $j;
-				  $details[$k][$j][]= $itemdetails[0]['item'];	
-				  $details[$k][$j][]= $company;
-				  $details[$k][$j][]= $itemdetails[0]['upc'];
-				  $details[$k][$j][]= $itemdetails[0]['discount'];
-				  $details[$k][$j][]= $itemdetails[0]['unit'];
-				  $details[$k][$j][]= $itemdetails[0]['startdate'];	
-				  $details[$k][$j][]= $itemdetails[0]['enddate'];	
-				  $details[$k][$j][]= $imgpath;
-				  $details[$k][$j][]= $link;
-				  $details[$k][$j][] = $vendorid;
-					
-				  } 	
-				}
-				else 
-				{
-					$details[$k][$j]=array();
-				 	
-				}
-				$j++;
-				
-			}
-		
-		$k++;	
-								
-		}
-		$itemsinfo[]=$upccount;
-		$itemsinfo[]=$upcids;
-		$itemsinfo[]=$details;
-		$itemsinfo[]=$images;
-		var_dump($upcids);
-		var_dump($images);
-		var_dump($details);
-		var_dump($itemsinfo);	
-		$data['details']=$itemsinfo;
-		
-		$this->load->view('discountbylist.php',$data);
-			 
-        		 
-	  }	
-	
-    */
+          
     
     public function getdiscounts()
 	  {
@@ -317,7 +190,7 @@ class Bylist extends CI_Controller {
 		
 		$upcids=array();
 	    $images=array();
-		
+		$productinfo=array();
 		
 		$k=0;$upccount=0;$imgpath='';
 		$details=array();
@@ -329,15 +202,12 @@ class Bylist extends CI_Controller {
 			{   $vendorid=$vendor['vendorid'];
 			    $company=$vendor['company'];
 				$itemdetails=$this->discounts->getdiscountbyitem($vendorid,$item);
-				//var_dump($itemdetails);
 				
-			    if(count($itemdetails)!=0)
+			    if((count($itemdetails)!=0)||(sizeof($itemdetails)!=0))
 				{  //var_dump($itemdetails);
 				   
 				  $upcid=$itemdetails[0]['upc'];
-				  
-				
-							  
+				  			  
 			      if($upcid)
 			      {
 			      
@@ -348,8 +218,33 @@ class Bylist extends CI_Controller {
 				  }
 				  /* get the Brand Link*/
 				  $gtindetails=$this->discounts->getgtindetailsbyupc($upcid);
+				  //var_dump($gtindetails);
 				  $bsin=$gtindetails[0]['BSIN'];
-				  $itemname=$gtindetails[0]['GTIN_NM'];
+				  $itemname=$gtindetails[0]['GTIN_NM'];	
+				  
+				  $mg=	$gtindetails[0]['M_G'];
+				  $moz= $gtindetails[0]['M_OZ'];	
+				  $mml= $gtindetails[0]['M_ML'];
+				  $mfloz= $gtindetails[0]['M_FLOZ'];
+				  $mabv=$gtindetails[0]['M_ABV'];
+				  $mabw=$gtindetails[0]['M_ABW'];
+				 if(!in_array($upcid,$productinfo))
+				  {  $productinfo[$itemname]['upc']=$upcid;
+				  if($mg!=NULL)
+				    $productinfo[$itemname]['weight']=$mg." grams";
+				  
+				  if($moz!=NULL)
+				    $productinfo[$itemname]['volume']=$moz." oz";
+				  
+				  if($mml!=NULL)
+				    $productinfo[$itemname]['volume']=$mml." ml";
+				  
+				  if($mfloz!=NULL)
+				    $productinfo[$itemname]['volume']=$mfloz." fluid oz";
+				  
+				  }
+				  
+				  
 				  
 				  
 				  $branddetails=$this->discounts->getbranddetails($bsin);
@@ -369,7 +264,7 @@ class Bylist extends CI_Controller {
 				else
 				$imgpath="http://dev.superdealyo.com/assets/img/notavailable.gif";			
 			        if(!in_array($imgpath,$images))
-			    array_push($images,$imgpath);	
+			            array_push($images,$imgpath);	
 			      //echo $j;
 				  $details[$k][$j][]= $itemdetails[0]['item'];	
 				  $details[$k][$j][]= $company;
@@ -386,14 +281,15 @@ class Bylist extends CI_Controller {
 				  }
 				  $details[$k][$j][] = $vendorid;
 				  $details[$k][$j][] = $itemname;
-				  } 	
+				  } 
+                $j++;	
 				}
 				else 
 				{
-					$details[$k][$j]=array();
+					//$details[$k][$j]=array();
 				 	
 				}
-				$j++;
+				
 				
 			}
 		
@@ -404,6 +300,8 @@ class Bylist extends CI_Controller {
 		$itemsinfo[]=$upcids;
 		$itemsinfo[]=$details;
 		$itemsinfo[]=$images;
+		$itemsinfo[]=$productinfo;
+		//var_dump($productinfo);
 		//var_dump($upcids);
 		//var_dump($images);
 		//var_dump($details);

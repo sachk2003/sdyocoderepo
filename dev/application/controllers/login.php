@@ -174,8 +174,8 @@ class Login extends CI_Controller {
 	 function sendemail($email,$password,$fname)
 	 {
 	 	
-		$headers = "From: info@superdealyo.com". "\r\n" .
-		"Reply-To: info@superdealyo.com ". "\r\n" .
+		$headers = "From: support@superdealyo.com". "\r\n" .
+		"Reply-To: support@superdealyo.com ". "\r\n" .
 		"X-Mailer: PHP/" . phpversion();
 		
 		if(mail($email,"Registration Confirmation",
@@ -189,11 +189,11 @@ class Login extends CI_Controller {
 		Sincerely
 		\n
 		SuperDealyo Team\n
-		Bringing your world to your fingertips",$headers))
-		
+		Bringing Location aware deals to your fingertips &reg;",$headers))
 		return true;else return false;
-		/// email to me infoming new subscriber has registered
-		mail("sach@linuxbox.simutel","New Registration",
+		
+		/// email to info informing a new subscriber has registered
+		mail("info@superdealyo.com","New Registration",
 		"new vendor:$email has registered.");
 		
 	 }

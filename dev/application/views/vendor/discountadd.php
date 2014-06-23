@@ -3,7 +3,7 @@
 <div class="col-md-9" style="margin-top:20px;">
 <div align="center">
 	
-<h5>Add Discounts and Offerings</h5>
+<h5>Add Deals and Offerings</h5>
 </div>	
 <div style="margin-top:50px;">
 <form class="form-horizontal" action="check_upc" method="post" id="upccheck">

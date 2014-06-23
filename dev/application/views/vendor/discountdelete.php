@@ -5,7 +5,7 @@
 <div class="col-md-9" style="margin-top:20px;">
 	
 <?php if ($num > 0){?> 
-      			<h6>Delete Discounts and Offerings </h6> 
+      			<h6>Delete Offerings </h6> 
                
       <form id="discountdelete" class="form-horizontal" action="discount_delete_confirm" method="post" name="discountdelete">
       	<h6 class="error" style="text-align: center"><?php if($message !='') echo $message;?></h6>

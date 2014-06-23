@@ -29,13 +29,13 @@ $enddate="";
                </div>
              </div>
              <div class="form-group">
-               <label for="itemname" class="col-md-2 control-label">Discount Amount</label>
+               <label for="itemname" class="col-md-2 control-label">Sale Amount</label>
                <div class="col-sm-10">
                <input type="text" id="discount" name="discount" class="form-control"   placeholder="discount" value="<?php echo $discount;?>">
                </div>
              </div>
              <div class="form-group">
-               <label for="itemname" class="col-md-2 control-label">Unit of Discount</label>
+               <label for="itemname" class="col-md-2 control-label">Unit of Amount</label>
                <div class="col-sm-10">
                <input type="text" id="unit" name="unit" class="form-control"   placeholder="discount" value="<?php echo $unit;?>">
                </div>

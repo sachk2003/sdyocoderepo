@@ -413,7 +413,7 @@ class Userlogin extends CI_Controller {
 		
 		
 	 	$count=count($items);
-		$subject="Latest Discounts from Superdealyo.com";
+		$subject="Latest deals for your shopping list from SuperDealyo";
 	 	$message="";
 		$message=$message."<br />Hi ".$fname."<br />";
 		$message=$message."Thank you for using SuperDealyo and for creating a profile . <br />Here are the DEALS NEAR YOU for the shopping list that you created in your profile and requested an alert for. <br /><br />";	
@@ -424,7 +424,7 @@ class Userlogin extends CI_Controller {
 			if($discountarray[$item])
 			{   $table="";
 				
-			    $table="<table style='background-color:#c1c1c1;width:50%;'><tr><th colspan='4'>".$item."</th></tr><tr><th>Vendor</th><th>Start Date</th><th>End Date</th><th>Discount</th></tr>"; 
+			    $table="<table style='background-color:#c1c1c1;width:50%;'><tr><th colspan='4'>".$item."</th></tr><tr><th>Vendor</th><th>Start Date</th><th>End Date</th><th>Sale Price</th></tr>"; 
 				foreach($discountarray[$item] as $discountinfo)
 				      {
 				      	

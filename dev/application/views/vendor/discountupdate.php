@@ -3,7 +3,7 @@
 <?php $array=$discounts;?>
 <div class="col-md-9" style="margin-top:20px;">
 	
-<h6>Update Discounts and Offerings-You can only update discount amount and dates</h6>
+<h6>Update Offerings-You can only update sale price and dates</h6>
               
               <?php if($array){?>
               
@@ -29,7 +29,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="itemname" class="col-md-2 control-label">discount<?php echo $j;?></label>
+                  <label for="itemname" class="col-md-2 control-label">Sale Price<?php echo $j;?></label>
                   <div class="col-sm-10">
                     <input type="text" id="discount<?php echo $i;?>" name="discount<?php echo $i;?>" class="form-control"   placeholder="" value="<?php echo $array[$i]['discount']?>">
                   </div>

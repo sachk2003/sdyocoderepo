@@ -5,6 +5,8 @@ $upccount=$details[0];
 $upcids=$details[1];
 $discounts=$details[2];
 $images=$details[3];
+$productinfo=$details[4];
+//var_dump($images);
 //var_dump($discounts);
 
 
@@ -60,7 +62,40 @@ if($upccount!=0)
       <p id="url" style="text-align: center"></p>
       <div class="caption">
       	<div id="productname">
+      		
         <h5 style="text-align: center;"><?php if($discounts[$n][0][10]!='') echo $discounts[$n][0][10];?></h5>
+        </div>
+        <div id="productdetails">
+        	
+        	<?php
+        	if($productinfo)
+			{
+        	 foreach($productinfo as $key=>$value)
+			  {
+			  	if($value['upc']==$upcids[$n])
+				{
+					$cnt=count($value);
+					$v=$cnt-1;
+					foreach($value as $param=>$val)
+					{   if($param!="upc")
+						 {
+						  			  
+						 if($v!=1)
+						  { 
+						    echo $param."=".$val.", ";
+							$v--;
+						  }
+						 
+						 else{ echo $param."=".$val;}
+						 					 
+						 }
+					}
+					
+				}
+                     				
+			  }
+			} 
+        	?>
         </div>
         <p>
         	<div class="vendor">
