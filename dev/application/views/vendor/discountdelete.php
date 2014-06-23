@@ -9,7 +9,7 @@
                
       <form id="discountdelete" class="form-horizontal" action="discount_delete_confirm" method="post" name="discountdelete">
       	<h6 class="error" style="text-align: center"><?php if($message !='') echo $message;?></h6>
-      <table class="table table-bordered"><tr><td></td><td>Item</td><td>UPC</td><td>Discount</td><td>Unit</td><td>Start Date</td><td>End Date</td></tr>
+      <table class="table table-bordered"><tr><td></td><td>Item</td><td>UPC</td><td>Sale Price</td><td>Unit</td><td>Start Date</td><td>End Date</td></tr>
       <?php 
               	for($i=0;$i<sizeof($array);$i++)
               	{$j=$i+1;
