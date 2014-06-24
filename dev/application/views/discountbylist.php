@@ -63,26 +63,19 @@ if($upccount!=0)
       <div class="caption">
       	<div id="productname">
       		
-        <h5 style="text-align: center;"><?php if($discounts[$n][0][10]!='') echo $discounts[$n][0][10];?>
-        	
-        	
-        </h5>
+        <h5 style="text-align: center;"><?php if($discounts[$n][0][10]!='') echo $discounts[$n][0][10];?></h5>
         </div>
         <div id="productdetails">
         	
         	<?php
-        	$max=0;
         	if($productinfo)
 			{
         	 foreach($productinfo as $key=>$value)
 			  {
-			  	$cnt=count($value); if(($cnt-1)>$max) $max=$cnt-1;
 			  	if($value['upc']==$upcids[$n])
 				{
-					
-					
+					$cnt=count($value);
 					$v=$cnt-1;
-					
 					foreach($value as $param=>$val)
 					{   if($param!="upc")
 						 {
@@ -103,7 +96,6 @@ if($upccount!=0)
 			  }
 			} 
         	?>
-        	<input type="hidden" value="<?php echo $max;?>" />
         </div>
         <p>
         	<div class="vendor">
