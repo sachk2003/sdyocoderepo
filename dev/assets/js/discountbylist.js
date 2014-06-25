@@ -14,9 +14,10 @@ tpj('document').ready(function(){
 	   );
 	   console.log("maxlen:"+maxlen);
 	   
-	   if(maxlen>24 & maxlen<60)
-	      tpj('.container-products .row .col-md-2 .caption #productname').css("height","30px");
-	      
+	   if(maxlen>24 && maxlen<60)
+	      tpj('.container-products .row .col-md-2 .caption #productname').css("height","10px");
+	   if(maxlen>61 && maxlen<80)
+	      tpj('.container-products .row .col-md-2 .caption #productname').css("height","20px");
 	   
 	   
         var upccount= tpj('input#upccount').val();
