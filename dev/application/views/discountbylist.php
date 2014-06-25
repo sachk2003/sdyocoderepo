@@ -74,9 +74,13 @@ if($upccount!=0)
         	$max=0;$cnt=0;
         	if($productinfo)
 			{
+			 	
         	 foreach($productinfo as $key=>$value)
 			  {
 			  	$cnt=count($value); if(($cnt-1)>$max) $max=$cnt-1;
+				if($cnt==1)
+				  echo "No details found";
+				
 			  	if($value['upc']==$upcids[$n])
 				{
 					
@@ -99,8 +103,7 @@ if($upccount!=0)
 					}
 					
 				}
-				if($cnt==1)
-				  echo "No details found";
+				
                      				
 			  }
 			}
@@ -110,7 +113,7 @@ if($upccount!=0)
         <p>
         	<div class="vendor">
         		<table class="borderless"><tbody>
-        		<tr><td colspan="4"><?php if($discounts[$n][0][8]!=''){ ?><a target="_blank" href="<?php echo $discounts[$n][0][8]?>" style="color:blue;"><?php echo $discounts[$n][0][8];?></a><?php }else{ echo 'Link not found'; }?></td></tr>
+        		<tr><td colspan="4"><?php if($discounts[$n][0][8]!=''){ ?><a target="_blank" href="<?php echo $discounts[$n][0][8]?>" style="color:blue;"><?php echo $discounts[$n][0][8];?></a><?php }else{ echo 'No Vendor Website'; }?></td></tr>
         		<tr><td class="store">Store</td><td>Price</td><td>Start Date</td><td>End Date</td></tr>
         			<?php if(!empty($discounts[$n])) {
         				//var_dump($discounts);
