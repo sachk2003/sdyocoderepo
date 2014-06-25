@@ -110,7 +110,7 @@ if($upccount!=0)
         	?>
         	<input type="hidden" value="<?php echo $max;?>" />
         </div>
-        <p>
+        
         	<div class="vendor">
         		<table class="borderless"><tbody>
         		<tr><td colspan="4"><?php if($discounts[$n][0][8]!=''){ ?><a target="_blank" href="<?php echo $discounts[$n][0][8]?>" style="color:blue;"><?php echo $discounts[$n][0][8];?></a><?php }else{ echo 'No Vendor Website'; }?></td></tr>
@@ -146,7 +146,7 @@ if($upccount!=0)
         		
         	</div>
         
-        </p>
+        
         <!--<p></p>-->
       </div>
     </div>
