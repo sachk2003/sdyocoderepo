@@ -15,7 +15,7 @@ tpj('document').ready(function(){
 	   //console.log(maxlen);
 	   
 	   if(maxlen>24 & maxlen<60)
-	      tpj('.container-products .row .col-md-2 .caption #productname').css("height","40px");
+	      tpj('.container-products .row .col-md-2 .caption #productname').css("height","30px");
 	      
 	   
 	   
