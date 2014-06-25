@@ -103,6 +103,16 @@
               
               	<h2 id="sec4">News</h2>
       			SuperDealyo was launched in February 2014
+                 <div class="row">
+                 	<div class="col-md-4">
+                 		<img src="<?php echo base_url('assets/img/event.jpg');?>" alt="Tech Meet @ Princeton" class="img-rounded" width="100%" />
+                 	</div>
+                 	<div class="col-md-8">
+                 		Launch/Demo - SuperDealyo at Princeton Tech Meetup on June 18.
+
+                        First milestone in our journey !
+                 	</div>
+                 </div>
                              
               	<hr>
               
