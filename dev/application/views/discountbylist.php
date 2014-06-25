@@ -8,7 +8,7 @@ $images=$details[3];
 $productinfo=$details[4];
 //var_dump($images);
 //var_dump($discounts);
-var_dump($productinfo);
+//var_dump($productinfo);
 
 
 if($upccount!=0)
@@ -71,7 +71,7 @@ if($upccount!=0)
         <div id="productdetails">
         	
         	<?php
-        	$max=0;
+        	$max=0;$cnt=0;
         	if($productinfo)
 			{
         	 foreach($productinfo as $key=>$value)
@@ -99,11 +99,11 @@ if($upccount!=0)
 					}
 					
 				}
+				if($cnt==1)
+				  echo "No details found";
                      				
 			  }
-			}else{
-				echo "no details found";
-			} 
+			}
         	?>
         	<input type="hidden" value="<?php echo $max;?>" />
         </div>
