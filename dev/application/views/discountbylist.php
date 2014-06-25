@@ -78,13 +78,13 @@ if($upccount!=0)
         	 foreach($productinfo as $key=>$value)
 			  {
 			  	$cnt=count($value); if(($cnt-1)>$max) $max=$cnt-1;
-				if($cnt==1)
-				  echo "No details found";
 				
 			  	if($value['upc']==$upcids[$n])
 				{
 					
-					
+					if($cnt==1)
+				      echo "No details found";
+					else{
 					$v=$cnt-1;
 					
 					foreach($value as $param=>$val)
@@ -101,7 +101,7 @@ if($upccount!=0)
 						 					 
 						 }
 					}
-					
+					}
 				}
 				
                      				
