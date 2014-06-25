@@ -102,7 +102,11 @@
       			<hr>
               
               	<h2 id="sec4">News</h2>
+      			<div class="row">
+      			<div class="col-md-12">
       			SuperDealyo was launched in February 2014<br />
+                 </div>
+                 </div>
                  <div class="row">
                  	<div class="col-md-4">
                  		<img src="<?php echo base_url('assets/img/event.jpg');?>" alt="Tech Meet @ Princeton" class="img-rounded" width="100%" />
