@@ -8,7 +8,7 @@ $images=$details[3];
 $productinfo=$details[4];
 //var_dump($images);
 //var_dump($discounts);
-
+var_dump($productinfo);
 
 
 if($upccount!=0)
