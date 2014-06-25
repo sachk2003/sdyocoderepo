@@ -101,6 +101,8 @@ if($upccount!=0)
 				}
                      				
 			  }
+			}else{
+				echo "no details found";
 			} 
         	?>
         	<input type="hidden" value="<?php echo $max;?>" />
