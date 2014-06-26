@@ -83,7 +83,7 @@ if($upccount!=0)
 				{
 					
 					if($cnt==1)
-				      echo "No details found";
+				      echo "volume/weight data unavailable";
 					else{
 					$v=$cnt-1;
 					
@@ -113,7 +113,7 @@ if($upccount!=0)
         
         	<div class="vendor">
         		<table class="borderless"><tbody>
-        		<tr><td colspan="4"><?php if($discounts[$n][0][8]!=''){ ?><a target="_blank" href="<?php echo $discounts[$n][0][8]?>" style="color:blue;"><?php echo $discounts[$n][0][8];?></a><?php }else{ echo 'No Vendor Website'; }?></td></tr>
+        		<tr><td colspan="4"><?php if($discounts[$n][0][8]!=''){ ?><a target="_blank" href="<?php echo $discounts[$n][0][8]?>" style="color:blue;"><?php echo $discounts[$n][0][8];?></a><?php }else{ echo 'Manufacturer website unavailable'; }?></td></tr>
         		<tr><td class="store">Store</td><td>Price</td><td>Start Date</td><td>End Date</td></tr>
         			<?php if(!empty($discounts[$n])) {
         				//var_dump($discounts);
