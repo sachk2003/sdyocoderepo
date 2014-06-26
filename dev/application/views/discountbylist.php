@@ -83,7 +83,7 @@ if($upccount!=0)
 				{
 					
 					if($cnt==1)
-				      echo "volume/weight data unavailable";
+				      echo "Volume/Weight data unavailable";
 					else{
 					$v=$cnt-1;
 					
