@@ -9,6 +9,8 @@ $productinfo=$details[4];
 //var_dump($images);
 //var_dump($discounts);
 //var_dump($productinfo);
+$this->load->library('session');
+$this->session->set_userdata($discounts);
 
 
 if($upccount!=0)
@@ -168,7 +170,7 @@ if($upccount!=0)
    <div class="container">
    	<div class="row">
             		<div class="col-md-12">
-            			<h2 style="color:#FF0000;text-align: center">Best Bet</h2>
+            			<h2 style="color:#FF0000;text-align: center"><a href="../bestbet/index">Best Bet</a></h2>
             		</div>
             		
     </div>
