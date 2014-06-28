@@ -21,6 +21,7 @@ class Bestbet extends CI_Controller {
 	 
 	public function index()
 	{
+		$bestbet=array();	
 		$items=array();$details=array();$lessdetails=array();
 		$vendors=array();$itemnames=array();$startdates=array();$enddates=array();
          //var_dump($this->session->all_userdata());
@@ -85,12 +86,13 @@ class Bestbet extends CI_Controller {
 				$count++;
 			 }
 			 
-			echo $vendorname." ";
-			echo count($itemarray)." "; 
-			echo "$".$sumprice." ";
-			echo "<br />";
+			$bestbet[]['vendorname']=$vendorname; 
+			$bestbet[]['count']=count($itemarray);
+			$bestbet[]['sum']=$sumprice;
+			
+			
 		   }
-		   
+		   var_dump($bestbet);
 		   echo "Best Start Date:".$beststartdate."<br />";
 		   echo "Best End Date:".$bestenddate."<br />";
 		   
