@@ -48,32 +48,41 @@ class Bestbet extends CI_Controller {
 		   date_default_timezone_set('GMT');
 		   //var_dump($details);
 		   
-		   $beststartdate=date("mdY",strtotime("01-01-1970"));
+		   //$beststartdate=date("mdY",strtotime("01-01-1970"));
 		   $itemarray=array();
-		   $bestenddate=date("mdY",strtotime("01-01-2020"));
+		   //$bestenddate=date("mdY",strtotime("01-01-2020"));
 		   $sumprice=0;
+		   $count=0;
 		   foreach($details as $key=>$value)
 		   { $itemarray=array();
 		   	 $sumprice=0;
 		   	 $vendorname=$key;
-			 
+			   
 			 foreach($value as $val)
 			 {
-			    $sumprice+=$val[1];	
-				if(!in_array($val[0],$itemarray))  array_push($itemarray,$val[0]);
-				$d=trim($val[2]);
+			 	$d=trim($val[2]);
 				$d=date("mdY",strtotime($d));
-				if($d>$beststartdate)
-				   $beststartdate=$d;
-				
 				$s=trim($val[3]);
 				$s=date("mdY",strtotime($s));
+			 	if($count==0)
+				{
+					$bestenddate=$s;
+					$beststartdate=$d;
+				}
+				else{
+				  if($d>$beststartdate)
+				     $beststartdate=$d;
 				
-				if($s>$bestenddate)
-				   { $bestenddate=$s;
+				  if($bestenddate>$s)
+				     $bestenddate=$s;
 				     
-				   }
+				}
 				
+			    $sumprice+=$val[1];	
+				if(!in_array($val[0],$itemarray))  array_push($itemarray,$val[0]);
+				
+				
+				$count++;
 			 }
 			 
 			echo $vendorname." ";
