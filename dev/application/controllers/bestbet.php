@@ -86,9 +86,9 @@ class Bestbet extends CI_Controller {
 				$count++;
 			 }
 			 
-			$bestbet[]['vendorname']=$vendorname; 
-			$bestbet[]['count']=count($itemarray);
-			$bestbet[]['sum']=$sumprice;
+			 
+			$bestbet[$vendorname]['count']=count($itemarray);
+			$bestbet[$vendorname]['sum']=$sumprice;
 			
 			
 		   }
