@@ -93,7 +93,7 @@ class Bestbet extends CI_Controller {
 			
 		   }
 		   
-		   
+		   var_dump(arsort($bestbet));
 		   foreach($bestbet as $key=>$value)
 		   {
 		   		
