@@ -99,7 +99,7 @@ class Bestbet extends CI_Controller {
 			}
 		   array_multisort($vol, SORT_DESC, $bestbet);
 		   
-		   echo "<h4>Your Best Bet for (".$beststartdate." – ".$bestenddate.")</h4>";
+		   echo "<h4>Your Best Bet for (".date("m/d/Y",$beststartdate)." – ".date("m/d/Y",$bestenddate).")</h4>";
 		   echo "<table border='1'><tr><td>Vendor</td><td>Number of Items</td><td>Total Amount</td></tr>";
 		   foreach($bestbet as $k=>$p)
 		   {
@@ -112,6 +112,9 @@ class Bestbet extends CI_Controller {
 		   
 		   //echo "Best Start Date:".$beststartdate."<br />";
 		   //echo "Best End Date:".$bestenddate."<br />";
+		   
+		   session_destroy();
+		   
 		   
 	}
    
