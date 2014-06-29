@@ -97,7 +97,7 @@ class Bestbet extends CI_Controller {
 			    $vol[$key]  = $row['count'];
 			    $be[$key]=$row['sum'];
 			}
-		   array_multisort($vol, SORT_DESC,$be,SORT_DESC, $bestbet);
+		   array_multisort($vol, SORT_DESC,$be,SORT_ASC, $bestbet);
 		   
 		   echo "<h4>Your Best Bet for (".$beststartdate." – ".$bestenddate.")</h4>";
 		   echo "<table border='1'><tr><td>Vendor</td><td>Number of Items</td><td>Total Amount</td></tr>";
