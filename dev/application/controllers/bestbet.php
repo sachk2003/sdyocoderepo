@@ -113,7 +113,7 @@ class Bestbet extends CI_Controller {
 		   echo "Best Start Date:".$beststartdate."<br />";
 		   echo "Best End Date:".$bestenddate."<br />";
 		   
-		  // $this->session->sess_destroy();
+		  $this->session->sess_destroy();
 		   
 		   
 	}
