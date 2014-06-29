@@ -93,19 +93,23 @@ class Bestbet extends CI_Controller {
 			
 		   }
 		   
-		   var_dump(arsort($bestbet));
-		   foreach($bestbet as $key=>$value)
-		   {
-		   		
-		   	arsort($value);
-			
-		   }
+		   foreach ($bestbet as $key => $row) {
+			    $vol[$key]  = $row['count'];
+			    
+			}
+		   array_multisort($vol, SORT_DESC, $bestbet);
+		   
 		   
 		   var_dump($bestbet);
+		   
 		   echo "Best Start Date:".$beststartdate."<br />";
 		   echo "Best End Date:".$bestenddate."<br />";
 		   
 	}
+   
+    
+     
+
 	
 }			
 		
