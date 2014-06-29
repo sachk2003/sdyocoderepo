@@ -62,9 +62,9 @@ class Bestbet extends CI_Controller {
 			 foreach($value as $val)
 			 {
 			 	$d=trim($val[2]);
-				$d=date("mdY",strtotime($d));
+				$d=date("m/d/Y",strtotime($d));
 				$s=trim($val[3]);
-				$s=date("mdY",strtotime($s));
+				$s=date("m/d/Y",strtotime($s));
 			 	if($count==0)
 				{
 					$bestenddate=$s;
@@ -95,11 +95,11 @@ class Bestbet extends CI_Controller {
 		   
 		   foreach ($bestbet as $key => $row) {
 			    $vol[$key]  = $row['count'];
-			    
+			    $be[$key]=$row['sum'];
 			}
-		   array_multisort($vol, SORT_DESC, $bestbet);
+		   array_multisort($vol, SORT_DESC,$be,SORT_DESC, $bestbet);
 		   
-		   echo "<h4>Your Best Bet for (".date('m/d/Y',$beststartdate)." – ".date('m/d/Y',$bestenddate).")</h4>";
+		   echo "<h4>Your Best Bet for (".$beststartdate." – ".$bestenddate.")</h4>";
 		   echo "<table border='1'><tr><td>Vendor</td><td>Number of Items</td><td>Total Amount</td></tr>";
 		   foreach($bestbet as $k=>$p)
 		   {
