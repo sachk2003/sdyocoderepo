@@ -100,7 +100,7 @@ class Bestbet extends CI_Controller {
 		   array_multisort($vol, SORT_DESC, $bestbet);
 		   
 		   echo "<h4>Your Best Bet for (".$beststartdate." – ".$bestenddate.")</h4>";
-		   echo "<table border='1'><tr><td>Vendor</td><td>Number of Items</td><td>Total Amount</td><td></td></tr>";
+		   echo "<table border='1'><tr><td>Vendor</td><td>Number of Items</td><td>Total Amount</td></tr>";
 		   foreach($bestbet as $k=>$p)
 		   {
 		   	  echo "<tr><td>".$k."</td>";	
