@@ -3734,3 +3734,12 @@ textarea[readonly] {
 	text-align:center;
 	
 }
+
+tr .popover{
+	background-color:#FFFFCC;
+    font-size:12px;	
+}
+#bestbet a,{
+	color:blue;
+	
+}
