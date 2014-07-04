@@ -15,7 +15,7 @@ class Bestbet extends CI_Controller {
 	 function __construct(){
 
         parent::__construct();
-        $this->load->model('discounts');             
+        $this->load->model('vendorfunctions');             
 
     }
 	 
@@ -24,11 +24,15 @@ class Bestbet extends CI_Controller {
 		$bestbet=array();	
 		$items=array();$details=array();$lessdetails=array();
 		$vendors=array();$itemnames=array();$startdates=array();$enddates=array();
-         //var_dump($this->session->all_userdata());
+		
+        $sess_data=$this->session->all_userdata();
+		//var_dump($sess_data);
+		if($this->session->userdata(0))
+		{
            for($i=0;$i<5;$i++)
 		   {
 		   	if($this->session->userdata($i)) 
-		     $items[]=$this->session->userdata($i);
+		      $items[]=$this->session->userdata($i);
 		   }
 		   
 		   foreach($items as $item)
@@ -37,7 +41,7 @@ class Bestbet extends CI_Controller {
 			 {  
 			 	//var_dump($deal);
 				$lessdetails=array();
-				array_push($lessdetails,$deal[0],$deal[3],$deal[5],$deal[6]);
+				array_push($lessdetails,$deal[0],$deal[3],$deal[5],$deal[6],$deal[9]);
 				$details[$deal[1]][]=$lessdetails;
 					
 			 	
@@ -46,11 +50,11 @@ class Bestbet extends CI_Controller {
 			
 		   }
 		   
-		   date_default_timezone_set('GMT');
+		   date_default_timezone_set('America/New_York');
 		   //var_dump($details);
 		   
 		   //$beststartdate=date("mdY",strtotime("01-01-1970"));
-		   $itemarray=array();
+		   $itemarray=array();$vendorid='';
 		   //$bestenddate=date("mdY",strtotime("01-01-2020"));
 		   $sumprice=0;
 		   $count=0;
@@ -84,12 +88,21 @@ class Bestbet extends CI_Controller {
 				
 				
 				$count++;
+				$vendorid=$val[4];
 			 }
-			 
-			 
+			$vendordetails=$this->vendorfunctions->getvendorbyid($vendorid); 
+			if($vendordetails)
+			{
+			$address=$vendordetails[0]['address']."+".$vendordetails[0]['city']."+".$vendordetails[0]['state']."+".$vendordetails[0]['country'];
+			
+			}
+			else {
+				$address='';
+			}
+			$bestbet[$vendorname]['id']= $vendorid;
 			$bestbet[$vendorname]['count']=count($itemarray);
 			$bestbet[$vendorname]['sum']=$sumprice;
-			
+			$bestbet[$vendorname]['address']=$address;
 			
 		   }
 		   
@@ -98,27 +111,53 @@ class Bestbet extends CI_Controller {
 			    $be[$key]=$row['sum'];
 			}
 		   array_multisort($vol, SORT_DESC,$be,SORT_ASC, $bestbet);
-		   
-		   echo "<h4>Your Best Bet for (".$beststartdate." – ".$bestenddate.")</h4>";
-		   echo "<table border='1'><tr><td>Vendor</td><td>Number of Items</td><td>Total Amount</td></tr>";
-		   foreach($bestbet as $k=>$p)
-		   {
-		   	  echo "<tr><td>".$k."</td>";	
-		   	  echo "<td>".$p['count']."</td>";
-			  echo "<td>".$p['sum']."</td></tr>";
-		   }
-		   echo "</table>";
-		   //var_dump($bestbet);
-		   //$this->sess_expiration = '60';
-		   //echo "Best Start Date:".$beststartdate."<br />";
-		   //echo "Best End Date:".$bestenddate."<br />";
-		   
-		  //$this->session->sess_destroy();
-		   
+		   $data['sess_id']=$sess_data['session_id'];
+		   $data['beststartdate']=$beststartdate;
+		   $data['bestenddate']=$bestenddate;
+		   $data['bestbet']=$bestbet;
+		   $this->load->view('bestbet',$data);
+		 }
+       else{
+       	$data['bestbet']=$bestbet;
+		   $this->load->view('bestbet',$data);
+		
+       }
 		   
 	}
    
-    
+    function getitems()
+	{
+		$vendor=$this->input->get('v');
+		$d=array();	
+		$sessiondata=$this->session->all_userdata();
+		//var_dump($discounts);
+		if($this->session->userdata(0))
+		{  $j=0;
+           for($i=0;$i<5;$i++)
+		   {
+		   	if($this->session->userdata($i)) 
+			 {
+		        foreach($this->session->userdata($i) as $offering)
+				{
+					if($offering[1] == $vendor)
+					{
+					  	
+					  $d[$j]['name']=$offering[0];
+					  $d[$j]['offer']=$offering[3];	
+					  $j++;
+					}
+					
+				}
+			  
+			 } 
+		   }
+		
+		}
+		$json=array('items'=>$d);
+	
+		echo json_encode($json);
+		
+	}
      
 
 	

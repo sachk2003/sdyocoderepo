@@ -49,12 +49,8 @@ class Vendorfunctions extends CI_Model{
 		else{
 				
 		       return false;		
-			}
-			
-		
-		
-		
-		
+   			}
+	 
 	}	
 		
 		
@@ -403,6 +399,32 @@ class Vendorfunctions extends CI_Model{
 		
 		
 	}
+	
+	public function getvendorbyid($vendorid)	
+	{
+		$this->db->where('vendorid',$vendorid);
+        
+        $query=$this->db->get('vendor');
+
+               	
+			if($query->num_rows >= 1){
+
+            foreach ($query->result() as $row)
+            {   //echo "came";
+                $data[]=(array)$row;
+               
+
+            }
+		 
+		   return $data; 
+		  }
+		else{
+				
+		       return false;		
+   			}
+	 
+	}
+	
 	
 }		
 	
