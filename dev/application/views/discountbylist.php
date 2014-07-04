@@ -34,7 +34,6 @@ $this->session->set_userdata($discounts);
 $sess_data=$this->session->all_userdata();
 //var_dump($sess_data);
 
-
 if($upccount!=0)
 {   for($m=0;$m<$upccount;$m++)
     {
@@ -95,16 +94,20 @@ if($upccount!=0)
         <div id="productdetails">
         	
         	<?php
-        	$max=0;
+        	$max=0;$cnt=0;
         	if($productinfo)
 			{
+			 	
         	 foreach($productinfo as $key=>$value)
 			  {
 			  	$cnt=count($value); if(($cnt-1)>$max) $max=$cnt-1;
+				
 			  	if($value['upc']==$upcids[$n])
 				{
 					
-					
+					if($cnt==1)
+				      echo "Volume/Weight data unavailable";
+					else{
 					$v=$cnt-1;
 					
 					foreach($value as $param=>$val)
@@ -121,18 +124,19 @@ if($upccount!=0)
 						 					 
 						 }
 					}
-					
+					}
 				}
+				
                      				
 			  }
-			} 
+			}
         	?>
         	<input type="hidden" value="<?php echo $max;?>" />
         </div>
-        <p>
+        
         	<div class="vendor">
         		<table class="borderless"><tbody>
-        		<tr><td colspan="4"><?php if($discounts[$n][0][8]!=''){ ?><a target="_blank" href="<?php echo $discounts[$n][0][8]?>" style="color:blue;"><?php echo $discounts[$n][0][8];?></a><?php }else{ echo 'Link not found'; }?></td></tr>
+        		<tr><td colspan="4"><?php if($discounts[$n][0][8]!=''){ ?><a target="_blank" href="<?php echo $discounts[$n][0][8]?>" style="color:blue;"><?php echo $discounts[$n][0][8];?></a><?php }else{ echo 'Manufacturer website unavailable'; }?></td></tr>
         		<tr><td class="store">Store</td><td>Price</td><td>Start Date</td><td>End Date</td></tr>
         			<?php if(!empty($discounts[$n])) {
         				//var_dump($discounts);
@@ -165,7 +169,7 @@ if($upccount!=0)
         		
         	</div>
         
-        </p>
+        
         <!--<p></p>-->
       </div>
     </div>
