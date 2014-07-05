@@ -21,7 +21,7 @@ var_dump($sess_data);
 		{        //echo $i;
 			     $array=$this->session->userdata($i);
 				 
-			    //unset($this->session->userdata[$i]);
+			   unset($this->session->userdata[$i]);
 			    
 				//var_dump($sess_data);   
 			     //$this->session->unset_userdata($array);
