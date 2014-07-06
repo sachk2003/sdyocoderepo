@@ -6,6 +6,7 @@ $upcids=$details[1];
 $discounts=$details[2];
 $images=$details[3];
 $productinfo=$details[4];
+$nsdata=$details[5];
 //var_dump($images);
 //var_dump($productinfo);
 //var_dump($discounts);
@@ -31,7 +32,7 @@ var_dump($sess_data);
 		   
 
 //echo "<br />Dumping all session data after<br />";
-$this->session->set_userdata($discounts);
+$this->session->set_userdata($nsdata);
 $sess_data=$this->session->all_userdata();
 //var_dump($sess_data);
 

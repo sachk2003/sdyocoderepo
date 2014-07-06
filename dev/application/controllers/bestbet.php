@@ -41,7 +41,8 @@ class Bestbet extends CI_Controller {
 			 {  
 			 	//var_dump($deal);
 				$lessdetails=array();
-				array_push($lessdetails,$deal[0],$deal[3],$deal[5],$deal[6],$deal[9]);
+				//array_push($lessdetails,$deal[0],$deal[3],$deal[5],$deal[6],$deal[9]);
+				array_push($lessdetails,$deal[0],$deal[2],$deal[3],$deal[4],$deal[5]);
 				$details[$deal[1]][]=$lessdetails;
 					
 			 	

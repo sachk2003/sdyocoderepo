@@ -193,7 +193,7 @@ class Bylist extends CI_Controller {
 		$productinfo=array();
 		
 		$k=0;$upccount=0;$imgpath='';
-		$details=array();
+		$details=array();$nsdata=array();
 		foreach($items as $item)
 		{
 			$link='';$itemname='';
@@ -266,6 +266,15 @@ class Bylist extends CI_Controller {
 			        if(!in_array($imgpath,$images))
 			            array_push($images,$imgpath);	
 			      //echo $j;
+			      $nsdata[$k][$j][]=$itemdetails[0]['item'];
+			      $nsdata[$k][$j][]=$company;
+			      $nsdata[$k][$j][]=$itemdetails[0]['discount'];
+			      $nsdata[$k][$j][]=$itemdetails[0]['startdate'];
+			      $nsdata[$k][$j][]=$itemdetails[0]['enddate'];
+				  $nsdata[$k][$j][] = $vendorid;
+			      
+			      
+			      
 				  $details[$k][$j][]= $itemdetails[0]['item'];	
 				  $details[$k][$j][]= $company;
 				  $details[$k][$j][]= $itemdetails[0]['upc'];
@@ -301,6 +310,7 @@ class Bylist extends CI_Controller {
 		$itemsinfo[]=$details;
 		$itemsinfo[]=$images;
 		$itemsinfo[]=$productinfo;
+		$itemsinfo[]=$nsdata;
 		//var_dump($productinfo);
 		//var_dump($upcids);
 		//var_dump($images);
