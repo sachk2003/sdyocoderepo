@@ -4,7 +4,7 @@
   			<div class="col-md-3" id="leftCol">
               
               	<ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="#sec0">Privacy</a></li>
+                  <li><a href="#sec0">Privacy &amp; Terms</a></li>
                   
               	</ul>
               
