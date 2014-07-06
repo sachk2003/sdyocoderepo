@@ -3,7 +3,7 @@
                     <div class="row">
                     	<div class="col-md-2"><a href="../vendor/index" >Vendor Login</a></div>
                         <div class="col-md-2"><a href="../about" >About Us</a></div>
-                        <div class="col-md-2 "><a href="../privacy">Privacy</a></div>
+                        <div class="col-md-2 "><a href="../privacy">Privacy & Terms</a></div>
                         <div class="col-md-2 "><a href="../help">Help</a></div>
                         <div class="col-md-2 "><a href="../jobs">Jobs</a></div>
                         <div class="col-md-2 "><a href="../contact">Contact</a></div>
