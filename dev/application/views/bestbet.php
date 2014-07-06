@@ -5,7 +5,7 @@
 		<div class="col-md-8" id="bestbet">
     <?php
        echo "<h2 style='text-align:center;color:red;'>Savings in a Snap!<h2>";
-           //var_dump($this->session->userdata(0));
+           //var_dump($this->session->all_userdata());
            
 	   if($this->session->userdata(0))
 	   {   echo "<h4 style='text-align:center;'>Your Best Bet for (".$beststartdate." – ".$bestenddate.")</h4>";
@@ -23,18 +23,6 @@
 		   //echo "Best Start Date:".$beststartdate."<br />";
 		   //echo "Best End Date:".$bestenddate."<br />";
 		  //echo $sess_id;
-  for($i=0;$i<5;$i++)
-  {
-     if($this->session->userdata($i)) 
-		{        //echo $i;
-			     $array=$this->session->userdata($i);
-				 
-			    unset($this->session->userdata[$i]);
-				//var_dump($sess_data);   
-			    //$this->session->unset_userdata($array);
-		}
-		      
-  }
 		  $this->session->unset_userdata();
 		  //$this->config->set_item('sess_expiration',60);
           // Force the Session class to recapture global settings by calling it's constructor

@@ -11,9 +11,9 @@ $nsdata=$details[5];
 //var_dump($productinfo);
 //var_dump($discounts);
 $this->load->library('session');
-echo "Dumping all session data before<br />";
+//echo "Dumping all session data before<br />";
 $sess_data=$this->session->all_userdata();
-var_dump($sess_data);
+//var_dump($sess_data);
 
 
   for($i=0;$i<5;$i++)

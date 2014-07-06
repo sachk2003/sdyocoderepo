@@ -131,23 +131,23 @@ class Bestbet extends CI_Controller {
 		$vendor=$this->input->get('v');
 		$d=array();	
 		$sessiondata=$this->session->all_userdata();
-		//var_dump($discounts);
+		//var_dump($sessiondata);
 		if($this->session->userdata(0))
 		{  $j=0;
            for($i=0;$i<5;$i++)
 		   {
 		   	if($this->session->userdata($i)) 
-			 {
+			 {  
 		        foreach($this->session->userdata($i) as $offering)
-				{
+				{   //var_dump($offering);
 					if($offering[1] == $vendor)
 					{
 					  	
 					  $d[$j]['name']=$offering[0];
-					  $d[$j]['offer']=$offering[3];	
+					  $d[$j]['offer']=$offering[2];	
 					  $j++;
 					}
-					
+	//			  var_dump($d);	
 				}
 			  
 			 } 
