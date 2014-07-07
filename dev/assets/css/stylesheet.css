@@ -3743,3 +3743,9 @@ tr .popover{
 	color:blue;
 	
 }
+
+.navbar-brand small {
+  display:block;
+  color:black;
+  font-size:9px;
+}
