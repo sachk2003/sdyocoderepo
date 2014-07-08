@@ -127,7 +127,7 @@
 			               tpj(this).data('bs.tooltip','false').popover(
 			               	{
 			               	  title: 'Items'
-			                } 	  
+			                }); 	  
 			               
 			               	var message='';
 			            	var vname =tpj(this).attr("name");
