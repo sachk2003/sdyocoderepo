@@ -38,7 +38,7 @@ $this->load->helper("form");
 	</div>
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-			<h6 style="color:red;">Note: By creating login you are agreeing to our terms. For details please see Privacy & Terms page.</h6>
+			<h6 style="color:black;">Note: By creating login you are agreeing to our terms. For details please see Privacy & Terms page.</h6>
 			
 		</div>	
 		
