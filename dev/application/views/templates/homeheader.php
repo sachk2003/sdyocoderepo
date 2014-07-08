@@ -44,8 +44,19 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="<?php echo base_url('');?>">Super<span>Dealyo</span><small>Bringing location aware deals to your fingertips <sup>&reg;</sup></small></a>
-                            <!--<a class="navbar-brand" href="<?php echo base_url('');?>"><img src="<?php echo base_url('assets/img/logo.png')?>" height="45px"/></a>-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+                            <a class="navbar-brand" href="<?php echo base_url('');?>">Super<span>Dealyo</span></a>
+</td>
+</tr>
+<tr>
+<td>
+<a><small>Bringing location aware deals to your fingertips<sup>&reg;</sup></small></a>
+</td>
+</tr>
+</table>
+ <!--<a class="navbar-brand" href="<?php echo base_url('');?>"><img src="<?php echo base_url('assets/img/logo.png')?>" height="45px"/></a>-->
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
