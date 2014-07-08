@@ -123,7 +123,26 @@
 			    },
 			  content: function()
 			            {   //console.log("entered the popoer content block");
-			                var message='';
+			            
+			               tpj(this).data('bs.tooltip','false').tooltip(
+			               	{
+			               	  title: 'Items',
+			               	  placement:function (context, source) {
+						        var position = tpj(source).position();
+						        var width = window.innerWidth;
+						        var positionleft = tpj(source).offset().left;
+						        //alert(width - positionleft);
+						       if((width - positionleft)<250 && width >500)
+						          return "left";         
+						        else if(width < 500)
+						           return "auto";
+						        else if(width < 800)
+						           return "auto";    
+						        else   
+						          return "right"; 
+			               	},
+			               	content:function(){
+			               	     var message='';
 			            	var vname =tpj(this).attr("name");
 			            	if(vname!='')
 			            	{
@@ -141,7 +160,13 @@
 			            	} 
 			            	
 			                //this.empty().append(message);
-			                return message;	
+			                return message;		
+			               		
+			               	}
+			               	
+			               	}
+			               );
+			                
 			            	
 			            
 			    }
