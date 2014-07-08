@@ -126,7 +126,7 @@
 			            
 			               tpj(this).data('bs.tooltip','false').popover(
 			               	{
-			               	  title: 'Items'
+			               	  title: 'Items',
 			                }); 	  
 			               
 			               	var message='';
@@ -149,7 +149,7 @@
 			                //this.empty().append(message);
 			                return message;		
 			               		
-			               	}
+			            }
 			               	
 			               	
 			              
@@ -158,7 +158,7 @@
                 
                 
                 
-                      
+         });             
         </script>
         
     </body>
