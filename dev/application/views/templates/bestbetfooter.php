@@ -63,7 +63,7 @@
 					
 					tpj.ajax({
 			          	
-			                type: "GET",
+			                type: "POST",
 			                url: 'getitems?v='+vname,
 			                contentType: "application/json; charset=utf-8",
 			                dataType: 'json',
@@ -95,7 +95,7 @@
 			               
 			               }
 			          });
-			          console.log(message);
+			          //console.log(message);
 			          return message;
 			          
 				}
