@@ -36,6 +36,14 @@ $this->load->helper("form");
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-2">
+			<h6 style="color:red;">Note: By creating login you are agreeing to our terms. For details please see Privacy & Terms page.</h6>
+			
+		</div>	
+		
+	</div>
+	
 </div>
 
 
