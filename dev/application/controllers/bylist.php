@@ -196,12 +196,15 @@ class Bylist extends CI_Controller {
 		$details=array();$nsdata=array();
 		foreach($items as $item)
 		{
+			$itembreak=explode('upc:',$item);
+			$itemupc=$itembreak[1];
+			
 			$link='';$itemname='';
 		    $j=0;			     
 			foreach($vendors as $vendor)	
 			{   $vendorid=$vendor['vendorid'];
 			    $company=$vendor['company'];
-				$itemdetails=$this->discounts->getdiscountbyitem($vendorid,$item);
+				$itemdetails=$this->discounts->getdiscountbyitem($vendorid,$itemupc);
 				
 			    if((count($itemdetails)!=0)||(sizeof($itemdetails)!=0))
 				{  //var_dump($itemdetails);

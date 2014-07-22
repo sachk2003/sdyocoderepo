@@ -65,11 +65,11 @@ class Discounts extends CI_Model{
 	   }
 	   
 	   
-	   public function getdiscountbyitem($vendor,$item)
+	   public function getdiscountbyitem($vendor,$upc)
 	   {
 	   	  $data=array();
 		  $this->db->where('vendorid', $vendor);
-          $this->db->where('item',$item);
+          $this->db->where('upc',$upc);
 		  $query=$this->db->get('discount');
 		  if($query->num_rows >= 1){
 
