@@ -43,7 +43,7 @@ class Bylist extends CI_Controller {
 		$term=$this->input->get('term');
 		// get a terms query instance and set some options
         $query = $client->createTerms();
-		$query->setFields('sname');
+		$query->setFields('cname');
 		//$query->setPrefix($searchterm); 
 		$query->setRegex($term.'.*');
 		$query->setRegexflags('case_insensitive');
@@ -56,14 +56,25 @@ class Bylist extends CI_Controller {
 		// display terms
 		foreach ($resultset as $field => $terms) {
 		    //echo '<h3>' . $field . '</h3>';
+                    if($terms)
+                   {
 		    foreach ($terms as $term => $count) {
-		       $json[]=array(
+		        
+                        
+                         $json[]=array(
 		                    'value'=>  $term,
 		                    'label'=> $term
 		                        );	
-		       
-		       
+		        
+                        
+                     		       
 		    }
+                    }
+                  else{
+                     $json[]=array('value'=>'',
+                                   'label'=>'No Products Found');
+
+                }
 		    //echo '<hr/>';
 		}
 		echo json_encode($json); 
