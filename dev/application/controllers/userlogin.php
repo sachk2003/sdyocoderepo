@@ -285,12 +285,16 @@ class Userlogin extends CI_Controller {
 			
 			if($userdetail['alertitem1']!='' || $userdetail['alertitem2']!='' || $userdetail['alertitem3']!='' || $userdetail['alertitem4']!='' || $userdetail['alertitem5']!='')
 			{
-				if($userdetail['alertitem1']!='') array_push($items,$userdetail['alertitem1']);
-				if($userdetail['alertitem2']!='') array_push($items,$userdetail['alertitem2']);
-				if($userdetail['alertitem3']!='') array_push($items,$userdetail['alertitem3']);
-				if($userdetail['alertitem4']!='') array_push($items,$userdetail['alertitem4']);
-				if($userdetail['alertitem5']!='') array_push($items,$userdetail['alertitem5']);
-			    //var_dump($items);	
+				 
+				
+	    if($userdetail['alertitem1']!='') {$ib1=explode('upc:',$userdetail['alertitem1']); array_push($items,$ib1);}
+        if($userdetail['alertitem2']!='') {$ib2=explode('upc:',$userdetail['alertitem2']); array_push($items,$ib2);}
+		if($userdetail['alertitem3']!='') {$ib3=explode('upc:',$userdetail['alertitem3']); array_push($items,$ib3);}
+		if($userdetail['alertitem4']!='') {$ib4=explode('upc:',$userdetail['alertitem4']); array_push($items,$ib4);}
+		if($userdetail['alertitem5']!='') {$ib5=explode('upc:',$userdetail['alertitem5']); array_push($items,$ib5);} 		
+		
+		
+				//var_dump($items);	
 				 
 				$zipcode=$userdetail['zip'];
 				$city=$userdetail['city'];

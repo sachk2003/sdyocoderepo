@@ -105,17 +105,13 @@ class User extends CI_Controller {
 		$mphone = $this->input->post('mphone');
 		$email = $this->input->post('email2');
 		
-		$aitem1 = $this->input->post('alertitem1');
-		$aitem2 = $this->input->post('alertitem2');
-		$aitem3 = $this->input->post('alertitem3');
-		$aitem4 = $this->input->post('alertitem4');
-		$aitem5 = $this->input->post('alertitem5');
+		$alertitem1 = $this->input->post('alertitem1');
+		$alertitem2 = $this->input->post('alertitem2');
+		$alertitem3 = $this->input->post('alertitem3');
+		$alertitem4 = $this->input->post('alertitem4');
+		$alertitem5 = $this->input->post('alertitem5');
 		
-		$ib1=explode('upc:',$aitem1); $alertitem1=$ib1[1];
-        $ib2=explode('upc:',$aitem2); $alertitem2=$ib2[1]; 		
-		$ib3=explode('upc:',$aitem3); $alertitem3=$ib3[1];
-		$ib4=explode('upc:',$aitem4); $alertitem4=$ib4[1];
-		$ib5=explode('upc:',$aitem5); $alertitem5=$ib5[1];
+		
 		
 		$password = "temp".$fname;
 		
