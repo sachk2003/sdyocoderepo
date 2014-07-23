@@ -7,6 +7,7 @@
                   <li><a href="update_profile">Update Profile</a></li>
                   
                   <li><a href="profile_delete">Delete Profile</a></li>
+                  <li><a href="change_password">Change Password</a></li>
                   <li><a href="logout">Logout</a></li>	
                   
               	</ul>
