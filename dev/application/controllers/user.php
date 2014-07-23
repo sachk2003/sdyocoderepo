@@ -174,7 +174,7 @@ class User extends CI_Controller {
 				if($validity)
 				{
 					
-					if($this->vendorfunctions->updateuser($email,$newpassword))
+					if($this->userfunctions->updateuser($email,$newpassword))
 					{
 						$data['message']='Password Updated';
 			            $this->load->view('user/changepassword',$data);
