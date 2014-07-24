@@ -115,4 +115,12 @@ class Adminfunctions extends CI_Model{
 		
 		
 	 }
+	 
+	function cleanup()
+	{
+		$today=date('m/d/y');
+		echo $today;
+		
+	} 
+	 
 }
