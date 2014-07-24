@@ -383,8 +383,25 @@ class Emaintain extends CI_Controller {
 		
 		
 	 }
+	/* Expired Deals Script*/
+	function cleanoffers()
+	{
+		$data['message']='';       
+        $this->load->view('admin/cleanoffers',$data);
+		
+		
+	}
 	
-	
+	function cleanupoffers()
+	{
+		if($this->input->post())
+		{
+			
+			
+		}		
+			
+		
+	}
 	
 	
 	

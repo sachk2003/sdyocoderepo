@@ -5,6 +5,7 @@
               	<ul class="nav nav-stacked" id="sidebar">
                   <li><a href="index">Home</a></li>
                   <li><a href="bulkdiscounts">Upload Discounts</a></li>
+                  <li><a href="cleanoffers">Clean Offers</a></li>
                   <li><a href="logout">Logout</a></li>
                   
                   
