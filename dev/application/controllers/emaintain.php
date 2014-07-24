@@ -396,6 +396,7 @@ class Emaintain extends CI_Controller {
 	{
 		if($this->input->post())
 		{
+			$this->adminfunctions->cleanup();
 			
 			
 		}		
