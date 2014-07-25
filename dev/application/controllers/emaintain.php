@@ -394,12 +394,10 @@ class Emaintain extends CI_Controller {
 	
 	function cleanupoffers()
 	{
-		if($this->input->post())
-		{
-			$this->adminfunctions->cleanup();
+             $count=$this->adminfunctions->cleanup();
 			
-			
-		}		
+                $data['message']='Number of Offers deleted: '.$count;
+                 $this->load->view('admin/cleanoffers',$data);    			
 			
 		
 	}

@@ -8,8 +8,8 @@
             <fieldset>
             	    
 			    		
-			    		<div class="form-group">
-			    			<table><tr><td><input class="control-small" type="submit" value="Trigger Cleanup"></td></tr></table>
+			    		<div class="form-group" style="margin-left:30%;">
+			    			<table><tr><td style="text-align:center;"><input class="btn btn-primary" type="submit" value="Trigger Cleanup"></td></tr></table>
 			    			
 			    			
 			    			

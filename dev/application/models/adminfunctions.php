@@ -117,10 +117,15 @@ class Adminfunctions extends CI_Model{
 	 }
 	 
 	function cleanup()
-	{
-		$today=date('m/d/y');
-		echo $today;
-		
+         {		$today=date('m/d/y');
+                $this->db->where('enddate < ',$today);		
+		$this->db->where('enddate != ','');
+                $query=$this->db->delete('discount');
+                //foreach($query->result() as $row)
+                  // { $data=(array)$row;
+                    // var_dump($data);
+                  //  }
+              return $this->db->affected_rows();
 	} 
 	 
 }

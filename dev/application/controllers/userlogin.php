@@ -287,11 +287,11 @@ class Userlogin extends CI_Controller {
 			{
 				 
 				
-	    if($userdetail['alertitem1']!='') {$ib1=explode('upc:',$userdetail['alertitem1']); array_push($items,$ib1);}
-        if($userdetail['alertitem2']!='') {$ib2=explode('upc:',$userdetail['alertitem2']); array_push($items,$ib2);}
-		if($userdetail['alertitem3']!='') {$ib3=explode('upc:',$userdetail['alertitem3']); array_push($items,$ib3);}
-		if($userdetail['alertitem4']!='') {$ib4=explode('upc:',$userdetail['alertitem4']); array_push($items,$ib4);}
-		if($userdetail['alertitem5']!='') {$ib5=explode('upc:',$userdetail['alertitem5']); array_push($items,$ib5);} 		
+	    if($userdetail['alertitem1']!='') {$ib1=explode('upc:',$userdetail['alertitem1']); array_push($items,$ib1[1]);}
+        if($userdetail['alertitem2']!='') {$ib2=explode('upc:',$userdetail['alertitem2']); array_push($items,$ib2[1]);}
+		if($userdetail['alertitem3']!='') {$ib3=explode('upc:',$userdetail['alertitem3']); array_push($items,$ib3[1]);}
+		if($userdetail['alertitem4']!='') {$ib4=explode('upc:',$userdetail['alertitem4']); array_push($items,$ib4[1]);}
+		if($userdetail['alertitem5']!='') {$ib5=explode('upc:',$userdetail['alertitem5']); array_push($items,$ib5[1]);} 		
 		
 		
 				//var_dump($items);	
@@ -301,6 +301,7 @@ class Userlogin extends CI_Controller {
 				if($zipcode!='' || $city!= '')
 				{
 					$vendors=$this->discounts->availablevendors($zipcode,$city);
+
 					foreach($vendors as $vendor)
 					{
 						$vendorid=$vendor['vendorid'];
@@ -356,11 +357,12 @@ class Userlogin extends CI_Controller {
 			
 			//var_dump($discountarray);
 			//var_dump($productarray);
+                      
 			if($this->senduseremail($fname,$email,$items,$discountarray,$productarray))
 			echo "Mail sent to ".$email;
 			else 
 			echo "Mail could not be sent";
-			
+		       	
 		}
 		
 		
@@ -427,8 +429,8 @@ class Userlogin extends CI_Controller {
 		{   $message.="<table><tr><td>";
 			if($discountarray[$item])
 			{   $table="";
-				
-			    $table="<table style='background-color:#c1c1c1;width:50%;'><tr><th colspan='4'>".$item."</th></tr><tr><th>Vendor</th><th>Start Date</th><th>End Date</th><th>Sale Price</th></tr>"; 
+			    //var_dump($discountarray[$item]);	
+			    $table="<table style='background-color:#c1c1c1;width:50%;'><tr><th colspan='4'>".$discountarray[$item][0]['item']."</th></tr><tr><th>Vendor</th><th>Start Date</th><th>End Date</th><th>Sale Price</th></tr>"; 
 				foreach($discountarray[$item] as $discountinfo)
 				      {
 				      	
@@ -464,7 +466,7 @@ class Userlogin extends CI_Controller {
 	 	$message.="If you would like to stop the alerts, please remove the items from your profile by logging on to your account using your email and password. <br />Note:Please do not respond to this email as it is machine generated.<br />";
 	 	$message.="Thank you for using SuperDealyo.<br />";
 	 	$message.="<br />SuperDealyo User Support Team<br />";
-	 	//echo $message;
+	 	//echo $message;exit;
 		if(mail($email,$subject,$message,$headers))
 		return true;
 		else 
