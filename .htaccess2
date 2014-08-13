@@ -1,0 +1,4 @@
+# Redirect /folder_name folder to https
+RewriteCond %{HTTPS} !=on
+RewriteCond %{REQUEST_URI} vendor
+RewriteRule ^(.*) https://%{SERVER_NAME}$1 [R,L]
