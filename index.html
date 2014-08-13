@@ -1,86 +1,565 @@
-<html><!-- #BeginTemplate "/Templates/superdealyo_home_template.dwt" -->
-<head>
-<!-- #BeginEditable "doctitle" --> 
-<title>SuperDealyo</title>
-<!-- #EndEditable -->
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link href="http://superdealyo.com/superdealyo.rss" rel="alternate" type="application/rss+xml" title="SuperDealyo News" />
-<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
-</head>
-<body bgcolor="#FFFFFF" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF">
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr> 
-    <td colspan="3" bgcolor="#FFFFFF" height="22"><font face="Verdana, Arial, Helvetica, sans-serif" size="+2"> 
-      <a href="index.html"> <img src="/images/world.png" width="69" height="77" border="0"></a></font><font face="Verdana, Arial, Helvetica, sans-serif" size="+2"><b><font color="#FFFFFF"><a STYLE="text-decoration:none" href="index.html"><font color="#FF0000" size="+3">Super</font><font color="#0000FF" size="+3">Dealyo</font></a></font></b></font><font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#000000"><b>&#153;</b> 
-      </font> <b><font face="Verdana, Arial, Helvetica, sans-serif" size="+2"><b><font color="#FFFFFF"> 
-      <font size="1">TM&#153;</font></font></b></font></b> </td>
-    <td rowspan="2" bgcolor="#FFFFFF" height="28" width="59%">
-<font color="#000000">
-<font color="#000000">
-<font face="Verdana, Arial, Helvetica, sans-serif" size="2"><i>
-<font size="1" color="#FFFFFF"> 
-      </font></i></font></font>
-<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
-<i></i></font></font>
-</td>
-  </tr>
-  <tr> 
-    <td colspan="3" bgcolor="#FFFFFF" height="6"> 
-      <p><font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#000000">Bringing 
-        location aware deals to your fingertips<b> &reg;</b></font></p>
-    </td>
-  </tr>
-</table>
-<table width="100%" border="0" height="22">
-  <tr bgcolor="#FFFFCC"> 
-    <td colspan="8" height="22" bgcolor="#DFDFDF"> 
-      <p align="center">&nbsp; </p>
-      </td>
-  </tr>
-</table>
-<table width="100%" border="0" height="197">
-  <tr align="left" valign="top">  
-    <td width="97%" height="317" bordercolor="#FFFFFF" valign="top" align="center"> 
-      <p><font color="#000000"><!-- #BeginEditable "Text_Area" -->
-       <font face="Arial, Helvetica, sans-serif" size="2" color="#333333">
-<p>&nbsp;</p> 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
         
-      <font size="3" color="#666666">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Welcome to SuperDealyo! Get ready to find 
-      great deals in your location;</font></font> 
-      <p>&nbsp;</p>
-        <menu><font color="#0000CC"><a href="bylist.html" target="_parent"><font color="#000099" size="3" face="Arial, Helvetica, sans-serif">You can search by creating a shopping list for deals in your location</font></a></font> 
-        </menu>
-        <font face="Arial, Helvetica, sans-serif" size="3" color="#000099">or</font><font face="Arial, Helvetica, sans-serif" size="2" color="#000099"> 
-        </font> 
-        <menu> <font color="#0000CC"><a href="byvendor.html"><font size="3" color="#000099" face="Arial, Helvetica, sans-serif">You can search by a vendor for deals in your location</font></a></font> 
-        </menu>
-
-<!-- #EndEditable --></font></p>       
-    </td>
-  </tr>
-</table>
-<table width="100%" border="0" height="8" bgcolor="#FFFFFF">
-  <tr bgcolor="#6699FF" bordercolor="#FFFFFF"> 
-    <td height="2" nowrap> 
-      <div align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FFFFFF"><a href="vendor/vendor.html" target="_self">Vendors</a> <a href="about/about.html" target="_blank">About</a> 
-        <a href="career/career.html" target="_blank">Career</a> <a href="privacy/privacy.html" target="_blank">Privacy</a> 
-        <a href="help/help.html" target="_blank">Help</a></font></div>
-    </td>
-  </tr>
-</table>
-<table width="100%" border="0" height="1%">
-  <tr bgcolor="#FFFFFF">
-    <td width=" " height="7"> 
-<div align="center"><a href="http://www.facebook.com/pages/superdealyo"><img src="../images/facebook.JPG" width="20" height="20"></a><a href="http://twitter.com/superdealyo"><img src="../images/twitter.JPG" width="20" height="20"></a><a href="../superdealyo.rss"><img src="../images/RSS.JPG" width="20" height="20"></a></div>    
-</td>
-  </tr>
-  <tr bgcolor="#FFFFFF"> 
-    <td width=" " height="2"> 
-      <p align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Copyright 
-        &copy; 2013 SuperDealyo</font></p>
-    </td>
-  </tr>
-</table>
-</body>
-<!-- #EndTemplate --></html>
+        <title>SuperDealyo - Location Aware Shopping</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Plugins CSS -->
+        <link href="assets/UItoTop/css/ui.totop.css" rel="stylesheet">
+        <!--<link href="assets/prettyPhoto/css/prettyPhoto.css" rel="stylesheet">-->
+        
+        <!-- Custom Stylesheet For This Template -->
+        <link href="assets/css/stylesheet.css" rel="stylesheet">
+        <link href="assets/css/skins.css" rel="stylesheet">
+        <!-- Font Awesome  -->    
+        <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Google Fonts -->    
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+        <div id="main-wrapper" class="color-skin-3">
+                       
+            <header id="header-2" class="header"  style="width: 100%; bottom: 0;">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html">Super<span>Dealyo</span></a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav">
+                            	
+                            	
+						
+                            	
+                            </ul>
+                            <!--
+                            <div class="social_icons">
+                                <ul>
+                                    <li><a href="#" data-toggle="tooltip" title="" data-original-title="Twitter"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" title="" data-original-title="Facebook"><i class="icon-facebook"></i></a></li>
+                                    
+                                    <li><a href="#" data-toggle="tooltip" title="" data-original-title="Youtube"><i class="icon-youtube"></i></a></li>
+                                    
+                                </ul>
+                            </div>-->
+                            <!-- /.nav -->
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container -->
+                </nav>
+                <!-- /.navbar -->
+            </header>
+            
+            	<!-- Main slider -->
+ <div class="col-md-12" style="padding: 0;" >    	
+  <div class="slider" style="display: none !important">
+  
+  <div class="slide" style="background-image:url(assets/img/slides/panorama1.jpg)">
+      
+      
+      <div class="shade"></div>
+      <div class="slidemsg">
+      <div class="msgbox">
+        <h1>The closest store with the lowest price for YOUR shopping list</h1>
+        
+      </div>
+      <a href="bylist.php" class="btn btn-primary transition"><span>CREATE SHOPPING LIST </span></a>
+      
+      </div>
+    
+    </div>
+  
+   
+    <div class="slide" style="background-image:url(assets/img/slides/marketing.jpg)">
+      <div class="shade"></div>
+      <div class="slidemsg">
+      <div class="msgbox">
+        <h1>The closest store with the lowest price for YOUR shoppping list</h1>
+        
+      </div>
+      <a href="bylist.php" class="btn btn-primary transition"><span>CREATE SHOPPING LIST</span></a>
+      
+      </div>
+    </div>
+</div>    
+            	
+ </div>           	
+            	
+           <section >
+           	<div class="container" style="border-bottom: 1px solid #f3f3f3;">
+           <div class="row" >
+           	<div class="col-md-3">
+           	<div class="service-style-5">
+									<h2></h2>
+									<div class="service-content">
+										<h2>How it Works</h2>
+										
+									</div>
+			</div>
+           	</div>
+           	
+           	
+            <div class="col-md-3">
+           	<div class="service-style-5">
+									<h2><i class="icon-list"></i></h2>
+									<div class="service-content">
+										<h2>Create List</h2>
+										
+									</div>
+			</div>
+           	</div>
+           	
+           	
+           	<div class="col-md-3">
+           	<div class="service-style-5">
+									<h2><span class="service-icon"><i class="icon-hand-right"></i></span></h2>
+									<div class="service-content">
+										<h2>See the Deals</h2>
+										
+									</div>
+			</div>
+           	</div>
+           	
+           	
+           	<div class="col-md-3">
+           	<div class="service-style-5">
+									<h2><i class="icon-trophy"></i></h2>
+									<div class="service-content">
+										<h2 style="text-align: center;">Compare</h2>
+										
+									</div>
+			</div>
+           	</div>
+           	
+           	
+           	</div></div>
+           	
+           </section> 	
+            	
+            <!--  Marketing Section 1-->	
+            <!--
+            <section id="our-services" class="colored-wrapper" style="margin-top: 4px;">
+            <div class="container">
+            	<div class="row" >
+            		<div class="col-md-3">
+            			<h3>How it Works</h3>
+            			
+            		</div>
+            		<div class="col-md-3">
+            			<h3>Step 1</h3>
+            			<h3>Create List</h3>
+            		</div>
+            		<div class="col-md-3">
+            			<h3>Step 2</h3>
+            			<h3>See the Deals</h3>
+            		</div>
+            		<div class="col-md-3">
+            			<h3>Step 3</h3>
+            			<h3>Compare</h3>
+            		</div>
+            		
+            	</div>
+            	
+            </div>
+            
+            <!--  Marketing Section 2-->
+            <!--</section>-->
+            
+            <!-- new marketing section -->
+   <div class="container" style="margin-top:0px; ">
+     <article>
+	<h2 class="centered">Advantages</h2>
+	<div class="row facts">
+		<div class="col-md-4 facts-item">
+			<h6><i class="icon-shopping-cart"></i>Mimics Shopping Behaviour</h6>
+			<p>Menu is easy to understand and lets you create a shopping list as easily as writing on a piece of paper.</p>
+		</div>
+		<div class="col-md-4 facts-item">
+			<h6><i class="icon-eye-open"></i>Details of the Products</h6>
+			<p>You can see the picture, name and specifications of the product in your shopping list. Link to manufacturer's web site is also given.</p>
+		</div>
+		<div class="col-md-4 facts-item">
+			<h6><i class="icon-check"></i>Compare Deals</h6>
+			<p>Results are presented in a format that makes comparing deals as easy as 123. You can change location to see deals in other areas.</p>
+		</div>
+	</div>
+		<div class="row facts">
+		<div class="col-md-4 facts-item">
+			<h6><i class="icon-ok"></i>Covers  All Vendors</h6>
+			<p>We cover all participating vendors and stores. This gives you wider choice.  </p>
+		</div>
+		<div class="col-md-4 facts-item">
+			<h6><i class="icon-gift"></i>Covers Broad Range of Products and Services</h6>
+			<p>We cover every imaginable product, perishable, non-perishable, perfumes, smartphones etc. </p>
+		</div>
+		<div class="col-md-4 facts-item">
+			<h6><i class="icon-smile"></i>Takes hassle out of shopping deals</h6>
+			<p>No more leafing through printed circulars, surfing through web sites  of brick and mortar stores and online vendors.</p>
+		</div>
+	</div>
+</article>
+            
+  </div>
+            
+            
+           
+    <div class="container-stats  stats" style="margin-top:0px; ">
+                 
+         <div class="row col-md-offset-1 facts"> 
+           <div class="col-md-3 facts-item">
+           	 <h3 class="centered">Our Stats</h3>
+           	 <h5 style="text-align: center">Number of Vendors</h5>
+                   <h5 style="text-align: center">5000+</h5> 
+                   <br />
+                    <h5 style="text-align: center">Products in our Database </h5>
+                    <h5 style="text-align: center">620,000</h5>
+           	 
+           </div>
+           <div class="col-md-4 facts-item">
+           	 <h3 class="centered">Quotes</h3>
+           	  <h5><blockquote>                   	 
+                   	" A great option for comparing products and getting the best out of discounts."
+               </blockquote></h5>    	 
+                   	 
+                   	   
+           </div>
+           <div class="col-md-3 facts-item">
+           	 <h3 class="centered">Connect</h3>
+           	 <div class="share1">
+           	 <table>
+                   		<tr>
+                   			<td><h2 class="facebook"><i class="icon-facebook"></i></h2></td>
+                   			<td><h2 class="twitter"><i class="icon-twitter"></i></h2></td>
+                   			<td><h2 class="youtube"><i class="icon-youtube"></i></h2></td>
+                   			<td><h2 class="pinterest"><i class="icon-pinterest"></i></h2></td>
+                   		</tr>
+             </table>
+             </div>
+           </div>
+          
+         </div>
+            
+            
+                     
+            
+      
+      </div>      
+            
+            <!--
+            
+                 <div class="container" style="margin-top:5px; ">
+                    <div class="row">
+                            <div class="col-md-3">
+                              <div class="service service-5">
+                              <h4>ADVANTAGES</h4>	
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                               <div class="service service-2">
+                                <span class="service-icon">
+                                <i class="icon-shopping-cart"></i>
+                                </span>
+                                <h4>Mimics Shopping Behaviour</h4>
+                                <p>Menu is easy to understand and lets you create a shopping list as easily as writing on a piece of paper.</p>
+                            </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="service service-2">
+                                <span class="service-icon">
+                                <i class="icon-eye-open"></i>
+                                </span>
+                                <h4>Details of the Products</h4>
+                                <p>You can see the picture, name and specifications of the product in your shopping list. Link to manufacturer's web site is also given.</p>
+                            </div>
+                            </div>
+                            <div class="col-md-3">
+                                 <div class="service service-2">
+                                <span class="service-icon">
+                                <i class="icon-check"></i>
+                                </span>
+                                <h4>Compare Deals</h4>
+                                <p>Results are presented in a format that makes comparing deals as easy as 123. You can change location to see deals in other areas. </p>
+                            </div>
+                            </div>
+                    </div>
+                 </div>  
+                -->           
+                <!-- Third Marketing Unit -->
+                <!--
+                <div class="container" style="margin-top:10px; ">
+                    <div class="row">
+                            <div class="col-md-3">
+                              <div class="service service-5">
+                              <h4>WHY US?</h4>	
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                               <div class="service service-2">
+                                <span class="service-icon">
+                                <i class="icon-ok"></i>
+                                </span>
+                                <h4>Covers  All Vendors</h4>
+                                <p>We cover all participating vendors and stores. This gives you wider choice.  </p>
+                            </div>
+                            </div>
+                            <div class="col-md-3">
+                               <div class="service service-2">
+                                <span class="service-icon">
+                                <i class="icon-gift"></i>
+                                </span>
+                                <h4>Covers Broad Range of Products and Services</h4>
+                                <p>We cover every imaginable product, perishable, non-perishable, perfumes, smartphones etc.  </p>
+                            </div>
+                            </div>
+                            <div class="col-md-3">
+                               <div class="service service-2">
+                                <span class="service-icon">
+                                <i class="icon-smile"></i>
+                                </span>
+                                <h4>Takes hassle out of shopping deals</h4>
+                                <p>No more leafing through printed circulars, surfing through web sites  of brick and mortar stores and online vendors.</p>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="container">
+                	<div class="row"></div>
+                	
+                </div>
+                  
+                
+                
+                -->
+                
+                
+                <!-- End: Third Marketing Unit -->
+                <!-- Similar Marketing Tool-->
+           <!--
+            <section id="our-services" class="colored-wrapper">    
+            <div class="container container-full" style="margin-top:5px; ">      
+            <div class="row" id="marketing4">
+            		              
+             <div class="col-md-4">
+                   <h4 style="text-align: center">Number of Vendors</h4>
+                   <h4 style="text-align: center">5000+</h4> 
+                   <br />
+                    <h4 style="text-align: center">Products in our Database </h4>
+                    <h4 style="text-align: center">620,000</h4> 
+                   <br /><br /><br /><br />    
+             </div>
+             <div class="col-md-4">
+                   <h4 style="text-align: center">Quotes</h4>   
+                   <div class="testimonial">
+                   	 <div class="testimonial-content">
+                   	" A great option for comparing products and getting the best out of discounts."
+                   	 </div>
+                   	 <div class="testimonial-author">
+                   	 	<span class="user"></span>
+                   	 	<span class="user-info"></span>
+                   	 </div>
+                   	</div>         
+             </div>
+             <div class="col-md-4">
+                   <h4 style="text-align: center">Connect with us</h4> 
+                   <div class="share">
+                            <ul class="list-unstyled">
+                                <li><a href="#"><img src="assets/img/facebook.png" alt="Facebook Icon" /></a></li>
+                                <li><a href="#"><img src="assets/img/twitter.png" alt="Twitter Icon" /></a></li>
+                                <li><a href="#"><img src="assets/img/rss.png" alt="RSS Icon" /></a></li>
+                                
+                            </ul>
+                            <!-- /.social-links -->
+               <!--    </div> 
+                   <div class="share1">
+                   	<table>
+                   		<tr>
+                   			<td><h2><i class="icon-facebook"></i></h2></td>
+                   			<td><h2><i class="icon-twitter"></i></h2></td>
+                   			<td><h2><i class="icon-youtube"></i></h2></td>
+                   		</tr>
+                   	</table>
+                   	
+                   	
+                   </div>
+                   
+                   <br /><br /><br /><br /><br />
+              </div>
+            
+            </div>
+            </div><!-- /.container -->
+            <!--</section>-->
+            
+            
+           
+            
+            
+            <footer id="footer-1" class="footer">
+                <div class="container">
+                    <div class="row">
+                    	<div class="col-md-2"><a href="vendor/index.php" >Vendor Login</a></div>
+                        <div class="col-md-2"><a href="about.php" >About Us</a></div>
+                        <div class="col-md-2 "><a href="privacy.php">Privacy</a></div>
+                        <div class="col-md-2 "><a href="help.php">Help</a></div>
+                        <div class="col-md-2 "><a href="jobs.php">Jobs</a></div>
+                        <div class="col-md-2 "><a href="contact.php">Contact</a></div>
+                                              
+                        
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </footer>
+            <!-- /#footer-1 -->
+            <footer id="footer-2" class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>© 2014 SuperDealyo. ALL RIGHTS RESERVED </span>                        
+                        </div>
+                        <!-- /.footer-info-wrapper -->
+                        
+                        <!-- /.social-link-wrapper -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </footer>
+            <!-- /#footer-2 -->
+            
+        </div>
+        <!-- /#main-wrapper -->
+        <!-- Bootstrap JS & Others JavaScript Plugins
+            ================================================== -->
+        <!-- Placed At The End Of The Document So Page Loads Faster -->
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <!--<script src="assets/js/jquery-2.0.3.min.js"></script>-->
+        <!--<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>-->
+        <script src="assets/js/jquery.bxslider.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        
+        
+        <script src="assets/carouFredSel-6.2.1/jquery.carouFredSel-6.2.1.js"></script>
+        <!--<script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>-->
+        
+        <script src="assets/UItoTop/js/easing.js"></script>
+        <script src="assets/UItoTop/js/jquery.ui.totop.min.js"></script>
+        <script src="assets/isotope-site/jquery.isotope.min.js"></script>
+        <script src="assets/FitVids.js/jquery.fitvids.js"></script>
+        
+        
+        <!--<script src="assets/js/custom.js"></script>-->
+        
+        <script type="text/javascript">
+            var tpj = jQuery;
+            tpj.noConflict();
+            
+            
+            tpj(document).ready(function () {
+            
+            /* SLider */    	
+           if(tpj('.slider').length != 0)
+	        {
+		     tpj('.slider').show().bxSlider({
+			      pager: true,
+			      auto: true,
+			      autoHover: true,
+			      speed:500,
+			      infiniteLoop: true,
+			      easing: null,
+			      //easing: 'ease-in-out',
+			      controls: false
+		                            });
+        	}
+            	
+            	
+                
+                // PrettyPhoto
+                /*tpj("a[rel^='prettyPhoto']").prettyPhoto({
+                    theme: 'light_square',
+                    social_tools: false
+                });*/
+               
+               
+                // FitVids
+                //tpj(".responsive-video-wrapper").fitVids();
+                
+                // jQuery UItoTop
+                tpj().UItoTop({ easingType: 'easeOutQuart' });
+                // Skin Chooser
+                tpj(".color-skin").click(function () {
+                    var cls = this.id;
+                    tpj(".color-skin").removeClass("active");
+                    tpj(this).addClass("active");
+                    tpj("#main-wrapper").removeClass();
+                    tpj("#main-wrapper").addClass(cls);
+                });
+            });
+            
+            // jQuery CarouFredSel
+            
+            var caroufredsel = function () {
+                tpj('#caroufredsel-portfolio-container').carouFredSel({
+                    responsive: true,
+                    scroll: 1,
+                    circular: false,
+                    infinite: false,
+                    items: {
+                        visible: {
+                            min: 1,
+                            max: 3
+                        }
+                    },
+                    prev: '#portfolio-prev',
+                    next: '#portfolio-next',
+                    auto: {
+                        play: false
+                    }
+                });
+                tpj('#caroufredsel-clients-container').carouFredSel({
+                    responsive: true,
+                    scroll: 1,
+                    circular: false,
+                    infinite: false,
+                    items: {
+                        visible: {
+                            min: 1,
+                            max: 4
+                        }
+                    },
+                    prev: '#client-prev',
+                    next: '#client-next',
+                    auto: {
+                        play: false
+                    }
+                });
+            };
+            tpj(window).load(function () {
+                caroufredsel();
+            });
+            tpj(window).resize(function () {
+                caroufredsel();
+            });         
+        </script>
+    </body>
+</html>
