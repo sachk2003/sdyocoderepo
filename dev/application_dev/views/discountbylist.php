@@ -193,7 +193,7 @@ if($upccount!=0)
    <div class="container">
    	<div class="row">
             		<div class="col-md-12">
-            			<h2 style="color:#FF0000;text-align: center"><a href="../bestbet/index"><button class="btn btn-primary">Best Bet</button></a></h2>
+            			<h2 style="color:#FF0000;text-align: center"><a href="../bestbet/index"><button class="btn btn-primary btn-lg">Best Bet</button></a></h2>
             		</div>
             		
     </div>
